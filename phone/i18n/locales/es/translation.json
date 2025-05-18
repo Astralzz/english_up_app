@@ -1,0 +1,13 @@
+{
+  "app_name": "EnglishUp App",
+  "welcome": "Bienvenido",
+  "menu": {
+    "header": {
+      "title": "EnglishUp",
+      "body": "Tu viaje al bilingüismo"
+    },
+    "footer": {
+      "version": "version n.n.n"
+    }
+  }
+}
