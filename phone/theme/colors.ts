@@ -15,12 +15,15 @@ export type ColorsAppType = {
   };
   alert: {
     error: string;
+    errorSecondary: string;
     success: string;
+    successSecondary: string;
   };
   neutral: Record<number, string>;
   background: {
     primary: string;
     secondary: string;
+    overlay: string;
   };
 };
 
@@ -28,91 +31,96 @@ export type ColorsAppType = {
 const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
   light: {
     primary: {
-      50: "#fff8e1",
-      100: "#ffecb3",
-      200: "#ffe082",
-      300: "#ffd54f",
-      400: "#ffca28",
-      500: "#ffc107", // Principal
-      600: "#ffb300", // Hover
-      700: "#ffa000", // Active
-      800: "#ff8f00",
-      900: "#ff6f00", // Disabled
-      950: "#7c4d00", // Outline
+      50: "#FFF8E1",
+      100: "#FFECB3",
+      200: "#FFE082",
+      300: "#FFD54F",
+      400: "#FFCA28",
+      500: "#FFC107",
+      600: "#FFB300",
+      700: "#FFA000",
+      800: "#FF8F00",
+      900: "#FF6F00",
+      950: "#7C4D00",
     },
     text: {
       primary: "#1A1A1A",
-      secondary: "#5C5C5C",
-      tertiary: "#9E9E9E",
+      secondary: "#424242",
+      tertiary: "#616161",
     },
     icons: {
       primary: "#1A1A1A",
-      secondary: "#757575",
+      secondary: "#616161",
     },
     alert: {
       error: "#D32F2F",
-      success: "#388E3C",
+      errorSecondary: "#FFEBEE",
+      success: "#2E7D32",
+      successSecondary: "#E8F5E9",
     },
     neutral: {
-      100: "#FAFAFA",
-      200: "#F0F0F0",
-      300: "#E0E0E0",
-      400: "#BDBDBD",
-      500: "#9E9E9E",
-      600: "#757575",
-      700: "#616161",
-      800: "#424242",
+      100: "#FFFFFF",
+      200: "#F5F5F5",
+      300: "#EEEEEE",
+      400: "#E0E0E0",
+      500: "#BDBDBD",
+      600: "#9E9E9E",
+      700: "#757575",
+      800: "#616161",
       900: "#212121",
     },
     background: {
-      primary: "#ffecb3",
-      secondary: "#ffe082",
+      primary: "#F5F5F5",
+      secondary: "#FFFFFF",
+      overlay: "rgba(0, 0, 0, 0.4)",
     },
   },
-
   dark: {
     primary: {
-      50: "#f3e8ff",
-      100: "#e9d5ff",
-      200: "#d8b4fe",
-      300: "#c084fc",
-      400: "#a855f7",
-      500: "#9333ea", // Principal
-      600: "#7e22ce", // Hover
-      700: "#6b21a8", // Active
-      800: "#581c87",
-      900: "#3b0764", // Disabled
-      950: "#1e0a3f", // Outline
+      50: "#F3E5F5",
+      100: "#E1BEE7",
+      200: "#CE93D8",
+      300: "#BA68C8",
+      400: "#AB47BC",
+      500: "#9C27B0",
+      600: "#8E24AA",
+      700: "#7B1FA2",
+      800: "#6A1B9A",
+      900: "#4A148C",
+      950: "#1A237E",
     },
     text: {
-      primary: "#FFFFFF",
-      secondary: "#D1D5DB",
-      tertiary: "#9CA3AF",
+      primary: "#E0E0E0",
+      secondary: "#BDBDBD",
+      tertiary: "#9E9E9E",
     },
     icons: {
-      primary: "#FFFFFF",
-      secondary: "#9CA3AF",
+      primary: "#E0E0E0",
+      secondary: "#9E9E9E",
     },
     alert: {
       error: "#EF5350",
-      success: "#81C784",
+      errorSecondary: "#2A1A1A",
+      success: "#66BB6A",
+      successSecondary: "#1B2A1B",
     },
     neutral: {
-      100: "#1E1E2E",
-      200: "#2A2A3C",
-      300: "#3A3A4C",
-      400: "#4B4B5C",
-      500: "#6B6B7D",
-      600: "#8C8CA1",
-      700: "#BDBDD2",
-      800: "#E0E0F0",
-      900: "#FFFFFF",
+      100: "#121212",
+      200: "#1E1E1E",
+      300: "#252525",
+      400: "#303030",
+      500: "#424242",
+      600: "#616161",
+      700: "#757575",
+      800: "#9E9E9E",
+      900: "#BDBDBD",
     },
     background: {
-      primary: "#121212", // Fondo principal oscuro
-      secondary: "#1E1E2E", // Fondo tarjetas oscuro
+      primary: "#121212",
+      secondary: "#1E1E1E",
+      overlay: "rgba(0, 0, 0, 0.8)",
     },
   },
-} as const;
+};
 
 export default COLORS_APP;

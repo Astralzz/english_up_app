@@ -1,8 +1,8 @@
 import { RoutesMenuTypeApp } from "@/types/navigation";
 import HomeScreen from "@/screens/home/HomeScreen";
-import VerbsScreen from "@/screens/verbs/VerbsScreen";
 import WordsScreen from "@/screens/words/WordsScreen";
 import FormulasScreen from "@/screens/formulas/FormulasScreen";
+import VerbsStack from "@/screens/verbs/VerbsStack";
 
 // Rutas de la app en general (Menu)
 const ROUTES_MENU_APP: Array<RoutesMenuTypeApp> = [
@@ -16,7 +16,7 @@ const ROUTES_MENU_APP: Array<RoutesMenuTypeApp> = [
   },
   {
     name: "Verbs",
-    Component: VerbsScreen,
+    Component: VerbsStack,
     icon: "run-fast",
     options: {
       drawerLabel: "Verbos",

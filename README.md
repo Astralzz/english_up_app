@@ -42,6 +42,7 @@ PROVIDERS
 
 - [React Redux](https://react-redux.js.org)
 - [Redux Toolkit](https://redux-toolkit.js.org)
+- [Redux Persist](https://github.com/rt2zz/redux-persist#readme)
 
 NAVIGATION
 

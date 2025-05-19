@@ -5,8 +5,14 @@ import { useNavigation, DrawerActions } from "@react-navigation/native";
 import { Text } from "react-native-paper";
 import { ColorsAppType } from "@/theme/colors";
 import { useThemeApp } from "@/hooks/useThemeApp";
+import { DrawerHeaderProps } from "@react-navigation/drawer";
 
-const NavigationHeader = () => {
+/**
+ * Menu - Navigation component
+ *
+ * @return {TSX.Component}
+ */
+const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
   // Hooks
   const {
     state: { colors },
@@ -19,7 +25,7 @@ const NavigationHeader = () => {
     <View style={styles.container}>
       {/* Título */}
       <Text style={styles.title} variant="titleLarge">
-        EnglishUp
+        {props?.route?.name ?? "EnglishUp"}
       </Text>
 
       {/* Botones adicionales */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar, SafeAreaView } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 
 // React Navigation
 import RouterControl from "../router/RouterControl";
@@ -22,11 +22,12 @@ const Main: React.FC = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       {/* StatusBar */}
-      {/* <StatusBar
-        backgroundColor={colors.background.primary} // Android
+      <StatusBar
+        backgroundColor={colors.background.secondary} // Android
+        animated
         barStyle="dark-content" // iOS: 'light-content' para texto blanco
         translucent={true}
-      /> */}
+      />
 
       {/* Router component */}
       <RouterControl />

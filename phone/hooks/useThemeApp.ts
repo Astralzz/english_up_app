@@ -10,9 +10,9 @@ export const useThemeApp = (): {
   state: ThemeSliceType;
   toggleTheme: () => void;
 } => {
-  // Usos
-  const dispatch = useDispatch<AppDispatch>();
+  // Hooks
   const themeState = useSelector((state: RootState) => state.stateTheme);
+  const dispatch = useDispatch<AppDispatch>();
 
   // Acción
   const toggleTheme = () => {

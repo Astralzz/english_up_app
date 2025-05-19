@@ -13,7 +13,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from "react-i18next";
 
 /**
- *Menu - Navigation component
+ * Menu - Navigation component
  *
  * @return {TSX.Component}
  */

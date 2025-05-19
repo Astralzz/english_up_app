@@ -1,0 +1,4002 @@
+[
+  {
+    "no": 1,
+    "type": "I",
+    "simple_form": "Abide",
+    "third_person": "Abides",
+    "simple_past": "Abode",
+    "past_participle": "Abode",
+    "gerund": "Abiding",
+    "meaning": ["Morar", "Habitar", "Tolerar"]
+  },
+  {
+    "no": 2,
+    "type": "R",
+    "simple_form": "Absorb",
+    "third_person": "Absorbs",
+    "simple_past": "Absorbed",
+    "past_participle": "Absorbed",
+    "gerund": "Absorbing",
+    "meaning": ["Absorber"]
+  },
+  {
+    "no": 3,
+    "type": "R",
+    "simple_form": "Add",
+    "third_person": "Adds",
+    "simple_past": "Added",
+    "past_participle": "Added",
+    "gerund": "Adding",
+    "meaning": ["Añadir"]
+  },
+  {
+    "no": 4,
+    "type": "R",
+    "simple_form": "Advance",
+    "third_person": "Advances",
+    "simple_past": "Advanced",
+    "past_participle": "Advanced",
+    "gerund": "Advancing",
+    "meaning": ["Avanzar"]
+  },
+  {
+    "no": 5,
+    "type": "R",
+    "simple_form": "Agree",
+    "third_person": "Agrees",
+    "simple_past": "Agreed",
+    "past_participle": "Agreed",
+    "gerund": "Agreeing",
+    "meaning": ["Acordar", "Estar de acuerdo", "Acceder"]
+  },
+  {
+    "no": 6,
+    "type": "R",
+    "simple_form": "Answer",
+    "third_person": "Answers",
+    "simple_past": "Answered",
+    "past_participle": "Answered",
+    "gerund": "Answering",
+    "meaning": ["Contestar", "Responder"]
+  },
+  {
+    "no": 7,
+    "type": "R",
+    "simple_form": "Appear",
+    "third_person": "Appears",
+    "simple_past": "Appeared",
+    "past_participle": "Appeared",
+    "gerund": "Appearing",
+    "meaning": ["Aparecer"]
+  },
+  {
+    "no": 8,
+    "type": "I",
+    "simple_form": "Arise",
+    "third_person": "Arises",
+    "simple_past": "Arose",
+    "past_participle": "Arisen",
+    "gerund": "Arising",
+    "meaning": ["Surgir", "Levantarse"]
+  },
+  {
+    "no": 9,
+    "type": "R",
+    "simple_form": "Arrive",
+    "third_person": "Arrives",
+    "simple_past": "Arrived",
+    "past_participle": "Arrived",
+    "gerund": "Arriving",
+    "meaning": ["Llegar"]
+  },
+  {
+    "no": 10,
+    "type": "R",
+    "simple_form": "Ask",
+    "third_person": "Asks",
+    "simple_past": "Asked",
+    "past_participle": "Asked",
+    "gerund": "Asking",
+    "meaning": ["Preguntar"]
+  },
+  {
+    "no": 11,
+    "type": "R",
+    "simple_form": "Assign",
+    "third_person": "Assigns",
+    "simple_past": "Assigned",
+    "past_participle": "Assigned",
+    "gerund": "Assigning",
+    "meaning": ["Asignar"]
+  },
+  {
+    "no": 12,
+    "type": "R",
+    "simple_form": "Assist",
+    "third_person": "Assists",
+    "simple_past": "Assisted",
+    "past_participle": "Assisted",
+    "gerund": "Assisting",
+    "meaning": ["Asistir"]
+  },
+  {
+    "no": 13,
+    "type": "R",
+    "simple_form": "Attach",
+    "third_person": "Attaches",
+    "simple_past": "Attached",
+    "past_participle": "Attached",
+    "gerund": "Attaching",
+    "meaning": ["Unir", "Juntar", "Sujetar", "Pegar"]
+  },
+  {
+    "no": 14,
+    "type": "R",
+    "simple_form": "Attend",
+    "third_person": "Attends",
+    "simple_past": "Attended",
+    "past_participle": "Attended",
+    "gerund": "Attending",
+    "meaning": ["Atender"]
+  },
+  {
+    "no": 15,
+    "type": "I",
+    "simple_form": "Awake",
+    "third_person": "Awakes",
+    "simple_past": "Awoke",
+    "past_participle": "Awoke",
+    "gerund": "Awaking",
+    "meaning": ["Despertar(se)"]
+  },
+  {
+    "no": 16,
+    "type": "R",
+    "simple_form": "Award",
+    "third_person": "Awards",
+    "simple_past": "Awarded",
+    "past_participle": "Awarded",
+    "gerund": "Awarding",
+    "meaning": ["Otorgar"]
+  },
+  {
+    "no": 17,
+    "type": "R",
+    "simple_form": "Bake",
+    "third_person": "Bakes",
+    "simple_past": "Baked",
+    "past_participle": "Baked",
+    "gerund": "Baking",
+    "meaning": ["Hornear"]
+  },
+  {
+    "no": 18,
+    "type": "R",
+    "simple_form": "Bathe",
+    "third_person": "Bathes",
+    "simple_past": "Bathed",
+    "past_participle": "Bathed",
+    "gerund": "Bathing",
+    "meaning": ["Bañar"]
+  },
+  {
+    "no": 19,
+    "type": "I",
+    "simple_form": "Be",
+    "third_person": "Is",
+    "simple_past": "Was - were",
+    "past_participle": "Been",
+    "gerund": "Being",
+    "meaning": ["Ser-estar"]
+  },
+  {
+    "no": 20,
+    "type": "I",
+    "simple_form": "Bear",
+    "third_person": "Bears",
+    "simple_past": "Bore",
+    "past_participle": "Born",
+    "gerund": "Bearing",
+    "meaning": ["Soportar", "Aguantar"]
+  },
+  {
+    "no": 21,
+    "type": "I",
+    "simple_form": "Beat",
+    "third_person": "Beats",
+    "simple_past": "Beat",
+    "past_participle": "Beaten",
+    "gerund": "Beating",
+    "meaning": ["Vencer", "Batir"]
+  },
+  {
+    "no": 22,
+    "type": "I",
+    "simple_form": "Become",
+    "third_person": "Becomes",
+    "simple_past": "Became",
+    "past_participle": "Become",
+    "gerund": "Becoming",
+    "meaning": ["Llegar a ser", "Ponerse", "Volverse"]
+  },
+  {
+    "no": 23,
+    "type": "I",
+    "simple_form": "Befall",
+    "third_person": "Befalls",
+    "simple_past": "Befell",
+    "past_participle": "Befallen",
+    "gerund": "Befalling",
+    "meaning": ["Suceder", "Acontecer", "Ocurrir"]
+  },
+  {
+    "no": 24,
+    "type": "I",
+    "simple_form": "Begin",
+    "third_person": "Begins",
+    "simple_past": "Began",
+    "past_participle": "Begun",
+    "gerund": "Beginning",
+    "meaning": ["Comenzar", "Empezar"]
+  },
+  {
+    "no": 25,
+    "type": "I",
+    "simple_form": "Behold",
+    "third_person": "Beholds",
+    "simple_past": "Beheld",
+    "past_participle": "Beheld",
+    "gerund": "Beholding",
+    "meaning": ["Contemplar", "Mirar"]
+  },
+  {
+    "no": 26,
+    "type": "R",
+    "simple_form": "Believe",
+    "third_person": "Believes",
+    "simple_past": "Believed",
+    "past_participle": "Believed",
+    "gerund": "Believing",
+    "meaning": ["Creer"]
+  },
+  {
+    "no": 27,
+    "type": "R",
+    "simple_form": "Belong",
+    "third_person": "Belongs",
+    "simple_past": "Belonged",
+    "past_participle": "Belonged",
+    "gerund": "Belonging",
+    "meaning": ["Pertenecer"]
+  },
+  {
+    "no": 28,
+    "type": "I",
+    "simple_form": "Bend",
+    "third_person": "Bends",
+    "simple_past": "Bent",
+    "past_participle": "Bent",
+    "gerund": "Bending",
+    "meaning": ["Doblar(se)", "Encorvar(se)"]
+  },
+  {
+    "no": 29,
+    "type": "I",
+    "simple_form": "Bet",
+    "third_person": "Bets",
+    "simple_past": "Bet",
+    "past_participle": "Bet",
+    "gerund": "Betting",
+    "meaning": ["Apostar"]
+  },
+  {
+    "no": 30,
+    "type": "I",
+    "simple_form": "Bid",
+    "third_person": "Bids",
+    "simple_past": "Bid ",
+    "past_participle": "Bid",
+    "gerund": "Bidding",
+    "meaning": ["Mandar", "Ordenar"]
+  },
+  {
+    "no": 31,
+    "type": "I",
+    "simple_form": "Bind",
+    "third_person": "Binds",
+    "simple_past": "Bound",
+    "past_participle": "Bound",
+    "gerund": "Binding",
+    "meaning": ["Unir", "Ligar", "Atar", "Amarrar"]
+  },
+  {
+    "no": 32,
+    "type": "I",
+    "simple_form": "Bite",
+    "third_person": "Bites",
+    "simple_past": "Bit",
+    "past_participle": "Bitten",
+    "gerund": "Bitting",
+    "meaning": ["Morder", "Picar"]
+  },
+  {
+    "no": 33,
+    "type": "R",
+    "simple_form": "Bleed",
+    "third_person": "Bleeds",
+    "simple_past": "Bled",
+    "past_participle": "Bled",
+    "gerund": "Bleeding",
+    "meaning": ["Sangrar"]
+  },
+  {
+    "no": 34,
+    "type": "I",
+    "simple_form": "Blow",
+    "third_person": "Blows",
+    "simple_past": "Blew",
+    "past_participle": "Blown",
+    "gerund": "Blowing",
+    "meaning": ["Soplar", "Ventear"]
+  },
+  {
+    "no": 35,
+    "type": "R",
+    "simple_form": "Blush",
+    "third_person": "Blushes",
+    "simple_past": "Blushed",
+    "past_participle": "Blushed",
+    "gerund": "Blushing",
+    "meaning": ["Sonrojar"]
+  },
+  {
+    "no": 36,
+    "type": "R",
+    "simple_form": "Boil",
+    "third_person": "Boils",
+    "simple_past": "Boiled",
+    "past_participle": "Boiled",
+    "gerund": "Boiling",
+    "meaning": ["Hervir"]
+  },
+  {
+    "no": 37,
+    "type": "R",
+    "simple_form": "Borrow",
+    "third_person": "Borrows",
+    "simple_past": "Borrowed",
+    "past_participle": "Borrowed",
+    "gerund": "Borrowing",
+    "meaning": ["Pedir prestado"]
+  },
+  {
+    "no": 38,
+    "type": "R",
+    "simple_form": "Bother",
+    "third_person": "Bothers",
+    "simple_past": "Bothered",
+    "past_participle": "Bothered",
+    "gerund": "Bothering",
+    "meaning": ["Molestar"]
+  },
+  {
+    "no": 39,
+    "type": "I",
+    "simple_form": "Break",
+    "third_person": "Breaks",
+    "simple_past": "Broke",
+    "past_participle": "Broken",
+    "gerund": "Breaking",
+    "meaning": ["Quebrar", "Romper"]
+  },
+  {
+    "no": 40,
+    "type": "R",
+    "simple_form": "Breed",
+    "third_person": "Breeds",
+    "simple_past": "Bred",
+    "past_participle": "Bred",
+    "gerund": "Breeding",
+    "meaning": ["Criar", "Educar"]
+  },
+  {
+    "no": 41,
+    "type": "I",
+    "simple_form": "Bring",
+    "third_person": "Brings",
+    "simple_past": "Brought",
+    "past_participle": "Brought",
+    "gerund": "Bringing",
+    "meaning": ["Traer", "Llevar"]
+  },
+  {
+    "no": 42,
+    "type": "I",
+    "simple_form": "Broadcast",
+    "third_person": "Broadcasts",
+    "simple_past": "Broadcast",
+    "past_participle": "Broadcast",
+    "gerund": "Broadcasting",
+    "meaning": ["Difundir", "Emitir"]
+  },
+  {
+    "no": 43,
+    "type": "R",
+    "simple_form": "Broil",
+    "third_person": "Broils",
+    "simple_past": "Broiled",
+    "past_participle": "Broiled",
+    "gerund": "Broiling",
+    "meaning": ["Asar"]
+  },
+  {
+    "no": 44,
+    "type": "R",
+    "simple_form": "Brown",
+    "third_person": "Browns",
+    "simple_past": "Browned",
+    "past_participle": "Browned",
+    "gerund": "Browning",
+    "meaning": ["Tostar"]
+  },
+  {
+    "no": 45,
+    "type": "R",
+    "simple_form": "Brush",
+    "third_person": "Brushes",
+    "simple_past": "Brushed",
+    "past_participle": "Brushed",
+    "gerund": "Brushing",
+    "meaning": ["Cepillar"]
+  },
+  {
+    "no": 46,
+    "type": "I",
+    "simple_form": "Build",
+    "third_person": "Builds",
+    "simple_past": "Built",
+    "past_participle": "Built",
+    "gerund": "Building",
+    "meaning": ["Construir", "Fundar", "Edificar"]
+  },
+  {
+    "no": 47,
+    "type": "R",
+    "simple_form": "Burn",
+    "third_person": "Burns",
+    "simple_past": "Burnt/burned",
+    "past_participle": "Burnt/burned",
+    "gerund": "Burning",
+    "meaning": ["Quemar", "Incendiar"]
+  },
+  {
+    "no": 48,
+    "type": "I",
+    "simple_form": "Burst",
+    "third_person": "Bursts",
+    "simple_past": "Burst",
+    "past_participle": "Burst",
+    "gerund": "Bursting",
+    "meaning": ["Estallar", "Reventar"]
+  },
+  {
+    "no": 49,
+    "type": "I",
+    "simple_form": "Buy",
+    "third_person": "Buys",
+    "simple_past": "Bought",
+    "past_participle": "Bought",
+    "gerund": "Buying",
+    "meaning": ["Comprar", "Adquirir"]
+  },
+  {
+    "no": 50,
+    "type": "R",
+    "simple_form": "Call",
+    "third_person": "Calls",
+    "simple_past": "Called",
+    "past_participle": "Called",
+    "gerund": "Calling",
+    "meaning": ["Llamar"]
+  },
+  {
+    "no": 51,
+    "type": "R",
+    "simple_form": "Calm",
+    "third_person": "Calms",
+    "simple_past": "Calmed",
+    "past_participle": "Calmed",
+    "gerund": "Calming",
+    "meaning": ["Calmar"]
+  },
+  {
+    "no": 52,
+    "type": "R",
+    "simple_form": "Camp",
+    "third_person": "Camps",
+    "simple_past": "Camped",
+    "past_participle": "Camped",
+    "gerund": "Camping",
+    "meaning": ["Acampar"]
+  },
+  {
+    "no": 53,
+    "type": "R",
+    "simple_form": "Cancel",
+    "third_person": "Cancels",
+    "simple_past": "Cancelled",
+    "past_participle": "Cancelled",
+    "gerund": "Canceling",
+    "meaning": ["Cancelar"]
+  },
+  {
+    "no": 54,
+    "type": "R",
+    "simple_form": "Care",
+    "third_person": "Cares",
+    "simple_past": "Cared",
+    "past_participle": "Cared",
+    "gerund": "Caring",
+    "meaning": ["Preocupar(so)cuidar"]
+  },
+  {
+    "no": 55,
+    "type": "R",
+    "simple_form": "Carry",
+    "third_person": "Carries",
+    "simple_past": "Carried",
+    "past_participle": "Carried",
+    "gerund": "Carrying",
+    "meaning": ["Llevar"]
+  },
+  {
+    "no": 56,
+    "type": "I",
+    "simple_form": "Cast",
+    "third_person": "Casts",
+    "simple_past": "Cast",
+    "past_participle": "Cast",
+    "gerund": "Casting",
+    "meaning": ["Moldear", "Repartir", "Echar", "Tirar"]
+  },
+  {
+    "no": 57,
+    "type": "I",
+    "simple_form": "Catch",
+    "third_person": "Catches",
+    "simple_past": "Caught",
+    "past_participle": "Caught",
+    "gerund": "Catching",
+    "meaning": ["Coger", "Tomar", "Agarrar"]
+  },
+  {
+    "no": 58,
+    "type": "R",
+    "simple_form": "Celebrate",
+    "third_person": "Celebrates",
+    "simple_past": "Celebrated",
+    "past_participle": "Celebrated",
+    "gerund": "Celebrating",
+    "meaning": ["Celebrar"]
+  },
+  {
+    "no": 59,
+    "type": "R",
+    "simple_form": "Change",
+    "third_person": "Changes",
+    "simple_past": "Changed",
+    "past_participle": "Changed",
+    "gerund": "Changing",
+    "meaning": ["Cambiar"]
+  },
+  {
+    "no": 60,
+    "type": "R",
+    "simple_form": "Charge",
+    "third_person": "Charges",
+    "simple_past": "Charged",
+    "past_participle": "Charged",
+    "gerund": "Charging",
+    "meaning": ["Cargar"]
+  },
+  {
+    "no": 61,
+    "type": "R",
+    "simple_form": "Cheat",
+    "third_person": "Cheats",
+    "simple_past": "Cheated",
+    "past_participle": "Cheated",
+    "gerund": "Cheating",
+    "meaning": ["Engañar"]
+  },
+  {
+    "no": 62,
+    "type": "R",
+    "simple_form": "Check",
+    "third_person": "Checks",
+    "simple_past": "Checked",
+    "past_participle": "Checked",
+    "gerund": "Checking",
+    "meaning": ["Comprobar", "Chequear", "Verificar"]
+  },
+  {
+    "no": 63,
+    "type": "R",
+    "simple_form": "Cheer",
+    "third_person": "Cheers",
+    "simple_past": "Cheered",
+    "past_participle": "Cheered",
+    "gerund": "Cheering",
+    "meaning": ["Victorear", "Alegrar", "Animar", "Aplaudir"]
+  },
+  {
+    "no": 64,
+    "type": "R",
+    "simple_form": "Chew",
+    "third_person": "Chews",
+    "simple_past": "Chewed",
+    "past_participle": "Chewed",
+    "gerund": "Chewing",
+    "meaning": ["Masticar"]
+  },
+  {
+    "no": 65,
+    "type": "R",
+    "simple_form": "Chill",
+    "third_person": "Chills",
+    "simple_past": "Chilled",
+    "past_participle": "Chilled",
+    "gerund": "Chilling",
+    "meaning": ["Resfriar"]
+  },
+  {
+    "no": 66,
+    "type": "I",
+    "simple_form": "Choose",
+    "third_person": "Chooses",
+    "simple_past": "Chose",
+    "past_participle": "Chosen",
+    "gerund": "Choosing",
+    "meaning": ["Escoger", "Elegir", "Optar"]
+  },
+  {
+    "no": 67,
+    "type": "R",
+    "simple_form": "Circle",
+    "third_person": "Circles",
+    "simple_past": "Circled",
+    "past_participle": "Circled",
+    "gerund": "Circling",
+    "meaning": ["Rodear", "Hacer un circulo"]
+  },
+  {
+    "no": 68,
+    "type": "R",
+    "simple_form": "Clap",
+    "third_person": "Claps",
+    "simple_past": "Clapped",
+    "past_participle": "Clapped",
+    "gerund": "Clapping",
+    "meaning": ["Aplaudir"]
+  },
+  {
+    "no": 69,
+    "type": "R",
+    "simple_form": "Clean",
+    "third_person": "Cleans",
+    "simple_past": "Cleaned",
+    "past_participle": "Cleaned",
+    "gerund": "Cleaning",
+    "meaning": ["Limpiar"]
+  },
+  {
+    "no": 70,
+    "type": "R",
+    "simple_form": "Climb",
+    "third_person": "Climbs",
+    "simple_past": "Climbed",
+    "past_participle": "Climbed",
+    "gerund": "Climbing",
+    "meaning": ["Subir"]
+  },
+  {
+    "no": 71,
+    "type": "I",
+    "simple_form": "Cling",
+    "third_person": "Clings",
+    "simple_past": "Clung",
+    "past_participle": "Clung",
+    "gerund": "Clinging",
+    "meaning": ["Agarrar", "Aferrarse", "Adherirse"]
+  },
+  {
+    "no": 72,
+    "type": "R",
+    "simple_form": "Close",
+    "third_person": "Closes",
+    "simple_past": "Closed",
+    "past_participle": "Closed",
+    "gerund": "Closing",
+    "meaning": ["Cerrar"]
+  },
+  {
+    "no": 73,
+    "type": "R",
+    "simple_form": "Clothe",
+    "third_person": "Clothes",
+    "simple_past": "Clothed",
+    "past_participle": "Clothed",
+    "gerund": "Clothing",
+    "meaning": ["Vestir", "Arropar"]
+  },
+  {
+    "no": 74,
+    "type": "R",
+    "simple_form": "Collect",
+    "third_person": "Collects",
+    "simple_past": "Collected",
+    "past_participle": "Collected",
+    "gerund": "Collecting",
+    "meaning": ["Coleccionar"]
+  },
+  {
+    "no": 75,
+    "type": "I",
+    "simple_form": "Come",
+    "third_person": "Comes",
+    "simple_past": "Came",
+    "past_participle": "Come",
+    "gerund": "Coming",
+    "meaning": ["Venir"]
+  },
+  {
+    "no": 76,
+    "type": "R",
+    "simple_form": "Comment",
+    "third_person": "Comments",
+    "simple_past": "Commented",
+    "past_participle": "Commented",
+    "gerund": "Commenting",
+    "meaning": ["Comentar"]
+  },
+  {
+    "no": 77,
+    "type": "R",
+    "simple_form": "Complain",
+    "third_person": "Complains",
+    "simple_past": "Complained",
+    "past_participle": "Complained",
+    "gerund": "Complaining",
+    "meaning": ["Quejarse"]
+  },
+  {
+    "no": 78,
+    "type": "R",
+    "simple_form": "Complete",
+    "third_person": "Completes",
+    "simple_past": "Completed",
+    "past_participle": "Completed",
+    "gerund": "Completing",
+    "meaning": ["Completar"]
+  },
+  {
+    "no": 79,
+    "type": "R",
+    "simple_form": "Continue",
+    "third_person": "Continues",
+    "simple_past": "Continued",
+    "past_participle": "Continued",
+    "gerund": "Continuing",
+    "meaning": ["Continuar"]
+  },
+  {
+    "no": 80,
+    "type": "R",
+    "simple_form": "Convince",
+    "third_person": "Convinces",
+    "simple_past": "Convinced",
+    "past_participle": "Convinced",
+    "gerund": "Convincing",
+    "meaning": ["Convencer"]
+  },
+  {
+    "no": 81,
+    "type": "R",
+    "simple_form": "Cook",
+    "third_person": "Cooks",
+    "simple_past": "Cooked",
+    "past_participle": "Cooked",
+    "gerund": "Cooking",
+    "meaning": ["Cocinar"]
+  },
+  {
+    "no": 82,
+    "type": "R",
+    "simple_form": "Cool",
+    "third_person": "Cools",
+    "simple_past": "Cooled",
+    "past_participle": "Cooled",
+    "gerund": "Cooling",
+    "meaning": ["Enfriar", "Refrescar(se)", "Calmar(se)"]
+  },
+  {
+    "no": 83,
+    "type": "R",
+    "simple_form": "Copy",
+    "third_person": "Copies",
+    "simple_past": "Copied",
+    "past_participle": "Copied",
+    "gerund": "Copying",
+    "meaning": ["Copiar"]
+  },
+  {
+    "no": 84,
+    "type": "I",
+    "simple_form": "Cost",
+    "third_person": "Costs",
+    "simple_past": "Cost",
+    "past_participle": "Cost",
+    "gerund": "Costing",
+    "meaning": ["Costar"]
+  },
+  {
+    "no": 85,
+    "type": "R",
+    "simple_form": "Count",
+    "third_person": "Counts",
+    "simple_past": "Counted",
+    "past_participle": "Counted",
+    "gerund": "Counting",
+    "meaning": ["Contar"]
+  },
+  {
+    "no": 86,
+    "type": "R",
+    "simple_form": "Cover",
+    "third_person": "Covers",
+    "simple_past": "Covered",
+    "past_participle": "Covered",
+    "gerund": "Covering",
+    "meaning": ["Cubrir"]
+  },
+  {
+    "no": 87,
+    "type": "I",
+    "simple_form": "Creep",
+    "third_person": "Creeps",
+    "simple_past": "Crept",
+    "past_participle": "Crept",
+    "gerund": "Creeping",
+    "meaning": ["Arrastrarse", "Deslizarse", "Gatear"]
+  },
+  {
+    "no": 88,
+    "type": "R",
+    "simple_form": "Cross",
+    "third_person": "Crosses",
+    "simple_past": "Crossed",
+    "past_participle": "Crossed",
+    "gerund": "Crossing",
+    "meaning": ["Cruzar", "Atravesar"]
+  },
+  {
+    "no": 89,
+    "type": "R",
+    "simple_form": "Cry",
+    "third_person": "Cries",
+    "simple_past": "Cried",
+    "past_participle": "Cried",
+    "gerund": "Crying",
+    "meaning": ["Llorar", "Gritar"]
+  },
+  {
+    "no": 90,
+    "type": "I",
+    "simple_form": "Cut",
+    "third_person": "Cuts",
+    "simple_past": "Cut",
+    "past_participle": "Cut",
+    "gerund": "Cutting",
+    "meaning": ["Cortar", "Recortar"]
+  },
+  {
+    "no": 91,
+    "type": "R",
+    "simple_form": "Dance",
+    "third_person": "Dances",
+    "simple_past": "Danced",
+    "past_participle": "Danced",
+    "gerund": "Dancing",
+    "meaning": ["Bailar"]
+  },
+  {
+    "no": 92,
+    "type": "I",
+    "simple_form": "Deal",
+    "third_person": "Deals",
+    "simple_past": "Dealt",
+    "past_participle": "Dealt",
+    "gerund": "Dealing",
+    "meaning": ["Negociar", "Comerciar"]
+  },
+  {
+    "no": 93,
+    "type": "R",
+    "simple_form": "Decide",
+    "third_person": "Decides",
+    "simple_past": "Decided",
+    "past_participle": "Decided",
+    "gerund": "Deciding",
+    "meaning": ["Decidir"]
+  },
+  {
+    "no": 94,
+    "type": "R",
+    "simple_form": "Declare",
+    "third_person": "Declares",
+    "simple_past": "Declared",
+    "past_participle": "Declared",
+    "gerund": "Declaring",
+    "meaning": ["Declarar"]
+  },
+  {
+    "no": 95,
+    "type": "R",
+    "simple_form": "Decorate",
+    "third_person": "Decorates",
+    "simple_past": "Decorated",
+    "past_participle": "Decorated",
+    "gerund": "Decorating",
+    "meaning": ["Decorar"]
+  },
+  {
+    "no": 96,
+    "type": "R",
+    "simple_form": "Defend",
+    "third_person": "Defends",
+    "simple_past": "Defended",
+    "past_participle": "Defended",
+    "gerund": "Defending",
+    "meaning": ["Defender"]
+  },
+  {
+    "no": 97,
+    "type": "R",
+    "simple_form": "Demostrate",
+    "third_person": "Demostrates",
+    "simple_past": "Demostrated",
+    "past_participle": "Demostrated",
+    "gerund": "Demostrating",
+    "meaning": ["Demostrar"]
+  },
+  {
+    "no": 98,
+    "type": "R",
+    "simple_form": "Depend",
+    "third_person": "Depends",
+    "simple_past": "Depended",
+    "past_participle": "Depended",
+    "gerund": "Depending",
+    "meaning": ["Depender"]
+  },
+  {
+    "no": 99,
+    "type": "R",
+    "simple_form": "Descend",
+    "third_person": "Descendes",
+    "simple_past": "Descended",
+    "past_participle": "Descended",
+    "gerund": "Descending",
+    "meaning": ["Descender", "Bajar"]
+  },
+  {
+    "no": 100,
+    "type": "R",
+    "simple_form": "Describe",
+    "third_person": "Describes",
+    "simple_past": "Described",
+    "past_participle": "Described",
+    "gerund": "Describing",
+    "meaning": ["Describir"]
+  },
+  {
+    "no": 101,
+    "type": "R",
+    "simple_form": "Destroy",
+    "third_person": "Destroys",
+    "simple_past": "Destroyed",
+    "past_participle": "Destroyed",
+    "gerund": "Destroying",
+    "meaning": ["Destruir"]
+  },
+  {
+    "no": 102,
+    "type": "R",
+    "simple_form": "Dictate",
+    "third_person": "Dictates",
+    "simple_past": "Dictated",
+    "past_participle": "Dictated",
+    "gerund": "Dictating",
+    "meaning": ["Dictar"]
+  },
+  {
+    "no": 103,
+    "type": "R",
+    "simple_form": "Die",
+    "third_person": "Dies",
+    "simple_past": "Died",
+    "past_participle": "Died",
+    "gerund": "Dying",
+    "meaning": ["Morir"]
+  },
+  {
+    "no": 104,
+    "type": "I",
+    "simple_form": "Dig",
+    "third_person": "Digs",
+    "simple_past": "Dug",
+    "past_participle": "Dug",
+    "gerund": "Digging",
+    "meaning": ["Cavar", "Excavar"]
+  },
+  {
+    "no": 105,
+    "type": "R",
+    "simple_form": "Disagree",
+    "third_person": "Disagrees",
+    "simple_past": "Disagreed",
+    "past_participle": "Disagreed",
+    "gerund": "Disagreeing",
+    "meaning": ["Discrepar", "No estar de acuerdo"]
+  },
+  {
+    "no": 106,
+    "type": "R",
+    "simple_form": "Discover",
+    "third_person": "Discovers",
+    "simple_past": "Discovered",
+    "past_participle": "Discovered",
+    "gerund": "Discovering",
+    "meaning": ["Descubrir"]
+  },
+  {
+    "no": 107,
+    "type": "R",
+    "simple_form": "Discuss",
+    "third_person": "Discusses",
+    "simple_past": "Discussed",
+    "past_participle": "Discussed",
+    "gerund": "Discussing",
+    "meaning": ["Discutir"]
+  },
+  {
+    "no": 108,
+    "type": "R",
+    "simple_form": "Divide",
+    "third_person": "Divides",
+    "simple_past": "Divided",
+    "past_participle": "Divided",
+    "gerund": "Dividing",
+    "meaning": ["Dividir"]
+  },
+  {
+    "no": 109,
+    "type": "I",
+    "simple_form": "Do",
+    "third_person": "Does",
+    "simple_past": "Did",
+    "past_participle": "Done",
+    "gerund": "Doing",
+    "meaning": ["Hacer"]
+  },
+  {
+    "no": 110,
+    "type": "R",
+    "simple_form": "Drain",
+    "third_person": "Drains",
+    "simple_past": "Drained",
+    "past_participle": "Drained",
+    "gerund": "Draining",
+    "meaning": ["Agotar"]
+  },
+  {
+    "no": 111,
+    "type": "I",
+    "simple_form": "Draw",
+    "third_person": "Draws",
+    "simple_past": "Drew",
+    "past_participle": "Drawn",
+    "gerund": "Drawing",
+    "meaning": ["Dibujar", "Trazar"]
+  },
+  {
+    "no": 112,
+    "type": "R",
+    "simple_form": "Dream",
+    "third_person": "Dreams",
+    "simple_past": "Dreamed",
+    "past_participle": "Dreamt/dreamed",
+    "gerund": "Dreaming",
+    "meaning": ["Soñar"]
+  },
+  {
+    "no": 113,
+    "type": "R",
+    "simple_form": "Dress",
+    "third_person": "Dresses",
+    "simple_past": "Dressed",
+    "past_participle": "Dressed",
+    "gerund": "Dressing",
+    "meaning": ["Vestir"]
+  },
+  {
+    "no": 114,
+    "type": "I",
+    "simple_form": "Drink",
+    "third_person": "Drinks",
+    "simple_past": "Drank",
+    "past_participle": "Drunk",
+    "gerund": "Drinking",
+    "meaning": ["Beber", "Tomar"]
+  },
+  {
+    "no": 115,
+    "type": "I",
+    "simple_form": "Drive",
+    "third_person": "Drives",
+    "simple_past": "Drove",
+    "past_participle": "Driven",
+    "gerund": "Driving",
+    "meaning": ["Manejar", "Conducir"]
+  },
+  {
+    "no": 116,
+    "type": "R",
+    "simple_form": "Drop",
+    "third_person": "Drops",
+    "simple_past": "Dropped",
+    "past_participle": "Dropped",
+    "gerund": "Dropping",
+    "meaning": ["Bajar", "Soltar"]
+  },
+  {
+    "no": 117,
+    "type": "R",
+    "simple_form": "Dust",
+    "third_person": "Dusts",
+    "simple_past": "Dusted",
+    "past_participle": "Dusted",
+    "gerund": "Dusting",
+    "meaning": ["Desempolvar"]
+  },
+  {
+    "no": 118,
+    "type": "I",
+    "simple_form": "Dwell",
+    "third_person": "Dwells",
+    "simple_past": "Dwelt",
+    "past_participle": "Dwelt",
+    "gerund": "Dwelling",
+    "meaning": ["Residir", "Morar", "Habitar"]
+  },
+  {
+    "no": 119,
+    "type": "I",
+    "simple_form": "Eat",
+    "third_person": "Eats",
+    "simple_past": "Ate",
+    "past_participle": "Eaten",
+    "gerund": "Eating",
+    "meaning": ["Comer"]
+  },
+  {
+    "no": 120,
+    "type": "R",
+    "simple_form": "Empty",
+    "third_person": "Empties",
+    "simple_past": "Emptied",
+    "past_participle": "Emptied",
+    "gerund": "Emptying",
+    "meaning": ["Vaciar"]
+  },
+  {
+    "no": 121,
+    "type": "R",
+    "simple_form": "End",
+    "third_person": "Ends",
+    "simple_past": "Ended",
+    "past_participle": "Ended",
+    "gerund": "Ending",
+    "meaning": ["Terminar"]
+  },
+  {
+    "no": 122,
+    "type": "R",
+    "simple_form": "Enjoy",
+    "third_person": "Enjoyes",
+    "simple_past": "Enjoyed",
+    "past_participle": "Enjoyed",
+    "gerund": "Enjoying",
+    "meaning": ["Gozar(de)", "Disfrutar"]
+  },
+  {
+    "no": 123,
+    "type": "R",
+    "simple_form": "Enroll",
+    "third_person": "Enrolls",
+    "simple_past": "Enrolled",
+    "past_participle": "Enrolled",
+    "gerund": "Enrolling",
+    "meaning": ["Matricular"]
+  },
+  {
+    "no": 124,
+    "type": "R",
+    "simple_form": "Enter",
+    "third_person": "Enters",
+    "simple_past": "Entered",
+    "past_participle": "Entered",
+    "gerund": "Entering",
+    "meaning": ["Entrar"]
+  },
+  {
+    "no": 125,
+    "type": "R",
+    "simple_form": "Erase",
+    "third_person": "Erases",
+    "simple_past": "Erased",
+    "past_participle": "Erased",
+    "gerund": "Erasing",
+    "meaning": ["Borrar"]
+  },
+  {
+    "no": 126,
+    "type": "R",
+    "simple_form": "Excuse",
+    "third_person": "Excuses",
+    "simple_past": "Excused",
+    "past_participle": "Excused",
+    "gerund": "Excusing",
+    "meaning": ["Excusar"]
+  },
+  {
+    "no": 127,
+    "type": "R",
+    "simple_form": "Exercise",
+    "third_person": "Exercises",
+    "simple_past": "Exercised",
+    "past_participle": "Exercised",
+    "gerund": "Exercising",
+    "meaning": ["Ejercitar(se)"]
+  },
+  {
+    "no": 128,
+    "type": "R",
+    "simple_form": "Expect",
+    "third_person": "Expects",
+    "simple_past": "Expected",
+    "past_participle": "Expected",
+    "gerund": "Expecting",
+    "meaning": ["Esperar"]
+  },
+  {
+    "no": 129,
+    "type": "R",
+    "simple_form": "Explain",
+    "third_person": "Explains",
+    "simple_past": "Explained",
+    "past_participle": "Explained",
+    "gerund": "Explaining",
+    "meaning": ["Explicar"]
+  },
+  {
+    "no": 130,
+    "type": "R",
+    "simple_form": "Fade",
+    "third_person": "Fades",
+    "simple_past": "Faded",
+    "past_participle": "Faded",
+    "gerund": "Fading",
+    "meaning": ["Desteñir", "Desvanecer(se)"]
+  },
+  {
+    "no": 131,
+    "type": "R",
+    "simple_form": "Fail",
+    "third_person": "Fails",
+    "simple_past": "Failed",
+    "past_participle": "Failed",
+    "gerund": "Failing",
+    "meaning": ["Fallar", "Fracasar", "Perder"]
+  },
+  {
+    "no": 132,
+    "type": "I",
+    "simple_form": "Fall",
+    "third_person": "Falls",
+    "simple_past": "Fell",
+    "past_participle": "Fallen",
+    "gerund": "Falling",
+    "meaning": ["Caer(se)"]
+  },
+  {
+    "no": 133,
+    "type": "R",
+    "simple_form": "Fasten",
+    "third_person": "Fastens",
+    "simple_past": "Fastened",
+    "past_participle": "Fastened",
+    "gerund": "Fastening",
+    "meaning": ["Abrochar"]
+  },
+  {
+    "no": 134,
+    "type": "R",
+    "simple_form": "Fear",
+    "third_person": "Fears",
+    "simple_past": "Feared",
+    "past_participle": "Feared",
+    "gerund": "Fearing",
+    "meaning": ["Temer"]
+  },
+  {
+    "no": 135,
+    "type": "R",
+    "simple_form": "Feed",
+    "third_person": "Feeds",
+    "simple_past": "Fed",
+    "past_participle": "Fed",
+    "gerund": "Feeding",
+    "meaning": ["Alimentar(se)"]
+  },
+  {
+    "no": 136,
+    "type": "I",
+    "simple_form": "Feel",
+    "third_person": "Feels",
+    "simple_past": "Felt",
+    "past_participle": "Felt",
+    "gerund": "Feeling",
+    "meaning": ["Sentir"]
+  },
+  {
+    "no": 137,
+    "type": "I",
+    "simple_form": "Fight",
+    "third_person": "Fights",
+    "simple_past": "Fought",
+    "past_participle": "Fought",
+    "gerund": "Fighting",
+    "meaning": ["Pelear", "Luchar"]
+  },
+  {
+    "no": 138,
+    "type": "R",
+    "simple_form": "Fill",
+    "third_person": "Fills",
+    "simple_past": "Filled",
+    "past_participle": "Filled",
+    "gerund": "Fillining",
+    "meaning": ["Llenar", "Rellenar"]
+  },
+  {
+    "no": 139,
+    "type": "I",
+    "simple_form": "Find",
+    "third_person": "Finds",
+    "simple_past": "Found",
+    "past_participle": "Found",
+    "gerund": "Finding",
+    "meaning": ["Encontrar", "Hallar"]
+  },
+  {
+    "no": 140,
+    "type": "R",
+    "simple_form": "Finish",
+    "third_person": "Finishes",
+    "simple_past": "Finished",
+    "past_participle": "Finished",
+    "gerund": "Finishing",
+    "meaning": ["Acabar(con)", "Terminar"]
+  },
+  {
+    "no": 141,
+    "type": "R",
+    "simple_form": "Fish",
+    "third_person": "Fishes",
+    "simple_past": "Fished",
+    "past_participle": "Fished",
+    "gerund": "Fishing",
+    "meaning": ["Pescar"]
+  },
+  {
+    "no": 142,
+    "type": "R",
+    "simple_form": "Fit",
+    "third_person": "Fits",
+    "simple_past": "Fitted",
+    "past_participle": "Fitted",
+    "gerund": "Fitting",
+    "meaning": ["Caber", "Encajar", "Ajustar"]
+  },
+  {
+    "no": 143,
+    "type": "R",
+    "simple_form": "Fix",
+    "third_person": "Fixes",
+    "simple_past": "Fixed",
+    "past_participle": "Fixed",
+    "gerund": "Fixing",
+    "meaning": ["Arreglar"]
+  },
+  {
+    "no": 144,
+    "type": "R",
+    "simple_form": "Flee",
+    "third_person": "Flees",
+    "simple_past": "Fled",
+    "past_participle": "Fled",
+    "gerund": "Fleeing",
+    "meaning": ["Evitar", "Huir de"]
+  },
+  {
+    "no": 145,
+    "type": "I",
+    "simple_form": "Fling",
+    "third_person": "Flings",
+    "simple_past": "Flung",
+    "past_participle": "Flung",
+    "gerund": "Flinging",
+    "meaning": ["Arrojar", "Lanzar", "Tirar"]
+  },
+  {
+    "no": 146,
+    "type": "R",
+    "simple_form": "Flunk",
+    "third_person": "Flunk",
+    "simple_past": "Flunked",
+    "past_participle": "Flunked",
+    "gerund": "Flunking",
+    "meaning": ["Fracasar"]
+  },
+  {
+    "no": 147,
+    "type": "I",
+    "simple_form": "Fly",
+    "third_person": "Flies",
+    "simple_past": "Flew",
+    "past_participle": "Flown",
+    "gerund": "Flying",
+    "meaning": ["Volar", "Huir"]
+  },
+  {
+    "no": 148,
+    "type": "R",
+    "simple_form": "Follow",
+    "third_person": "Follows",
+    "simple_past": "Followed",
+    "past_participle": "Followed",
+    "gerund": "Following",
+    "meaning": ["Seguir"]
+  },
+  {
+    "no": 149,
+    "type": "I",
+    "simple_form": "Forbid",
+    "third_person": "Forbids",
+    "simple_past": "Forbade",
+    "past_participle": "Forbidden",
+    "gerund": "Forbidding",
+    "meaning": ["Prohibir", "Privar"]
+  },
+  {
+    "no": 150,
+    "type": "I",
+    "simple_form": "Forecast",
+    "third_person": "Forecasts",
+    "simple_past": "Forecast",
+    "past_participle": "Forecast",
+    "gerund": "Forecasting",
+    "meaning": ["Pronosticar"]
+  },
+  {
+    "no": 151,
+    "type": "I",
+    "simple_form": "Forget",
+    "third_person": "Forgets",
+    "simple_past": "Forgot",
+    "past_participle": "Forgotten",
+    "gerund": "Forgeting",
+    "meaning": ["Olvidar"]
+  },
+  {
+    "no": 152,
+    "type": "I",
+    "simple_form": "Forgive",
+    "third_person": "Forgives",
+    "simple_past": "Forgave",
+    "past_participle": "Forgiven",
+    "gerund": "Forgiving",
+    "meaning": ["Perdonar"]
+  },
+  {
+    "no": 153,
+    "type": "I",
+    "simple_form": "Forsake",
+    "third_person": "Forsakes",
+    "simple_past": "Forsook",
+    "past_participle": "Forsaken",
+    "gerund": "Forsaking",
+    "meaning": ["Abandonar", "Dejar"]
+  },
+  {
+    "no": 154,
+    "type": "I",
+    "simple_form": "Freeze",
+    "third_person": "Freezes",
+    "simple_past": "Froze",
+    "past_participle": "Frozen",
+    "gerund": "Freezing",
+    "meaning": ["Congelar", "Helar"]
+  },
+  {
+    "no": 155,
+    "type": "R",
+    "simple_form": "Fry",
+    "third_person": "Fries",
+    "simple_past": "Fried",
+    "past_participle": "Fried",
+    "gerund": "Frying",
+    "meaning": ["Freir(se)"]
+  },
+  {
+    "no": 156,
+    "type": "I",
+    "simple_form": "Get",
+    "third_person": "Gets",
+    "simple_past": "Got",
+    "past_participle": "Gotten",
+    "gerund": "Getting",
+    "meaning": ["Conseguir", "Obtener"]
+  },
+  {
+    "no": 157,
+    "type": "I",
+    "simple_form": "Give",
+    "third_person": "Gives",
+    "simple_past": "Gave",
+    "past_participle": "Given",
+    "gerund": "Giving",
+    "meaning": ["Dar", "Regalar"]
+  },
+  {
+    "no": 158,
+    "type": "I",
+    "simple_form": "Go",
+    "third_person": "Goes",
+    "simple_past": "Went",
+    "past_participle": "Gone",
+    "gerund": "Going",
+    "meaning": ["Ir"]
+  },
+  {
+    "no": 159,
+    "type": "R",
+    "simple_form": "Grade",
+    "third_person": "Grades",
+    "simple_past": "Graded",
+    "past_participle": "Graded",
+    "gerund": "Grading",
+    "meaning": ["Graduar", "Calificar", "Clasificar"]
+  },
+  {
+    "no": 160,
+    "type": "R",
+    "simple_form": "Grate",
+    "third_person": "Grates",
+    "simple_past": "Grated",
+    "past_participle": "Grated",
+    "gerund": "Grating",
+    "meaning": ["Rallar", "Raspar"]
+  },
+  {
+    "no": 161,
+    "type": "R",
+    "simple_form": "Grill",
+    "third_person": "Grills",
+    "simple_past": "Grilled",
+    "past_participle": "Grilled",
+    "gerund": "Grilling",
+    "meaning": ["Asar (en parrilla)"]
+  },
+  {
+    "no": 162,
+    "type": "I",
+    "simple_form": "Grind",
+    "third_person": "Grinds",
+    "simple_past": "Ground",
+    "past_participle": "Ground",
+    "gerund": "Grinding",
+    "meaning": ["Moler", "Triturar"]
+  },
+  {
+    "no": 163,
+    "type": "I",
+    "simple_form": "Grow",
+    "third_person": "Grows",
+    "simple_past": "Grew",
+    "past_participle": "Grown",
+    "gerund": "Growing",
+    "meaning": ["Crecer", "Brotar"]
+  },
+  {
+    "no": 164,
+    "type": "I",
+    "simple_form": "Hand in",
+    "third_person": "Hands in",
+    "simple_past": "Handed in",
+    "past_participle": "Handed in",
+    "gerund": "Handing in",
+    "meaning": ["Entregar-presentar"]
+  },
+  {
+    "no": 165,
+    "type": "I",
+    "simple_form": "Hand out",
+    "third_person": "Hands out",
+    "simple_past": "Handed out",
+    "past_participle": "Handed out",
+    "gerund": "Handing out",
+    "meaning": ["Dar-distribuir"]
+  },
+  {
+    "no": 166,
+    "type": "I",
+    "simple_form": "Hang",
+    "third_person": "Hangs",
+    "simple_past": "Hung",
+    "past_participle": "Hung",
+    "gerund": "Hanging",
+    "meaning": ["Colgar", "Suspender"]
+  },
+  {
+    "no": 167,
+    "type": "R",
+    "simple_form": "Happen",
+    "third_person": "Happens",
+    "simple_past": "Happened",
+    "past_participle": "Happened",
+    "gerund": "Happening",
+    "meaning": ["Suceder", "Ocurrir", "Pasar"]
+  },
+  {
+    "no": 168,
+    "type": "R",
+    "simple_form": "Hate",
+    "third_person": "Hates",
+    "simple_past": "Hated",
+    "past_participle": "Hated",
+    "gerund": "Hating",
+    "meaning": ["Odiar", "Aborrecer", "Detestar"]
+  },
+  {
+    "no": 169,
+    "type": "I",
+    "simple_form": "Have",
+    "third_person": "Has",
+    "simple_past": "Had",
+    "past_participle": "Had",
+    "gerund": "Having",
+    "meaning": ["Haber", "Tener"]
+  },
+  {
+    "no": 170,
+    "type": "I",
+    "simple_form": "Hear",
+    "third_person": "Hears",
+    "simple_past": "Heard",
+    "past_participle": "Heard",
+    "gerund": "Hearing",
+    "meaning": ["Oir"]
+  },
+  {
+    "no": 171,
+    "type": "R",
+    "simple_form": "Help",
+    "third_person": "Helps",
+    "simple_past": "Helped",
+    "past_participle": "Helped",
+    "gerund": "Helping",
+    "meaning": ["Ayudar", "Socorrer"]
+  },
+  {
+    "no": 172,
+    "type": "I",
+    "simple_form": "Hide",
+    "third_person": "Hides",
+    "simple_past": "Hid",
+    "past_participle": "Hidden",
+    "gerund": "Hiding",
+    "meaning": ["Ocultar", "Esconder"]
+  },
+  {
+    "no": 173,
+    "type": "I",
+    "simple_form": "Hit",
+    "third_person": "Hits",
+    "simple_past": "Hit",
+    "past_participle": "Hit",
+    "gerund": "Hitting",
+    "meaning": ["Golpear", "Pegar"]
+  },
+  {
+    "no": 174,
+    "type": "I",
+    "simple_form": "Hold",
+    "third_person": "Holds",
+    "simple_past": "Held",
+    "past_participle": "Held",
+    "gerund": "Holding",
+    "meaning": ["Sostener", "Retener"]
+  },
+  {
+    "no": 175,
+    "type": "R",
+    "simple_form": "Hurry",
+    "third_person": "Hurries",
+    "simple_past": "Hurried",
+    "past_participle": "Hurried",
+    "gerund": "Hurrying",
+    "meaning": ["Apresurar(se)"]
+  },
+  {
+    "no": 176,
+    "type": "I",
+    "simple_form": "Hurt",
+    "third_person": "Hurts",
+    "simple_past": "Hurt",
+    "past_participle": "Hurt",
+    "gerund": "Hurting",
+    "meaning": ["Herir", "Lastimar"]
+  },
+  {
+    "no": 177,
+    "type": "R",
+    "simple_form": "Identify",
+    "third_person": "Identifies",
+    "simple_past": "Identified",
+    "past_participle": "Identified",
+    "gerund": "Identifying",
+    "meaning": ["Identificar"]
+  },
+  {
+    "no": 178,
+    "type": "R",
+    "simple_form": "Imagine",
+    "third_person": "Imagines",
+    "simple_past": "Imagined",
+    "past_participle": "Imagined",
+    "gerund": "Imagining",
+    "meaning": ["Imaginar"]
+  },
+  {
+    "no": 179,
+    "type": "R",
+    "simple_form": "Imitate",
+    "third_person": "Imitates",
+    "simple_past": "Imitated",
+    "past_participle": "Imitated",
+    "gerund": "Imitating",
+    "meaning": ["Imitar"]
+  },
+  {
+    "no": 180,
+    "type": "R",
+    "simple_form": "Include",
+    "third_person": "Includes",
+    "simple_past": "Included",
+    "past_participle": "Included",
+    "gerund": "Including",
+    "meaning": ["Incluir"]
+  },
+  {
+    "no": 181,
+    "type": "R",
+    "simple_form": "Inspect",
+    "third_person": "Inspects",
+    "simple_past": "Inspected",
+    "past_participle": "Inspected",
+    "gerund": "Inspecting",
+    "meaning": ["Inspeccionar"]
+  },
+  {
+    "no": 182,
+    "type": "R",
+    "simple_form": "Invite",
+    "third_person": "Invites",
+    "simple_past": "Invited",
+    "past_participle": "Invited",
+    "gerund": "Inviting",
+    "meaning": ["Invitar"]
+  },
+  {
+    "no": 183,
+    "type": "R",
+    "simple_form": "Jog",
+    "third_person": "Jogs",
+    "simple_past": "Jogged",
+    "past_participle": "Jogged",
+    "gerund": "Jogging",
+    "meaning": ["Trotar"]
+  },
+  {
+    "no": 184,
+    "type": "R",
+    "simple_form": "Jump",
+    "third_person": "Jumps",
+    "simple_past": "Jumped",
+    "past_participle": "Jumped",
+    "gerund": "Jumping",
+    "meaning": ["Saltar", "Brincar"]
+  },
+  {
+    "no": 185,
+    "type": "I",
+    "simple_form": "Keep",
+    "third_person": "Keeps",
+    "simple_past": "Kept",
+    "past_participle": "Kept",
+    "gerund": "Keeping",
+    "meaning": ["Guardar", "Mantener"]
+  },
+  {
+    "no": 186,
+    "type": "R",
+    "simple_form": "Kick",
+    "third_person": "Kicks",
+    "simple_past": "Kicked",
+    "past_participle": "Kicked",
+    "gerund": "Kicking",
+    "meaning": ["Patear", "Dar punta piés"]
+  },
+  {
+    "no": 187,
+    "type": "R",
+    "simple_form": "Kill",
+    "third_person": "Kills",
+    "simple_past": "Killed",
+    "past_participle": "Killed",
+    "gerund": "Killing",
+    "meaning": ["Matar", "Acabar con"]
+  },
+  {
+    "no": 188,
+    "type": "R",
+    "simple_form": "Kiss",
+    "third_person": "Kisses",
+    "simple_past": "Kissed",
+    "past_participle": "Kissed",
+    "gerund": "Kissing",
+    "meaning": ["Besar"]
+  },
+  {
+    "no": 189,
+    "type": "I",
+    "simple_form": "Know",
+    "third_person": "Knows",
+    "simple_past": "Knew",
+    "past_participle": "Known",
+    "gerund": "Knowing",
+    "meaning": ["Saber", "Conocer"]
+  },
+  {
+    "no": 190,
+    "type": "R",
+    "simple_form": "Land",
+    "third_person": "Lands",
+    "simple_past": "Landed",
+    "past_participle": "Landed",
+    "gerund": "Landing",
+    "meaning": ["Aterrizar", "Desembarcar"]
+  },
+  {
+    "no": 191,
+    "type": "R",
+    "simple_form": "Laugh",
+    "third_person": "Laughs",
+    "simple_past": "Laughed",
+    "past_participle": "Laughed",
+    "gerund": "Laughing",
+    "meaning": ["Reir(se)"]
+  },
+  {
+    "no": 192,
+    "type": "I",
+    "simple_form": "Lay",
+    "third_person": "Lays",
+    "simple_past": "Laid",
+    "past_participle": "Laid",
+    "gerund": "Laying",
+    "meaning": ["Poner", "Colocar", "Echar"]
+  },
+  {
+    "no": 193,
+    "type": "R",
+    "simple_form": "Lead",
+    "third_person": "Leads",
+    "simple_past": "Led",
+    "past_participle": "Led",
+    "gerund": "Leading",
+    "meaning": ["Conducir", "Liderar"]
+  },
+  {
+    "no": 194,
+    "type": "R",
+    "simple_form": "Learn",
+    "third_person": "Learns",
+    "simple_past": "Learned",
+    "past_participle": "Learned",
+    "gerund": "Learning",
+    "meaning": ["Aprender"]
+  },
+  {
+    "no": 195,
+    "type": "I",
+    "simple_form": "Leave",
+    "third_person": "Leaves",
+    "simple_past": "Left",
+    "past_participle": "Left",
+    "gerund": "Leaving",
+    "meaning": ["Salir", "Abandonar"]
+  },
+  {
+    "no": 196,
+    "type": "I",
+    "simple_form": "Lend",
+    "third_person": "Lends",
+    "simple_past": "Lent",
+    "past_participle": "Lent",
+    "gerund": "Lending",
+    "meaning": ["Prestar"]
+  },
+  {
+    "no": 197,
+    "type": "I",
+    "simple_form": "Let",
+    "third_person": "Lets",
+    "simple_past": "Let",
+    "past_participle": "Let",
+    "gerund": "Letting",
+    "meaning": ["Dejar", "Permitir"]
+  },
+  {
+    "no": 198,
+    "type": "R",
+    "simple_form": "Lick",
+    "third_person": "Licks",
+    "simple_past": "Licked",
+    "past_participle": "Licked",
+    "gerund": "Licking",
+    "meaning": ["Lamer", "Adular"]
+  },
+  {
+    "no": 199,
+    "type": "I",
+    "simple_form": "Lie",
+    "third_person": "Lies",
+    "simple_past": "Lay",
+    "past_participle": "Lain",
+    "gerund": "Lying",
+    "meaning": ["Mentir"]
+  },
+  {
+    "no": 200,
+    "type": "I",
+    "simple_form": "Light",
+    "third_person": "Lights",
+    "simple_past": "Lit",
+    "past_participle": "Lit",
+    "gerund": "Lighting",
+    "meaning": ["Encender", "Prender"]
+  },
+  {
+    "no": 201,
+    "type": "R",
+    "simple_form": "Like",
+    "third_person": "Likes",
+    "simple_past": "Liked",
+    "past_participle": "Liked",
+    "gerund": "Liking",
+    "meaning": ["Gustar", "Querer"]
+  },
+  {
+    "no": 202,
+    "type": "R",
+    "simple_form": "Listen to",
+    "third_person": "Listens to",
+    "simple_past": "Listened to",
+    "past_participle": "Listened to",
+    "gerund": "Listening to",
+    "meaning": ["Escuchar"]
+  },
+  {
+    "no": 203,
+    "type": "R",
+    "simple_form": "Live",
+    "third_person": "Lives",
+    "simple_past": "Lived",
+    "past_participle": "Lived",
+    "gerund": "Living",
+    "meaning": ["Vivir"]
+  },
+  {
+    "no": 204,
+    "type": "R",
+    "simple_form": "Look",
+    "third_person": "Looks",
+    "simple_past": "Looked",
+    "past_participle": "Looked",
+    "gerund": "Looking",
+    "meaning": ["Mirar"]
+  },
+  {
+    "no": 205,
+    "type": "I",
+    "simple_form": "Lose",
+    "third_person": "Loses",
+    "simple_past": "Lost",
+    "past_participle": "Lost",
+    "gerund": "Losing",
+    "meaning": ["Perder"]
+  },
+  {
+    "no": 206,
+    "type": "R",
+    "simple_form": "Love",
+    "third_person": "Loves",
+    "simple_past": "Loved",
+    "past_participle": "Loved",
+    "gerund": "Loving",
+    "meaning": ["Amar", "Adorar", "Encantar"]
+  },
+  {
+    "no": 207,
+    "type": "R",
+    "simple_form": "Lower",
+    "third_person": "Lowers",
+    "simple_past": "Lowered",
+    "past_participle": "Lowered",
+    "gerund": "Lowering",
+    "meaning": ["Bajar", "Reducir", "Disminuir"]
+  },
+  {
+    "no": 208,
+    "type": "I",
+    "simple_form": "Make",
+    "third_person": "Makes",
+    "simple_past": "Made",
+    "past_participle": "Made",
+    "gerund": "Making",
+    "meaning": ["Hacer", "Fabricar"]
+  },
+  {
+    "no": 209,
+    "type": "R",
+    "simple_form": "Manage",
+    "third_person": "Manage",
+    "simple_past": "Managed",
+    "past_participle": "Managed",
+    "gerund": "Managing",
+    "meaning": ["Manejar", "Dirigir", "Arreglárselas"]
+  },
+  {
+    "no": 210,
+    "type": "I",
+    "simple_form": "Mean",
+    "third_person": "Means",
+    "simple_past": "Meant",
+    "past_participle": "Meant",
+    "gerund": "Meaning",
+    "meaning": ["Significar", "Querer decir"]
+  },
+  {
+    "no": 211,
+    "type": "I",
+    "simple_form": "Meet",
+    "third_person": "Meets",
+    "simple_past": "Met",
+    "past_participle": "Met",
+    "gerund": "Meeting",
+    "meaning": ["Conocer", "Encontrar"]
+  },
+  {
+    "no": 212,
+    "type": "R",
+    "simple_form": "Memorize",
+    "third_person": "Memorizes",
+    "simple_past": "Memorized",
+    "past_participle": "Memorized",
+    "gerund": "Memorizing",
+    "meaning": ["Memorizar"]
+  },
+  {
+    "no": 213,
+    "type": "R",
+    "simple_form": "Mend",
+    "third_person": "Mends",
+    "simple_past": "Mended",
+    "past_participle": "Mended",
+    "gerund": "Mending",
+    "meaning": ["Remendar", "Reparar"]
+  },
+  {
+    "no": 214,
+    "type": "R",
+    "simple_form": "Mind",
+    "third_person": "Minds",
+    "simple_past": "Minded",
+    "past_participle": "Minded",
+    "gerund": "Minding",
+    "meaning": ["Agregar", "Importar", "Preocuparse"]
+  },
+  {
+    "no": 215,
+    "type": "R",
+    "simple_form": "Mislay",
+    "third_person": "Mislays",
+    "simple_past": "Mislayed",
+    "past_participle": "Mislayed",
+    "gerund": "Mislaying",
+    "meaning": ["Extraviar", "Perder"]
+  },
+  {
+    "no": 216,
+    "type": "R",
+    "simple_form": "Miss",
+    "third_person": "Misses",
+    "simple_past": "Missed",
+    "past_participle": "Missed",
+    "gerund": "Missing",
+    "meaning": ["Echar de menos", "Perder"]
+  },
+  {
+    "no": 217,
+    "type": "I",
+    "simple_form": "Mistake",
+    "third_person": "Mistakes",
+    "simple_past": "Mistook",
+    "past_participle": "Mistaken",
+    "gerund": "Mistaking",
+    "meaning": ["Errar", "Equivocarse"]
+  },
+  {
+    "no": 218,
+    "type": "R",
+    "simple_form": "Mix",
+    "third_person": "Mixes",
+    "simple_past": "Mixed",
+    "past_participle": "Mixed",
+    "gerund": "Mixing",
+    "meaning": ["Mezclar", "Barajar"]
+  },
+  {
+    "no": 219,
+    "type": "R",
+    "simple_form": "Mop",
+    "third_person": "Mops",
+    "simple_past": "Mopped",
+    "past_participle": "Mopped",
+    "gerund": "Mopping",
+    "meaning": ["Trapear", "Fregar"]
+  },
+  {
+    "no": 220,
+    "type": "R",
+    "simple_form": "Move",
+    "third_person": "Moves",
+    "simple_past": "Moved",
+    "past_participle": "Moved",
+    "gerund": "Moving",
+    "meaning": ["Mover", "Trastear"]
+  },
+  {
+    "no": 221,
+    "type": "R",
+    "simple_form": "Multiply",
+    "third_person": "Multiplies",
+    "simple_past": "Multiplied",
+    "past_participle": "Multiplied",
+    "gerund": "Multiplying",
+    "meaning": ["Multiplicar"]
+  },
+  {
+    "no": 222,
+    "type": "R",
+    "simple_form": "Name",
+    "third_person": "Names",
+    "simple_past": "Named",
+    "past_participle": "Named",
+    "gerund": "Naming",
+    "meaning": ["Nombrar", "Denominar"]
+  },
+  {
+    "no": 223,
+    "type": "R",
+    "simple_form": "Need",
+    "third_person": "Needs",
+    "simple_past": "Needed",
+    "past_participle": "Needed",
+    "gerund": "Needing",
+    "meaning": ["Necesitar", "Requerir"]
+  },
+  {
+    "no": 224,
+    "type": "R",
+    "simple_form": "Notice",
+    "third_person": "Notices",
+    "simple_past": "Noticed",
+    "past_participle": "Noticed",
+    "gerund": "Noticing",
+    "meaning": ["Notar", "Advertir"]
+  },
+  {
+    "no": 225,
+    "type": "R",
+    "simple_form": "Occur",
+    "third_person": "Occurs",
+    "simple_past": "Occured",
+    "past_participle": "Occured",
+    "gerund": "Occurring",
+    "meaning": ["Ocurrir", "Suceder"]
+  },
+  {
+    "no": 226,
+    "type": "R",
+    "simple_form": "Offer",
+    "third_person": "Offers",
+    "simple_past": "Offered",
+    "past_participle": "Offered",
+    "gerund": "Offering",
+    "meaning": ["Ofrecer"]
+  },
+  {
+    "no": 227,
+    "type": "R",
+    "simple_form": "Omit",
+    "third_person": "Omits",
+    "simple_past": "Omitted",
+    "past_participle": "Omitted",
+    "gerund": "Omitting",
+    "meaning": ["Omitir"]
+  },
+  {
+    "no": 228,
+    "type": "R",
+    "simple_form": "Open",
+    "third_person": "Opens",
+    "simple_past": "Opened",
+    "past_participle": "Opened",
+    "gerund": "Opening",
+    "meaning": ["Abrir"]
+  },
+  {
+    "no": 229,
+    "type": "R",
+    "simple_form": "Order",
+    "third_person": "Orders",
+    "simple_past": "Ordered",
+    "past_participle": "Ordered",
+    "gerund": "Ordering",
+    "meaning": ["Ordenar", "Disponer"]
+  },
+  {
+    "no": 230,
+    "type": "I",
+    "simple_form": "Overcome",
+    "third_person": "Overcomes",
+    "simple_past": "Overcame",
+    "past_participle": "Overcome",
+    "gerund": "Overcoming",
+    "meaning": ["Vencer", "Superar", "Triunfar"]
+  },
+  {
+    "no": 231,
+    "type": "R",
+    "simple_form": "Pack",
+    "third_person": "Packs",
+    "simple_past": "Packed",
+    "past_participle": "Packed",
+    "gerund": "Packing",
+    "meaning": ["Empacar", "Envasar"]
+  },
+  {
+    "no": 232,
+    "type": "R",
+    "simple_form": "Paint",
+    "third_person": "Paints",
+    "simple_past": "Painted",
+    "past_participle": "Painted",
+    "gerund": "Painting",
+    "meaning": ["Pintar"]
+  },
+  {
+    "no": 233,
+    "type": "R",
+    "simple_form": "Park",
+    "third_person": "Parks",
+    "simple_past": "Parked",
+    "past_participle": "Parked",
+    "gerund": "Parking",
+    "meaning": ["Parquear", "Estacionar"]
+  },
+  {
+    "no": 234,
+    "type": "R",
+    "simple_form": "Pass",
+    "third_person": "Passes",
+    "simple_past": "Passed",
+    "past_participle": "Passed",
+    "gerund": "Passing",
+    "meaning": ["Pasar", "Aprobar", "Superar"]
+  },
+  {
+    "no": 235,
+    "type": "I",
+    "simple_form": "Pay",
+    "third_person": "Pays",
+    "simple_past": "Paid",
+    "past_participle": "Paid",
+    "gerund": "Paying",
+    "meaning": ["Pagar"]
+  },
+  {
+    "no": 236,
+    "type": "R",
+    "simple_form": "Peel",
+    "third_person": "Peels",
+    "simple_past": "Peeled",
+    "past_participle": "Peeled",
+    "gerund": "Peeling",
+    "meaning": ["Pelar"]
+  },
+  {
+    "no": 237,
+    "type": "R",
+    "simple_form": "Permit",
+    "third_person": "Permits",
+    "simple_past": "Permitted",
+    "past_participle": "Permitted",
+    "gerund": "Permitting",
+    "meaning": ["Permitir"]
+  },
+  {
+    "no": 238,
+    "type": "R",
+    "simple_form": "Persuade",
+    "third_person": "Persuades",
+    "simple_past": "Persuaded",
+    "past_participle": "Persuaded",
+    "gerund": "Persuading",
+    "meaning": ["Persuadir", "Convencer"]
+  },
+  {
+    "no": 239,
+    "type": "R",
+    "simple_form": "Pick up",
+    "third_person": "Picks up",
+    "simple_past": "Picked up",
+    "past_participle": "Picked up",
+    "gerund": "Picking up",
+    "meaning": ["Recoger"]
+  },
+  {
+    "no": 240,
+    "type": "R",
+    "simple_form": "Place",
+    "third_person": "Places",
+    "simple_past": "Placed",
+    "past_participle": "Placed",
+    "gerund": "Placing",
+    "meaning": ["Poner", "Colocar", "Situar"]
+  },
+  {
+    "no": 241,
+    "type": "R",
+    "simple_form": "Plan",
+    "third_person": "Plans",
+    "simple_past": "Planned",
+    "past_participle": "Planned",
+    "gerund": "Planning",
+    "meaning": ["Planear"]
+  },
+  {
+    "no": 242,
+    "type": "R",
+    "simple_form": "Plant",
+    "third_person": "Plants",
+    "simple_past": "Planted",
+    "past_participle": "Planted",
+    "gerund": "Planting",
+    "meaning": ["Plantar", "Sembrar"]
+  },
+  {
+    "no": 243,
+    "type": "R",
+    "simple_form": "Play",
+    "third_person": "Plays",
+    "simple_past": "Played",
+    "past_participle": "Played",
+    "gerund": "Playing",
+    "meaning": ["Jugar", "Tocar", "Reproducir"]
+  },
+  {
+    "no": 244,
+    "type": "R",
+    "simple_form": "Polish",
+    "third_person": "Polishes",
+    "simple_past": "Polished",
+    "past_participle": "Polished",
+    "gerund": "Polishing",
+    "meaning": ["Pulir"]
+  },
+  {
+    "no": 245,
+    "type": "R",
+    "simple_form": "Practice",
+    "third_person": "Practices",
+    "simple_past": "Practiced",
+    "past_participle": "Practiced",
+    "gerund": "Practicing",
+    "meaning": ["Practicar"]
+  },
+  {
+    "no": 246,
+    "type": "R",
+    "simple_form": "Prefer",
+    "third_person": "Prefers",
+    "simple_past": "Preferred",
+    "past_participle": "Preferred",
+    "gerund": "Preferring",
+    "meaning": ["Preferir"]
+  },
+  {
+    "no": 247,
+    "type": "R",
+    "simple_form": "Prepare",
+    "third_person": "Prepares",
+    "simple_past": "Prepared",
+    "past_participle": "Prepared",
+    "gerund": "Preparing",
+    "meaning": ["Preparar"]
+  },
+  {
+    "no": 248,
+    "type": "R",
+    "simple_form": "Print",
+    "third_person": "Prints",
+    "simple_past": "Printed",
+    "past_participle": "Printed",
+    "gerund": "Printing",
+    "meaning": ["Imprimir"]
+  },
+  {
+    "no": 249,
+    "type": "R",
+    "simple_form": "Promise",
+    "third_person": "Promises",
+    "simple_past": "Promised",
+    "past_participle": "Promised",
+    "gerund": "Promising",
+    "meaning": ["Prometer"]
+  },
+  {
+    "no": 250,
+    "type": "R",
+    "simple_form": "Pronounce",
+    "third_person": "Pronounces",
+    "simple_past": "Pronounced",
+    "past_participle": "Pronounced",
+    "gerund": "Pronouncing",
+    "meaning": ["Pronunciar"]
+  },
+  {
+    "no": 251,
+    "type": "R",
+    "simple_form": "Publish",
+    "third_person": "Publishes",
+    "simple_past": "Published",
+    "past_participle": "Published",
+    "gerund": "Publishing",
+    "meaning": ["Publicar"]
+  },
+  {
+    "no": 252,
+    "type": "R",
+    "simple_form": "Pull",
+    "third_person": "Pulls",
+    "simple_past": "Pulled",
+    "past_participle": "Pulled",
+    "gerund": "Pulling",
+    "meaning": ["Halar", "Tirar de"]
+  },
+  {
+    "no": 253,
+    "type": "R",
+    "simple_form": "Punish",
+    "third_person": "Punishes",
+    "simple_past": "Punished",
+    "past_participle": "Punished",
+    "gerund": "Punishing",
+    "meaning": ["Castigar"]
+  },
+  {
+    "no": 254,
+    "type": "R",
+    "simple_form": "Push",
+    "third_person": "Pushes",
+    "simple_past": "Pushed",
+    "past_participle": "Pushed",
+    "gerund": "Pushing",
+    "meaning": ["Empujar"]
+  },
+  {
+    "no": 255,
+    "type": "I",
+    "simple_form": "Put",
+    "third_person": "Puts",
+    "simple_past": "Put",
+    "past_participle": "Put",
+    "gerund": "Putting",
+    "meaning": ["Poner", "Colocar"]
+  },
+  {
+    "no": 256,
+    "type": "I",
+    "simple_form": "Quit",
+    "third_person": "Quits",
+    "simple_past": "Quit",
+    "past_participle": "Quit",
+    "gerund": "Quiting",
+    "meaning": ["Dejar-abandonar"]
+  },
+  {
+    "no": 257,
+    "type": "R",
+    "simple_form": "Rain",
+    "third_person": "Rains",
+    "simple_past": "Rained",
+    "past_participle": "Rained",
+    "gerund": "Raining",
+    "meaning": ["Llover"]
+  },
+  {
+    "no": 258,
+    "type": "R",
+    "simple_form": "Reach",
+    "third_person": "Reaches",
+    "simple_past": "Reached",
+    "past_participle": "Reached",
+    "gerund": "Reaching",
+    "meaning": ["Llegar", "Alcanzar"]
+  },
+  {
+    "no": 259,
+    "type": "I",
+    "simple_form": "Read",
+    "third_person": "Reads",
+    "simple_past": "Read",
+    "past_participle": "Read",
+    "gerund": "Reading",
+    "meaning": ["Leer"]
+  },
+  {
+    "no": 260,
+    "type": "R",
+    "simple_form": "Receive",
+    "third_person": "Receives",
+    "simple_past": "Received",
+    "past_participle": "Received",
+    "gerund": "Receiving",
+    "meaning": ["Recibir"]
+  },
+  {
+    "no": 261,
+    "type": "R",
+    "simple_form": "Relax",
+    "third_person": "Relaxes",
+    "simple_past": "Relaxed",
+    "past_participle": "Relaxed",
+    "gerund": "Relaxing",
+    "meaning": ["Relajar", "Mitigar"]
+  },
+  {
+    "no": 262,
+    "type": "R",
+    "simple_form": "Remain",
+    "third_person": "Remains",
+    "simple_past": "Remained",
+    "past_participle": "Remained",
+    "gerund": "Remaining",
+    "meaning": ["Permanecer", "Quedarse"]
+  },
+  {
+    "no": 263,
+    "type": "R",
+    "simple_form": "Remember",
+    "third_person": "Remembers",
+    "simple_past": "Remembered",
+    "past_participle": "Remembered",
+    "gerund": "Remembering",
+    "meaning": ["Recordar", "Acordarse"]
+  },
+  {
+    "no": 264,
+    "type": "R",
+    "simple_form": "Repair",
+    "third_person": "Repairs",
+    "simple_past": "Repaired",
+    "past_participle": "Repaired",
+    "gerund": "Repairing",
+    "meaning": ["Reparar", "Arreglar"]
+  },
+  {
+    "no": 265,
+    "type": "R",
+    "simple_form": "Repeat",
+    "third_person": "Repeats",
+    "simple_past": "Repeated",
+    "past_participle": "Repeated",
+    "gerund": "Repeating",
+    "meaning": ["Repetir"]
+  },
+  {
+    "no": 266,
+    "type": "R",
+    "simple_form": "Represent",
+    "third_person": "Represents",
+    "simple_past": "Represented",
+    "past_participle": "Represented",
+    "gerund": "Representing",
+    "meaning": ["Representar"]
+  },
+  {
+    "no": 267,
+    "type": "R",
+    "simple_form": "Rest",
+    "third_person": "Rest",
+    "simple_past": "Rested",
+    "past_participle": "Rested",
+    "gerund": "Resting",
+    "meaning": ["Descansar", "Reposar"]
+  },
+  {
+    "no": 268,
+    "type": "I",
+    "simple_form": "Rid",
+    "third_person": "Rids",
+    "simple_past": "Rid",
+    "past_participle": "Rid",
+    "gerund": "Ridding",
+    "meaning": ["Librarse de", "Deshacerse"]
+  },
+  {
+    "no": 269,
+    "type": "I",
+    "simple_form": "Ride",
+    "third_person": "Rides",
+    "simple_past": "Rode",
+    "past_participle": "Ridden",
+    "gerund": "Riding",
+    "meaning": ["Cabalgar", "Montar"]
+  },
+  {
+    "no": 270,
+    "type": "I",
+    "simple_form": "Ring",
+    "third_person": "Rings",
+    "simple_past": "Rang",
+    "past_participle": "Rung",
+    "gerund": "Ringing",
+    "meaning": ["Sonar", "Timbrar"]
+  },
+  {
+    "no": 271,
+    "type": "I",
+    "simple_form": "Rise",
+    "third_person": "Rises",
+    "simple_past": "Rose",
+    "past_participle": "Risen",
+    "gerund": "Rising",
+    "meaning": ["Subir", "Ascender"]
+  },
+  {
+    "no": 272,
+    "type": "I",
+    "simple_form": "Run",
+    "third_person": "Runs",
+    "simple_past": "Ran",
+    "past_participle": "Run",
+    "gerund": "Running",
+    "meaning": ["Correr"]
+  },
+  {
+    "no": 273,
+    "type": "R",
+    "simple_form": "Save",
+    "third_person": "Saves",
+    "simple_past": "Saved",
+    "past_participle": "Saved",
+    "gerund": "Saving",
+    "meaning": ["Guardar", "Ahorrar", "Salvar"]
+  },
+  {
+    "no": 274,
+    "type": "I",
+    "simple_form": "Say",
+    "third_person": "Says",
+    "simple_past": "Said",
+    "past_participle": "Said",
+    "gerund": "Saying",
+    "meaning": ["Decir"]
+  },
+  {
+    "no": 275,
+    "type": "R",
+    "simple_form": "Scrub",
+    "third_person": "Scrubs",
+    "simple_past": "Scrubbed",
+    "past_participle": "Scrubbed",
+    "gerund": "Scrubbing",
+    "meaning": ["Fregar", "Restregar"]
+  },
+  {
+    "no": 276,
+    "type": "R",
+    "simple_form": "Season",
+    "third_person": "Seasons",
+    "simple_past": "Seasoned",
+    "past_participle": "Seasoned",
+    "gerund": "Seasoning",
+    "meaning": ["Sazonar", "Aliñar"]
+  },
+  {
+    "no": 277,
+    "type": "I",
+    "simple_form": "See",
+    "third_person": "Sees",
+    "simple_past": "Saw",
+    "past_participle": "Seen",
+    "gerund": "Seeing",
+    "meaning": ["Ver"]
+  },
+  {
+    "no": 278,
+    "type": "I",
+    "simple_form": "Seek",
+    "third_person": "Seeks",
+    "simple_past": "Sought",
+    "past_participle": "Sought",
+    "gerund": "Seeking",
+    "meaning": ["Buscar", "Solicitar"]
+  },
+  {
+    "no": 279,
+    "type": "R",
+    "simple_form": "Seem",
+    "third_person": "Seems",
+    "simple_past": "Seemed",
+    "past_participle": "Seemed",
+    "gerund": "Seeming",
+    "meaning": ["Parecer"]
+  },
+  {
+    "no": 280,
+    "type": "R",
+    "simple_form": "Select",
+    "third_person": "Selects",
+    "simple_past": "Selected",
+    "past_participle": "Selected",
+    "gerund": "Selecting",
+    "meaning": ["Seleccionar"]
+  },
+  {
+    "no": 281,
+    "type": "I",
+    "simple_form": "Sell",
+    "third_person": "Sells",
+    "simple_past": "Sold",
+    "past_participle": "Sold",
+    "gerund": "Selling",
+    "meaning": ["Vender"]
+  },
+  {
+    "no": 282,
+    "type": "I",
+    "simple_form": "Send",
+    "third_person": "Sends",
+    "simple_past": "Sent",
+    "past_participle": "Sent",
+    "gerund": "Sending",
+    "meaning": ["Enviar", "Mandar"]
+  },
+  {
+    "no": 283,
+    "type": "I",
+    "simple_form": "Set",
+    "third_person": "Sets",
+    "simple_past": "Set",
+    "past_participle": "Set",
+    "gerund": "Setting",
+    "meaning": ["Establecer", "Poner", "Fijar"]
+  },
+  {
+    "no": 284,
+    "type": "R",
+    "simple_form": "Settle",
+    "third_person": "Settles",
+    "simple_past": "Settled",
+    "past_participle": "Settled",
+    "gerund": "Settling",
+    "meaning": ["Resolver"]
+  },
+  {
+    "no": 285,
+    "type": "R",
+    "simple_form": "Sew",
+    "third_person": "Sews",
+    "simple_past": "Sewed",
+    "past_participle": "Sewed",
+    "gerund": "Sewing",
+    "meaning": ["Coser"]
+  },
+  {
+    "no": 286,
+    "type": "I",
+    "simple_form": "Shake",
+    "third_person": "Shakes",
+    "simple_past": "Shook",
+    "past_participle": "Shaken",
+    "gerund": "Shaking",
+    "meaning": ["Sacudir", "Menear"]
+  },
+  {
+    "no": 287,
+    "type": "R",
+    "simple_form": "Share",
+    "third_person": "Shares",
+    "simple_past": "Shared",
+    "past_participle": "Shared",
+    "gerund": "Sharing",
+    "meaning": ["Compartir"]
+  },
+  {
+    "no": 288,
+    "type": "R",
+    "simple_form": "Sharpen",
+    "third_person": "Sharpens",
+    "simple_past": "Sharpened",
+    "past_participle": "Sharpened",
+    "gerund": "Sharpening",
+    "meaning": ["Afilar", "Ampliar"]
+  },
+  {
+    "no": 289,
+    "type": "R",
+    "simple_form": "Shed",
+    "third_person": "Sheds",
+    "simple_past": "Shed",
+    "past_participle": "Shed",
+    "gerund": "Sheedding",
+    "meaning": ["Quitarse", "Despojarse"]
+  },
+  {
+    "no": 290,
+    "type": "I",
+    "simple_form": "Shine",
+    "third_person": "Shines",
+    "simple_past": "Shone",
+    "past_participle": "Shone",
+    "gerund": "Shining",
+    "meaning": ["Brillar", "Alumbrar"]
+  },
+  {
+    "no": 291,
+    "type": "I",
+    "simple_form": "Shoot",
+    "third_person": "Shoots",
+    "simple_past": "Shot",
+    "past_participle": "Shot",
+    "gerund": "Shooting",
+    "meaning": ["Tirar", "Disparar"]
+  },
+  {
+    "no": 292,
+    "type": "R",
+    "simple_form": "Shop",
+    "third_person": "Shops",
+    "simple_past": "Shopped",
+    "past_participle": "Shopped",
+    "gerund": "Shopping",
+    "meaning": ["Comprar (de tiendas)"]
+  },
+  {
+    "no": 293,
+    "type": "R",
+    "simple_form": "Shout",
+    "third_person": "Shouts",
+    "simple_past": "Shouted",
+    "past_participle": "Shouted",
+    "gerund": "Shouting",
+    "meaning": ["Gritar"]
+  },
+  {
+    "no": 294,
+    "type": "I",
+    "simple_form": "Show",
+    "third_person": "Shows",
+    "simple_past": "Showed",
+    "past_participle": "Shown",
+    "gerund": "Showing",
+    "meaning": ["Mostrar", "Enseñar"]
+  },
+  {
+    "no": 295,
+    "type": "I",
+    "simple_form": "Shrink",
+    "third_person": "Shrinks",
+    "simple_past": "Shrank",
+    "past_participle": "Shrunk",
+    "gerund": "Shrinking",
+    "meaning": ["Encoger", "Contraer"]
+  },
+  {
+    "no": 296,
+    "type": "I",
+    "simple_form": "Shut",
+    "third_person": "Shuts",
+    "simple_past": "Shut",
+    "past_participle": "Shut",
+    "gerund": "Shutting",
+    "meaning": ["Cerrar(callar)"]
+  },
+  {
+    "no": 297,
+    "type": "R",
+    "simple_form": "Sigh",
+    "third_person": "Sighs",
+    "simple_past": "Sighed",
+    "past_participle": "Sighed",
+    "gerund": "Sighing",
+    "meaning": ["Suspirar", "Susurrar"]
+  },
+  {
+    "no": 298,
+    "type": "I",
+    "simple_form": "Sign",
+    "third_person": "Signs",
+    "simple_past": "Signed",
+    "past_participle": "Signed",
+    "gerund": "Signing",
+    "meaning": ["Firmar"]
+  },
+  {
+    "no": 299,
+    "type": "R",
+    "simple_form": "Simmer",
+    "third_person": "Simmers",
+    "simple_past": "Simmered",
+    "past_participle": "Simmered",
+    "gerund": "Simmering",
+    "meaning": ["Cocer a fuego lento"]
+  },
+  {
+    "no": 300,
+    "type": "I",
+    "simple_form": "Sing",
+    "third_person": "Sings",
+    "simple_past": "Sang",
+    "past_participle": "Sung",
+    "gerund": "Singing",
+    "meaning": ["Cantar"]
+  },
+  {
+    "no": 301,
+    "type": "I",
+    "simple_form": "Sink",
+    "third_person": "Sinks",
+    "simple_past": "Sank",
+    "past_participle": "Sunk",
+    "gerund": "Sinking",
+    "meaning": ["Sumergir", "Hundir"]
+  },
+  {
+    "no": 302,
+    "type": "I",
+    "simple_form": "Sit",
+    "third_person": "Sits",
+    "simple_past": "Sat",
+    "past_participle": "Sat",
+    "gerund": "Sitting",
+    "meaning": ["Sentarse"]
+  },
+  {
+    "no": 303,
+    "type": "R",
+    "simple_form": "Skate",
+    "third_person": "Skates",
+    "simple_past": "Skated",
+    "past_participle": "Skated",
+    "gerund": "Skating",
+    "meaning": ["Patinar"]
+  },
+  {
+    "no": 304,
+    "type": "R",
+    "simple_form": "Ski",
+    "third_person": "Skis",
+    "simple_past": "Skied",
+    "past_participle": "Skied",
+    "gerund": "Skiing",
+    "meaning": ["Esquiar"]
+  },
+  {
+    "no": 305,
+    "type": "I",
+    "simple_form": "Sleep",
+    "third_person": "Sleeps",
+    "simple_past": "Slept",
+    "past_participle": "Slept",
+    "gerund": "Sleeping",
+    "meaning": ["Dormir"]
+  },
+  {
+    "no": 306,
+    "type": "R",
+    "simple_form": "Slice",
+    "third_person": "Slices",
+    "simple_past": "Sliced",
+    "past_participle": "Sliced",
+    "gerund": "Slicing",
+    "meaning": ["Rebanar"]
+  },
+  {
+    "no": 307,
+    "type": "I",
+    "simple_form": "Slide",
+    "third_person": "Slides",
+    "simple_past": "Slid",
+    "past_participle": "Slid",
+    "gerund": "Sliding",
+    "meaning": ["Resbalar(se)"]
+  },
+  {
+    "no": 308,
+    "type": "R",
+    "simple_form": "Smell",
+    "third_person": "Smells",
+    "simple_past": "Smelled",
+    "past_participle": "Smelled",
+    "gerund": "Smelling",
+    "meaning": ["Oler", "Husmear"]
+  },
+  {
+    "no": 309,
+    "type": "R",
+    "simple_form": "Smile",
+    "third_person": "Smiles",
+    "simple_past": "Smiled",
+    "past_participle": "Smiled",
+    "gerund": "Smiling",
+    "meaning": ["Sonreir"]
+  },
+  {
+    "no": 310,
+    "type": "R",
+    "simple_form": "Smoke",
+    "third_person": "Smokes",
+    "simple_past": "Smoked",
+    "past_participle": "Smoked",
+    "gerund": "Smoking",
+    "meaning": ["Fumar"]
+  },
+  {
+    "no": 311,
+    "type": "R",
+    "simple_form": "Sneeze",
+    "third_person": "Sneezes",
+    "simple_past": "Sneezed",
+    "past_participle": "Sneezed",
+    "gerund": "Sneezing",
+    "meaning": ["Estornudar"]
+  },
+  {
+    "no": 312,
+    "type": "R",
+    "simple_form": "Solve",
+    "third_person": "Solves",
+    "simple_past": "Solved",
+    "past_participle": "Solved",
+    "gerund": "Solving",
+    "meaning": ["Resolver"]
+  },
+  {
+    "no": 313,
+    "type": "R",
+    "simple_form": "Sound",
+    "third_person": "Sounds",
+    "simple_past": "Sounded",
+    "past_participle": "Sounded",
+    "gerund": "Sounding",
+    "meaning": ["Sonar", "Tocar"]
+  },
+  {
+    "no": 314,
+    "type": "I",
+    "simple_form": "Speak",
+    "third_person": "Speaks",
+    "simple_past": "Spoke",
+    "past_participle": "Spoken",
+    "gerund": "Speaking",
+    "meaning": ["Hablar"]
+  },
+  {
+    "no": 315,
+    "type": "R",
+    "simple_form": "Speed",
+    "third_person": "Speeds",
+    "simple_past": "Sped",
+    "past_participle": "Sped",
+    "gerund": "Speeding",
+    "meaning": ["Acelerar"]
+  },
+  {
+    "no": 316,
+    "type": "R",
+    "simple_form": "Spell",
+    "third_person": "Spells",
+    "simple_past": "Spelled",
+    "past_participle": "Spelled",
+    "gerund": "Spelling",
+    "meaning": ["Deletrear"]
+  },
+  {
+    "no": 317,
+    "type": "I",
+    "simple_form": "Spend",
+    "third_person": "Spends",
+    "simple_past": "Spend",
+    "past_participle": "Spent",
+    "gerund": "Spending",
+    "meaning": ["Gastar", "Pasar el tiempo"]
+  },
+  {
+    "no": 318,
+    "type": "R",
+    "simple_form": "Spill",
+    "third_person": "Spills",
+    "simple_past": "Spilled",
+    "past_participle": "Spilled",
+    "gerund": "Spilling",
+    "meaning": ["Derramar", "Regar"]
+  },
+  {
+    "no": 319,
+    "type": "I",
+    "simple_form": "Spin",
+    "third_person": "Spins",
+    "simple_past": "Spun",
+    "past_participle": "Spun",
+    "gerund": "Spinning",
+    "meaning": ["Hacer girar (vueltas)"]
+  },
+  {
+    "no": 320,
+    "type": "I",
+    "simple_form": "Spit",
+    "third_person": "Spits",
+    "simple_past": "Spit",
+    "past_participle": "Spit",
+    "gerund": "Spitting",
+    "meaning": ["Escupir"]
+  },
+  {
+    "no": 321,
+    "type": "R",
+    "simple_form": "Splash",
+    "third_person": "Splashes",
+    "simple_past": "Splashed",
+    "past_participle": "Splashed",
+    "gerund": "Splashing",
+    "meaning": ["Salpicar", "Rociar"]
+  },
+  {
+    "no": 322,
+    "type": "I",
+    "simple_form": "Split",
+    "third_person": "Splits",
+    "simple_past": "Split",
+    "past_participle": "Split",
+    "gerund": "Splitting",
+    "meaning": ["Dividirse", "Partir"]
+  },
+  {
+    "no": 323,
+    "type": "R",
+    "simple_form": "Spoil",
+    "third_person": "Spoils",
+    "simple_past": "Spoiled",
+    "past_participle": "Spoiled",
+    "gerund": "Spoiling",
+    "meaning": ["Estropear", "Echar a perder", "Mimar"]
+  },
+  {
+    "no": 324,
+    "type": "I",
+    "simple_form": "Spread",
+    "third_person": "Spreads",
+    "simple_past": "Spread",
+    "past_participle": "Spread",
+    "gerund": "Spreading",
+    "meaning": ["Difundir", "Propagar"]
+  },
+  {
+    "no": 325,
+    "type": "I",
+    "simple_form": "Spring",
+    "third_person": "Springs",
+    "simple_past": "Sprang",
+    "past_participle": "Sprung",
+    "gerund": "Springing",
+    "meaning": ["Saltar", "Brotar"]
+  },
+  {
+    "no": 326,
+    "type": "R",
+    "simple_form": "Sprinkle",
+    "third_person": "Sprinkles",
+    "simple_past": "Sprinkled",
+    "past_participle": "Sprinkled",
+    "gerund": "Sprinking",
+    "meaning": ["Rociar"]
+  },
+  {
+    "no": 327,
+    "type": "R",
+    "simple_form": "Squeeze",
+    "third_person": "Squeezes",
+    "simple_past": "Squeezed",
+    "past_participle": "Squeezed",
+    "gerund": "Squeezing",
+    "meaning": ["Apretar"]
+  },
+  {
+    "no": 328,
+    "type": "I",
+    "simple_form": "Stand",
+    "third_person": "Stands",
+    "simple_past": "Stood",
+    "past_participle": "Stood",
+    "gerund": "Standing",
+    "meaning": ["Ponerse de pie", "Pararse"]
+  },
+  {
+    "no": 329,
+    "type": "R",
+    "simple_form": "Start",
+    "third_person": "Starts",
+    "simple_past": "Started",
+    "past_participle": "Started",
+    "gerund": "Starting",
+    "meaning": ["Agregar", "Comenzar", "Empezar", "Iniciar"]
+  },
+  {
+    "no": 330,
+    "type": "R",
+    "simple_form": "Stay",
+    "third_person": "Stays",
+    "simple_past": "Stayed",
+    "past_participle": "Stayed",
+    "gerund": "Staying",
+    "meaning": ["Permanecer", "Quedarse", "Durar"]
+  },
+  {
+    "no": 331,
+    "type": "I",
+    "simple_form": "Steal",
+    "third_person": "Steals",
+    "simple_past": "Stole",
+    "past_participle": "Stolen",
+    "gerund": "Stealing",
+    "meaning": ["Robar", "Hurtar"]
+  },
+  {
+    "no": 332,
+    "type": "R",
+    "simple_form": "Steam",
+    "third_person": "Steams",
+    "simple_past": "Steamed",
+    "past_participle": "Steamed",
+    "gerund": "Steaming",
+    "meaning": ["Cocer a vapor"]
+  },
+  {
+    "no": 333,
+    "type": "I",
+    "simple_form": "Stick",
+    "third_person": "Sticks",
+    "simple_past": "Stuck",
+    "past_participle": "Stuck",
+    "gerund": "Sticking",
+    "meaning": ["Pegar(se)", "Adherir(se)"]
+  },
+  {
+    "no": 334,
+    "type": "I",
+    "simple_form": "Sting",
+    "third_person": "Stings",
+    "simple_past": "Stung",
+    "past_participle": "Stung",
+    "gerund": "Stinging",
+    "meaning": ["Picar", "Golpear"]
+  },
+  {
+    "no": 335,
+    "type": "I",
+    "simple_form": "Stink",
+    "third_person": "Stinks",
+    "simple_past": "Stank",
+    "past_participle": "Stunk",
+    "gerund": "Stinking",
+    "meaning": ["Apestar", "Oler mal"]
+  },
+  {
+    "no": 336,
+    "type": "R",
+    "simple_form": "Stir",
+    "third_person": "Stirs",
+    "simple_past": "Stired",
+    "past_participle": "Stired",
+    "gerund": "Stirring",
+    "meaning": ["Agregar", "Revolver"]
+  },
+  {
+    "no": 337,
+    "type": "R",
+    "simple_form": "Stop",
+    "third_person": "Stops",
+    "simple_past": "Stopped",
+    "past_participle": "Stopped",
+    "gerund": "Stopping",
+    "meaning": ["Parar", "Detener"]
+  },
+  {
+    "no": 338,
+    "type": "I",
+    "simple_form": "Strike",
+    "third_person": "Stikes",
+    "simple_past": "Struck",
+    "past_participle": "Struck",
+    "gerund": "Striking",
+    "meaning": ["Golpear", "Pegar"]
+  },
+  {
+    "no": 339,
+    "type": "I",
+    "simple_form": "String",
+    "third_person": "Strings",
+    "simple_past": "Strungs",
+    "past_participle": "Strung",
+    "gerund": "Stringing",
+    "meaning": ["Atar(cordones)"]
+  },
+  {
+    "no": 340,
+    "type": "I",
+    "simple_form": "Strive",
+    "third_person": "Strives",
+    "simple_past": "Strove",
+    "past_participle": "Striven",
+    "gerund": "Striving",
+    "meaning": ["Esforzarse"]
+  },
+  {
+    "no": 341,
+    "type": "R",
+    "simple_form": "Study",
+    "third_person": "Studies",
+    "simple_past": "Studied",
+    "past_participle": "Studied",
+    "gerund": "Studying",
+    "meaning": ["Estudiar"]
+  },
+  {
+    "no": 342,
+    "type": "R",
+    "simple_form": "Stuff",
+    "third_person": "Stuffs",
+    "simple_past": "Stuffed",
+    "past_participle": "Stuffed",
+    "gerund": "Stuffing",
+    "meaning": ["Rellenar"]
+  },
+  {
+    "no": 343,
+    "type": "R",
+    "simple_form": "Substract",
+    "third_person": "Substracts",
+    "simple_past": "Substracted",
+    "past_participle": "Substracted",
+    "gerund": "Substracting",
+    "meaning": ["Sustraer", "Restar"]
+  },
+  {
+    "no": 344,
+    "type": "R",
+    "simple_form": "Suck",
+    "third_person": "Sucks",
+    "simple_past": "Sucked",
+    "past_participle": "Sucked",
+    "gerund": "Sucking",
+    "meaning": ["Chupar"]
+  },
+  {
+    "no": 346,
+    "type": "R",
+    "simple_form": "Support",
+    "third_person": "Supports",
+    "simple_past": "Supported",
+    "past_participle": "Supported",
+    "gerund": "Supporting",
+    "meaning": ["Soportar"]
+  },
+  {
+    "no": 345,
+    "type": "R",
+    "simple_form": "Suppose",
+    "third_person": "Supposes",
+    "simple_past": "Supposed",
+    "past_participle": "Supposed",
+    "gerund": "Supposing",
+    "meaning": ["Suponer"]
+  },
+  {
+    "no": 347,
+    "type": "R",
+    "simple_form": "Surround",
+    "third_person": "Surrounds",
+    "simple_past": "Surrounded",
+    "past_participle": "Surrounded",
+    "gerund": "Sorrounding",
+    "meaning": ["Rodear"]
+  },
+  {
+    "no": 348,
+    "type": "I",
+    "simple_form": "Swear",
+    "third_person": "Swears",
+    "simple_past": "Swore",
+    "past_participle": "Sworn",
+    "gerund": "Swearing",
+    "meaning": ["Jurar"]
+  },
+  {
+    "no": 349,
+    "type": "I",
+    "simple_form": "Sweep",
+    "third_person": "Sweeps",
+    "simple_past": "Swept",
+    "past_participle": "Swept",
+    "gerund": "Sweeping",
+    "meaning": ["Barrer"]
+  },
+  {
+    "no": 350,
+    "type": "I",
+    "simple_form": "Swim",
+    "third_person": "Swims",
+    "simple_past": "Swam",
+    "past_participle": "Swum",
+    "gerund": "Swimming",
+    "meaning": ["Nadar"]
+  },
+  {
+    "no": 351,
+    "type": "I",
+    "simple_form": "Swing",
+    "third_person": "Swings",
+    "simple_past": "Swung",
+    "past_participle": "Swung",
+    "gerund": "Swinging",
+    "meaning": ["Balancearse", "Girar", "Columpiarse"]
+  },
+  {
+    "no": 352,
+    "type": "I",
+    "simple_form": "Take",
+    "third_person": "Takes",
+    "simple_past": "Took",
+    "past_participle": "Taken",
+    "gerund": "Taking",
+    "meaning": ["Tomar", "Agarrar", "Coger"]
+  },
+  {
+    "no": 353,
+    "type": "R",
+    "simple_form": "Talk",
+    "third_person": "Talks",
+    "simple_past": "Talked",
+    "past_participle": "Talked",
+    "gerund": "Talking",
+    "meaning": ["Hablar", "Conversar"]
+  },
+  {
+    "no": 354,
+    "type": "R",
+    "simple_form": "Taste",
+    "third_person": "Tastes",
+    "simple_past": "Tasted",
+    "past_participle": "Tasted",
+    "gerund": "Tasting",
+    "meaning": ["Saborear", "Catar", "Probar"]
+  },
+  {
+    "no": 355,
+    "type": "I",
+    "simple_form": "Teach",
+    "third_person": "Teaches",
+    "simple_past": "Taught",
+    "past_participle": "Taught",
+    "gerund": "Teaching",
+    "meaning": ["Enseñar"]
+  },
+  {
+    "no": 356,
+    "type": "I",
+    "simple_form": "Tear",
+    "third_person": "Tears",
+    "simple_past": "Tore",
+    "past_participle": "Torn",
+    "gerund": "Tearing",
+    "meaning": ["Rasgar", "Desgarrar", "Arrancar"]
+  },
+  {
+    "no": 357,
+    "type": "I",
+    "simple_form": "Tell",
+    "third_person": "Tells",
+    "simple_past": "Told",
+    "past_participle": "Told",
+    "gerund": "Telling",
+    "meaning": ["Decir", "Contar"]
+  },
+  {
+    "no": 358,
+    "type": "I",
+    "simple_form": "Think",
+    "third_person": "Thinks",
+    "simple_past": "Thought",
+    "past_participle": "Thought",
+    "gerund": "Thinking",
+    "meaning": ["Pensar", "Creer"]
+  },
+  {
+    "no": 359,
+    "type": "I",
+    "simple_form": "Throw",
+    "third_person": "Throws",
+    "simple_past": "Threw",
+    "past_participle": "Thrown",
+    "gerund": "Throwing",
+    "meaning": ["Lanzar", "Arrojar"]
+  },
+  {
+    "no": 360,
+    "type": "I",
+    "simple_form": "Thrust",
+    "third_person": "Thrust",
+    "simple_past": "Thrust",
+    "past_participle": "Thrust",
+    "gerund": "Thrusting",
+    "meaning": ["Clavar", "Empujar"]
+  },
+  {
+    "no": 361,
+    "type": "R",
+    "simple_form": "Touch",
+    "third_person": "Touches",
+    "simple_past": "Touched",
+    "past_participle": "Touched",
+    "gerund": "Touching",
+    "meaning": ["Tocar", "Rozar"]
+  },
+  {
+    "no": 362,
+    "type": "R",
+    "simple_form": "Translate",
+    "third_person": "Translates",
+    "simple_past": "Translated",
+    "past_participle": "Translated",
+    "gerund": "Translating",
+    "meaning": ["Traducir"]
+  },
+  {
+    "no": 363,
+    "type": "R",
+    "simple_form": "Travel",
+    "third_person": "Travels",
+    "simple_past": "Traveled",
+    "past_participle": "Traveled",
+    "gerund": "Traveling",
+    "meaning": ["Viajar", "Andar", "Recorrer"]
+  },
+  {
+    "no": 364,
+    "type": "R",
+    "simple_form": "Trust",
+    "third_person": "Trusts",
+    "simple_past": "Trusted",
+    "past_participle": "Trusted",
+    "gerund": "Trusting",
+    "meaning": ["Confiar", "Creer"]
+  },
+  {
+    "no": 365,
+    "type": "R",
+    "simple_form": "Try",
+    "third_person": "Tries",
+    "simple_past": "Tried",
+    "past_participle": "Tried",
+    "gerund": "Trying",
+    "meaning": ["Probar", "Intentar", "Ensayar", "Tratar"]
+  },
+  {
+    "no": 366,
+    "type": "R",
+    "simple_form": "Turn",
+    "third_person": "Turns",
+    "simple_past": "Turned",
+    "past_participle": "Turned",
+    "gerund": "Turning",
+    "meaning": ["Girar", "Dar vueltas", "Dar la vuelta"]
+  },
+  {
+    "no": 367,
+    "type": "R",
+    "simple_form": "Type",
+    "third_person": "Types",
+    "simple_past": "Typed",
+    "past_participle": "Typed",
+    "gerund": "Typing",
+    "meaning": ["Mecanografiar", "Digitar"]
+  },
+  {
+    "no": 368,
+    "type": "R",
+    "simple_form": "Underline",
+    "third_person": "Underlines",
+    "simple_past": "Underlined",
+    "past_participle": "Underlined",
+    "gerund": "Underlining",
+    "meaning": ["Subrayar"]
+  },
+  {
+    "no": 369,
+    "type": "I",
+    "simple_form": "Understand",
+    "third_person": "Understands",
+    "simple_past": "Understood",
+    "past_participle": "Understood",
+    "gerund": "Understanding",
+    "meaning": ["Entender", "Comprender"]
+  },
+  {
+    "no": 370,
+    "type": "I",
+    "simple_form": "Undertake",
+    "third_person": "Undertakes",
+    "simple_past": "Undertook",
+    "past_participle": "Undertaken",
+    "gerund": "Undertaking",
+    "meaning": ["Encargarse", "Emprender"]
+  },
+  {
+    "no": 371,
+    "type": "I",
+    "simple_form": "Upset",
+    "third_person": "Upsets",
+    "simple_past": "Upset",
+    "past_participle": "Upset",
+    "gerund": "Upsetting",
+    "meaning": ["Alterar", "Perturbar"]
+  },
+  {
+    "no": 372,
+    "type": "R",
+    "simple_form": "Use",
+    "third_person": "Uses",
+    "simple_past": "Used",
+    "past_participle": "Used",
+    "gerund": "Using",
+    "meaning": ["Usar"]
+  },
+  {
+    "no": 373,
+    "type": "R",
+    "simple_form": "Vacuum",
+    "third_person": "Vacuums",
+    "simple_past": "Vacuumed",
+    "past_participle": "Vacuumed",
+    "gerund": "Vaccuming",
+    "meaning": ["Aspirar"]
+  },
+  {
+    "no": 374,
+    "type": "R",
+    "simple_form": "Vanish",
+    "third_person": "Vanishes",
+    "simple_past": "Vanished",
+    "past_participle": "Vanished",
+    "gerund": "Vanishing",
+    "meaning": ["Desvanecer(se)", "Desaparecer"]
+  },
+  {
+    "no": 375,
+    "type": "R",
+    "simple_form": "Visit",
+    "third_person": "Visits",
+    "simple_past": "Visited",
+    "past_participle": "Visited",
+    "gerund": "Visiting",
+    "meaning": ["Visitar", "Hacer visitas"]
+  },
+  {
+    "no": 376,
+    "type": "R",
+    "simple_form": "Wait",
+    "third_person": "Waits",
+    "simple_past": "Waited",
+    "past_participle": "Waited",
+    "gerund": "Waiting",
+    "meaning": ["Esperar"]
+  },
+  {
+    "no": 377,
+    "type": "I",
+    "simple_form": "Wake",
+    "third_person": "Wakes",
+    "simple_past": "Woke",
+    "past_participle": "Woken",
+    "gerund": "Waking",
+    "meaning": ["Despertar(se)"]
+  },
+  {
+    "no": 378,
+    "type": "R",
+    "simple_form": "Walk",
+    "third_person": "Walks",
+    "simple_past": "Walked",
+    "past_participle": "Walked",
+    "gerund": "Walking",
+    "meaning": ["Caminar", "Andar", "Pasear", "Andar"]
+  },
+  {
+    "no": 379,
+    "type": "R",
+    "simple_form": "Want",
+    "third_person": "Wants",
+    "simple_past": "Wanted",
+    "past_participle": "Wanted",
+    "gerund": "Wanting",
+    "meaning": ["Querer", "Desear", "Necesitar"]
+  },
+  {
+    "no": 380,
+    "type": "R",
+    "simple_form": "Warm",
+    "third_person": "Warms",
+    "simple_past": "Warmed",
+    "past_participle": "Warmed",
+    "gerund": "Warming",
+    "meaning": ["Calentar(se)", "Recalentar"]
+  },
+  {
+    "no": 381,
+    "type": "R",
+    "simple_form": "Wash",
+    "third_person": "Washes",
+    "simple_past": "Washed",
+    "past_participle": "Washed",
+    "gerund": "Washing",
+    "meaning": ["Lavar", "Fregar", "Mojar"]
+  },
+  {
+    "no": 382,
+    "type": "R",
+    "simple_form": "Watch",
+    "third_person": "Watches",
+    "simple_past": "Watched",
+    "past_participle": "Watched",
+    "gerund": "Watching",
+    "meaning": ["Mirar", "Velar", "Vigilar"]
+  },
+  {
+    "no": 383,
+    "type": "R",
+    "simple_form": "Wave",
+    "third_person": "Waves",
+    "simple_past": "Waved",
+    "past_participle": "Waved",
+    "gerund": "Waving",
+    "meaning": ["Agitar", "Ondear"]
+  },
+  {
+    "no": 384,
+    "type": "I",
+    "simple_form": "Wear",
+    "third_person": "Wears",
+    "simple_past": "Wore",
+    "past_participle": "Worn",
+    "gerund": "Wearing",
+    "meaning": ["Usar", "Llevar puesto"]
+  },
+  {
+    "no": 385,
+    "type": "I",
+    "simple_form": "Weave",
+    "third_person": "Weaves",
+    "simple_past": "Wove",
+    "past_participle": "Woven",
+    "gerund": "Weaving",
+    "meaning": ["Tejer"]
+  },
+  {
+    "no": 386,
+    "type": "R",
+    "simple_form": "Wed",
+    "third_person": "Weds",
+    "simple_past": "Wed",
+    "past_participle": "Wed",
+    "gerund": "Wedding",
+    "meaning": ["Casar(se)", "Unirse con"]
+  },
+  {
+    "no": 387,
+    "type": "I",
+    "simple_form": "Weep",
+    "third_person": "Weeps",
+    "simple_past": "Wept",
+    "past_participle": "Wept",
+    "gerund": "Weeping",
+    "meaning": ["Lamentarse", "Llorar"]
+  },
+  {
+    "no": 388,
+    "type": "R",
+    "simple_form": "Weigh",
+    "third_person": "Weighs",
+    "simple_past": "Weighed",
+    "past_participle": "Weighed",
+    "gerund": "Weighing",
+    "meaning": ["Pesar"]
+  },
+  {
+    "no": 389,
+    "type": "R",
+    "simple_form": "Whistle",
+    "third_person": "Whistles",
+    "simple_past": "Whistled",
+    "past_participle": "Whistled",
+    "gerund": "Whistling",
+    "meaning": ["Silbar"]
+  },
+  {
+    "no": 390,
+    "type": "I",
+    "simple_form": "Win",
+    "third_person": "Wins",
+    "simple_past": "Won",
+    "past_participle": "Won",
+    "gerund": "Winning",
+    "meaning": ["Ganar"]
+  },
+  {
+    "no": 391,
+    "type": "I",
+    "simple_form": "Wind",
+    "third_person": "Winds",
+    "simple_past": "Wound",
+    "past_participle": "Wound",
+    "gerund": "Winding",
+    "meaning": ["Dejar sin aliento"]
+  },
+  {
+    "no": 392,
+    "type": "R",
+    "simple_form": "Wish",
+    "third_person": "Wishes",
+    "simple_past": "Wished",
+    "past_participle": "Wished",
+    "gerund": "Wishing",
+    "meaning": ["Desear"]
+  },
+  {
+    "no": 393,
+    "type": "I",
+    "simple_form": "Withdraw",
+    "third_person": "Withdraws",
+    "simple_past": "Withdrew",
+    "past_participle": "Withdrawn",
+    "gerund": "Withdrawing",
+    "meaning": ["Quitar", "Apartar", "Retirar"]
+  },
+  {
+    "no": 394,
+    "type": "R",
+    "simple_form": "Wonder",
+    "third_person": "Wonders",
+    "simple_past": "Wondered",
+    "past_participle": "Wondered",
+    "gerund": "Wondering",
+    "meaning": ["Maravillarse", "Asombrarse", "Preguntarse"]
+  },
+  {
+    "no": 395,
+    "type": "R",
+    "simple_form": "Work",
+    "third_person": "Works",
+    "simple_past": "Worked",
+    "past_participle": "Worked",
+    "gerund": "Working",
+    "meaning": ["Trabajar", "Funcionar"]
+  },
+  {
+    "no": 396,
+    "type": "R",
+    "simple_form": "Worry",
+    "third_person": "Worries",
+    "simple_past": "Worried",
+    "past_participle": "Worried",
+    "gerund": "Worrying",
+    "meaning": ["Preocupar"]
+  },
+  {
+    "no": 397,
+    "type": "R",
+    "simple_form": "Wrap",
+    "third_person": "Wraps",
+    "simple_past": "Wrapped",
+    "past_participle": "Wrapped",
+    "gerund": "Wrapping",
+    "meaning": ["Empacar", "Envolver"]
+  },
+  {
+    "no": 398,
+    "type": "I",
+    "simple_form": "Wring",
+    "third_person": "Wrings",
+    "simple_past": "Wrung",
+    "past_participle": "Wrung",
+    "gerund": "Wringing",
+    "meaning": ["Escurrir", "Retorcer"]
+  },
+  {
+    "no": 399,
+    "type": "I",
+    "simple_form": "Write",
+    "third_person": "Writes",
+    "simple_past": "Wrote",
+    "past_participle": "Written",
+    "gerund": "Writing",
+    "meaning": ["Escribir", "Redactar"]
+  },
+  {
+    "no": 400,
+    "type": "R",
+    "simple_form": "Yawn",
+    "third_person": "Yawns",
+    "simple_past": "Yawned",
+    "past_participle": "Yawned",
+    "gerund": "Yawning",
+    "meaning": ["Bostezar"]
+  }
+]

@@ -1,15 +1,13 @@
 import React from "react";
 
-// React redux
+// Redux
 import { Provider as ReduxProvider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "@/redux/store";
 
 // UI
-import { PaperProvider } from "react-native-paper";
-
-// Components
-import SplashScreenComponent from "@/components/loadings/SplashScreen";
-import ErrorScreen from "@/components/screens/ErrorScreen";
-import { store } from "@/redux/store";
+import { ActivityIndicator, PaperProvider } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Props
 interface AppProviderProps {
@@ -23,12 +21,20 @@ interface AppProviderProps {
  * @return {TSX.Component}
  */
 const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
-  // ? Not store
-  if (!store) return <SplashScreenComponent />;
-
   return (
     <ReduxProvider store={store}>
-      <PaperProvider>{children}</PaperProvider>
+      <PersistGate
+        loading={
+          <SafeAreaView
+            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          >
+            <ActivityIndicator size="large" />
+          </SafeAreaView>
+        }
+        persistor={persistor}
+      >
+        <PaperProvider>{children}</PaperProvider>
+      </PersistGate>
     </ReduxProvider>
   );
 };

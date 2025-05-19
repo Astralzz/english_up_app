@@ -1,7 +1,7 @@
-// components/ScreenWrapper.tsx
 import React, { ReactNode } from "react";
 import { View, StyleSheet, ViewStyle } from "react-native";
 import { useThemeApp } from "@/hooks/useThemeApp";
+import { ScrollView } from "react-native-gesture-handler";
 
 // Props
 interface ScreenWrapperProps {
@@ -10,6 +10,8 @@ interface ScreenWrapperProps {
     justifyContent?: ViewStyle["justifyContent"];
     alignItems?: ViewStyle["alignItems"];
   };
+  style?: ViewStyle;
+  scrollable?: boolean;
 }
 
 /**
@@ -24,24 +26,30 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
     justifyContent: "center",
     alignItems: "center",
   },
+  scrollable,
+  style,
 }) => {
   // Tema
   const {
     state: { colors },
   } = useThemeApp();
 
+  // Contenido
+  const Wrapper = scrollable ? ScrollView : View;
+
   return (
-    <View
+    <Wrapper
       style={[
         styles.container,
         {
           backgroundColor: colors.background.primary,
           ...stylesProps,
+          ...style,
         },
       ]}
     >
       {children}
-    </View>
+    </Wrapper>
   );
 };
 

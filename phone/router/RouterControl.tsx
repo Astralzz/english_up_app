@@ -12,7 +12,7 @@ const RouterControl: React.FC = () => (
     drawerContent={(props) => <NavigationMenu {...props} />}
     initialRouteName="Home"
     screenOptions={{
-      header: () => <NavigationHeader />,
+      header: (props) => <NavigationHeader {...props} />,
       drawerPosition: "right",
       drawerType: "front", // Tipo de comportamiento
       // headerShown: false // Ocultar headers
