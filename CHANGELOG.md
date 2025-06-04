@@ -21,4 +21,11 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se mejoro la lógica
 - Se agrego persistencia
 
+## [0.0.3] - 04-06-2025
+
+- Se actualizo SDK a la version 53
+- Se actualizo React al 19
+- Se actualizo la app y lib para adaptarce a las nuevas versiones
+- Se elimino 'react-test-renderer' por incompatibilidad
+
 ---

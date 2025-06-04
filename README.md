@@ -4,12 +4,48 @@ App personal enfocada en mejorar mi ingles y ayudarme en mi aprendizaje
 
 ## COMANDOS
 
-Básicos:
+### COMANDOS CON NPM
+
+- Instalar dependencias
+
+    ```bash
+    npm install
+    npm install --legacy-peer-deps -> Para evitar problemas de compatibilidad
+    npm install --force -> Para forzar la instalación ignorando las dependencias
+    ```
+
+- Borrar cache
+
+    ```bash
+    npm cache clean --force
+    ```
+
+- Borrar node_modules and package-lock.json
+
+    ```bash
+    Remove-Item -Recurse -Force .\node_modules
+    Remove-Item -Force .\package-lock.json
+    ```
+ 
+- Verificar versiones disponibles de una librería
+
+    ```bash
+    npm show [libreria] versions
+    ```
+
+- Instalar una version específica de una librería
+
+    ```bash
+    npm install [libreria]@[version]
+    ```
+
+### COMANDOS CON NPX
 
 - Iniciar app (desarrollo)
 
     ```bash
-    npx expo start --reset-cache  
+    npx expo start --reset-cache
+    npx expo start --clear
     ```
 
 - Verificar integridad y problemas en la application
@@ -24,8 +60,12 @@ Básicos:
     npx expo install --check  
     ```
 
-npx expo prebuild // Este comando creará la carpeta de Android en la raíz
-npx expo prebuild --clean
+- Actualizar SDK y librerías
+
+    ```bash
+    npx expo upgrade
+    ```
+
 npx expo run:android
 
 Configuraciones antes del build:
@@ -42,7 +82,7 @@ PROVIDERS
 
 - [React Redux](https://react-redux.js.org)
 - [Redux Toolkit](https://redux-toolkit.js.org)
-- [Redux Persist](https://github.com/rt2zz/redux-persist#readme)
+- [Redux Persist](https://github.com/rt2zz/redux-persist#readme) > NOTE: Temporal, despues se usara react-native-mmkv
 
 NAVIGATION
 
