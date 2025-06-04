@@ -22,7 +22,7 @@ const VerbListScreen: React.FC = () => {
 
   // Hooks
   const {
-    state: { colors },
+    state: { colors, isThemeDark},
   } = useThemeApp();
 
   // Transition hook
@@ -64,7 +64,7 @@ const VerbListScreen: React.FC = () => {
       }}
       error={error}
     >
-      <VerbList verbs={verbs} colors={colors} />
+      <VerbList verbs={verbs} colors={colors} isThemeDark={isThemeDark} />
     </VerbsLayout>
   );
 };

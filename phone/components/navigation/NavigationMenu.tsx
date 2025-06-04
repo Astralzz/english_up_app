@@ -3,14 +3,15 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from "@react-navigation/drawer";
-import { Text, Avatar, Divider, Switch, Drawer } from "react-native-paper";
+import { Text, Avatar, Divider, Drawer } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { View, StyleSheet, Animated, TouchableOpacity } from "react-native";
+import { StyleSheet, Animated } from "react-native";
 import ROUTES_MENU_APP from "@/router/routerlist";
 import { ColorsAppType } from "@/theme/colors";
 import { useThemeApp } from "@/hooks/useThemeApp";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from "react-i18next";
+import FooterMenu from "./menu/FooterMenu";
 
 /**
  * Menu - Navigation component
@@ -21,10 +22,10 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
   // Hooks
   const {
     state: { colors, isThemeDark },
-    toggleTheme,
   } = useThemeApp();
   const { t } = useTranslation();
 
+  // Variables
   const animatedValue = React.useRef(new Animated.Value(0)).current;
   const currentRoute = props.state.routeNames[props.state.index];
 
@@ -50,6 +51,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
     ]).start();
   }, []);
 
+  // Interpolación
   const rotateInterpolation = React.useMemo(
     () =>
       animatedValue.interpolate({
@@ -64,7 +66,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
       {...props}
       contentContainerStyle={styles.scrollView}
     >
-      {/* Encabezado */}
+      {/* Header */}
       <LinearGradient
         colors={[colors.primary[600], colors.primary[400]]}
         style={styles.header}
@@ -129,32 +131,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
       </Drawer.Section>
 
       {/* Footer */}
-      <View style={styles.footer}>
-        <Divider style={styles.divider} />
-        <View style={styles.themeContainer}>
-          <Icon
-            name="white-balance-sunny"
-            size={22}
-            color={colors.text.primary}
-          />
-          <Switch
-            value={isThemeDark}
-            onValueChange={toggleTheme}
-            color={colors.primary[600]}
-            style={styles.themeSwitch}
-          />
-          <Icon
-            name="moon-waning-crescent"
-            size={22}
-            color={colors.icons.primary}
-          />
-        </View>
-
-        <TouchableOpacity style={styles.aboutButton}>
-          <Icon name="information" size={18} color={colors.primary[600]} />
-          <Text style={styles.aboutText}>{t("menu.footer.version")}</Text>
-        </TouchableOpacity>
-      </View>
+      <FooterMenu t={t} />
     </DrawerContentScrollView>
   );
 };
@@ -218,33 +195,6 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
     },
     icon: {
       marginRight: 8,
-    },
-    footer: {
-      marginTop: "auto",
-      paddingHorizontal: 18,
-      paddingBottom: 28,
-    },
-    themeContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 14,
-      marginVertical: 14,
-    },
-    themeSwitch: {
-      transform: [{ scaleX: 1.2 }, { scaleY: 1.2 }],
-    },
-    aboutButton: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 6,
-      padding: 10,
-    },
-    aboutText: {
-      color: colors.text.tertiary,
-      fontSize: 12,
-      fontWeight: "500",
     },
   });
 

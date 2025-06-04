@@ -14,8 +14,18 @@ interface Verb {
   meaning: Array<string>;
 }
 
+/**
+ * Verb type
+ * @module VerbTypeType
+ * @description This module defines the VerbTypeType type.
+ */
 export type VerbTypeType = "I" | "R";
 
+/**
+ * Paginate verbs type
+ * @module PaginateVerbsType
+ * @description This module defines the PaginateVerbsType type.
+ */
 export type PaginateVerbsType = {
   data: Verb[];
   totalPages: number;

@@ -1,83 +1,69 @@
 import React from "react";
-import { FlatList, View, StyleSheet } from "react-native";
-import { Card, Text } from "react-native-paper";
-import { LinearGradient } from "expo-linear-gradient";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { FlatList } from "react-native";
 import { ColorsAppType } from "@/theme/colors";
 import Verb from "@/models/Verb";
+import VerbCard from "./VerbCard";
+import VerbDetails from "./VerbDetails";
+import ModalDefault from "@/components/modals/ModalDefault";
 
-interface VerbCardProps {
-  verb: Verb;
-  colors: ColorsAppType;
-}
-
-const VerbCard = ({ verb, colors }: VerbCardProps) => {
-  return (
-    <Card style={styles.card}>
-      <LinearGradient
-        colors={[colors.primary[200], colors.primary[400]]}
-        style={styles.gradient}
-        start={[0, 0]}
-        end={[1, 1]}
-      >
-        <View style={styles.content}>
-          <Icon
-            name="book-open-page-variant"
-            size={24}
-            color={colors.text.primary}
-          />
-          <View style={{ marginLeft: 12 }}>
-            <Text style={[styles.simpleForm, { color: colors.text.primary }]}>
-              {verb.simple_form}
-            </Text>
-            <Text style={[styles.meaning, { color: colors.text.secondary }]}>
-              {verb.meaning.join(", ")}
-            </Text>
-          </View>
-        </View>
-      </LinearGradient>
-    </Card>
-  );
-};
-
+// Props
 interface VerbListProps {
   verbs: Verb[];
   colors: ColorsAppType;
+  isThemeDark: boolean;
 }
 
-const VerbList = ({ verbs, colors }: VerbListProps) => {
+/**
+ * Componente que muestra una lista de verbos.
+ *
+ * @param {Object} props - Props del componente.
+ * @param {Verb[]} props.verbs - Lista de verbos a mostrar.
+ * @param {ColorsAppType} props.colors - Colores de la aplicación.
+ * @returns {TSX.Element} Componente VerbList.
+ */
+const VerbList = ({ verbs, colors, isThemeDark }: VerbListProps) => {
+  // State
+  const [showModal, setShowModal] = React.useState<boolean>(false);
+  const [selectedVerb, setSelectedVerb] = React.useState<Verb | null>(null);
+
+  // View verb details
+  const viewVerb = React.useCallback((verb: Verb) => {
+    setSelectedVerb(verb);
+    setShowModal(true);
+  }, []);
+
+  // Close modal
+  const closeModal = React.useCallback(() => {
+    setShowModal(false);
+    setSelectedVerb(null);
+  }, []);
+
   return (
-    <FlatList
-      data={verbs}
-      keyExtractor={(item) => item.no.toString()}
-      contentContainerStyle={{ padding: 12 }}
-      renderItem={({ item }) => <VerbCard verb={item} colors={colors} />}
-    />
+    <>
+      {/* FlatList */}
+      <FlatList
+        data={verbs}
+        keyExtractor={(item) => item.no.toString()}
+        contentContainerStyle={{ padding: 12 }}
+        renderItem={({ item }) => (
+          <VerbCard verb={item} colors={colors} viewVerb={viewVerb} />
+        )}
+      />
+      {/* Modal */}
+      <ModalDefault
+        visible={showModal}
+        onClose={closeModal}
+        title={`${selectedVerb?.simple_form || "N/A"}`}
+      >
+        <VerbDetails
+          verb={selectedVerb}
+          onClose={closeModal}
+          colors={colors}
+          isThemeDark={isThemeDark}
+        />
+      </ModalDefault>
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  card: {
-    marginVertical: 6,
-    borderRadius: 8,
-    overflow: "hidden",
-    elevation: 4,
-  },
-  gradient: {
-    padding: 16,
-  },
-  content: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  simpleForm: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  meaning: {
-    fontSize: 14,
-    marginTop: 4,
-  },
-});
 
 export default VerbList;

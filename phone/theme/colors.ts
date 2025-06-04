@@ -25,6 +25,12 @@ export type ColorsAppType = {
     secondary: string;
     overlay: string;
   };
+  modal: {
+    container: string;
+    header: string;
+    overlay: string;
+    text: string;
+  };
 };
 
 // OPaleta de colores
@@ -70,9 +76,15 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       900: "#212121",
     },
     background: {
-      primary: "#F5F5F5",
-      secondary: "#FFFFFF",
-      overlay: "rgba(0, 0, 0, 0.4)",
+      primary: "#FFF8E1",
+      secondary: "#FFECB3",
+      overlay: "rgba(0, 0, 0, 0.5)",
+    },
+    modal: {
+      overlay: "rgba(0, 0, 0, 0.5)",
+      container: "#FFF8E1",
+      header: "#FFECB3",
+      text: "#FFD54F",
     },
   },
   dark: {
@@ -119,6 +131,12 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       primary: "#121212",
       secondary: "#1E1E1E",
       overlay: "rgba(0, 0, 0, 0.8)",
+    },
+    modal: {
+      overlay: "rgba(0, 0, 0, 0.8)",
+      container: "#121212",
+      header: "#1E1E1E",
+      text: "#252525",
     },
   },
 };

@@ -7,7 +7,41 @@
       "body": "Tu viaje al bilingüismo"
     },
     "footer": {
-      "version": "version n.n.n"
+      "version": "version 0.0.3"
+    }
+  },
+  "verbs": {
+    "stack": {
+      "titles": {
+        "list": "Lista de Verbos",
+        "search": "Buscar verbos",
+        "games": "Juegos con Verbos"
+      }
+    },
+    "floatButton": {
+      "labels": {
+        "all": "Todos",
+        "search": "Buscar",
+        "games": "Juegos",
+        "refresh": "Actualizar"
+      }
+    },
+    "modal": {
+      "details": {
+        "header": {
+          "type_regular": "Verbo Regular",
+          "type_irregular": "Verbo Irregular"
+        },
+        "cards": {
+          "third_person": "3ra Persona",
+          "simple_past": "Simple Pasado",
+          "past_participle": "Participio Pasado",
+          "gerund": "Gerundio"
+        },
+        "meaning": {
+          "title": "Significado"
+        }
+      }
     }
   }
 }

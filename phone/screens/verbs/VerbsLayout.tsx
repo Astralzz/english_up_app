@@ -11,7 +11,9 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { VerbsStackParamList } from "./VerbsStack";
 import { Text } from "react-native-paper";
 import { ViewStyle } from "react-native";
+import { useTranslation } from "react-i18next";
 
+// Props
 type VerbsLayoutProps = {
   children: React.ReactNode;
   service?: ListVerbsService | null;
@@ -29,6 +31,12 @@ type VerbsLayoutProps = {
   styleWrapper?: ViewStyle;
 };
 
+/**
+ * Verbs layout
+ *
+ * @param {VerbsLayoutProps} props
+ * @return {TSX.Component}
+ */
 const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   children,
   service,
@@ -42,6 +50,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   const navigation =
     useNavigation<NativeStackNavigationProp<VerbsStackParamList>>();
   const route = useRoute();
+  const { t } = useTranslation();
 
   // Obtener acciones
   const getFloatingButtons = React.useMemo((): Array<FabActionButtonType> => {
@@ -54,23 +63,23 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
     }> = [
       {
         icon: "microsoft-xbox-controller",
-        label: "Juegos",
+        label: t("verbs.floatButton.labels.games"),
         routeName: "VerbGames",
       },
       {
         icon: "magnify",
-        label: "Buscar",
+        label: t("verbs.floatButton.labels.search"),
         routeName: "VerbSearch",
       },
       {
         icon: "format-list-bulleted-square",
-        label: "Lista completa",
+        label: t("verbs.floatButton.labels.all"),
         routeName: "VerbsList",
       },
-      // Aniones
+      // Acciones
       {
         icon: "refresh",
-        label: "Recargar",
+        label: t("verbs.floatButton.labels.refresh"),
         onPress: floatButtonActions?.refresh,
       },
     ];
@@ -113,7 +122,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
         return null;
       })
       .filter((a): a is FabActionButtonType => a !== null);
-  }, [floatButtonActions, route, navigation]);
+  }, [floatButtonActions, route, navigation, t]);
 
   return (
     <ScreenWrapper style={styleWrapper}>

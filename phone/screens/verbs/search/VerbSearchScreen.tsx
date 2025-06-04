@@ -19,9 +19,10 @@ const VerbSearchScreen: React.FC = () => {
     service,
   } = useVerbSearch();
 
+  // Hooks
   const [showFilters, setShowFilters] = useState(false);
   const {
-    state: { colors },
+    state: { colors, isThemeDark },
   } = useThemeApp();
 
   return (
@@ -70,7 +71,7 @@ const VerbSearchScreen: React.FC = () => {
       </View>
 
       <View style={styles.listContainer}>
-        <VerbList verbs={verbs} colors={colors} />
+        <VerbList verbs={verbs} colors={colors} isThemeDark={isThemeDark} />
       </View>
     </VerbsLayout>
   );

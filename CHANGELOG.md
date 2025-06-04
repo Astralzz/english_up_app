@@ -28,4 +28,12 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se actualizo la app y lib para adaptarce a las nuevas versiones
 - Se elimino 'react-test-renderer' por incompatibilidad
 
+## [0.0.4] - 04-06-2025
+
+- Se mejoro la logica para el cambio de idioma
+- Se agrego la funcionalidad de los verbos
+- Se agrego modal de detalles de verbos
+- Se creo un modal global para la app
+- Se agrego boton para cambiar idioma
+
 ---

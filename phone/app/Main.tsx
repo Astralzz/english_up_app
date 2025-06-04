@@ -6,6 +6,8 @@ import RouterControl from "../router/RouterControl";
 
 // Theme
 import { useThemeApp } from "@/hooks/useThemeApp";
+import { useLanguageApp } from "@/hooks/useLanguageApp";
+import i18n from "@/i18n";
 
 /**
  *
@@ -18,6 +20,16 @@ const Main: React.FC = () => {
   const {
     state: { colors },
   } = useThemeApp();
+
+  // Language
+  const {
+    state: { language },
+  } = useLanguageApp();
+
+  // Acción
+  React.useEffect(() => {
+    i18n.changeLanguage(language || "en");
+  }, [language]);
 
   return (
     <SafeAreaView style={{ flex: 1 }}>

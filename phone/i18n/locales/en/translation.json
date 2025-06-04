@@ -1,13 +1,47 @@
 {
   "app_name": "EnglishUp App",
-  "welcome": "Bienvenido",
+  "welcome": "Welcome",
   "menu": {
     "header": {
       "title": "EnglishUp",
-      "body": "Tu viaje al bilingüismo"
+      "body": "Your journey to bilingualism"
     },
     "footer": {
-      "version": "version n.n.n"
+      "version": "version 0.0.3"
+    }
+  },
+  "verbs": {
+    "stack": {
+      "titles": {
+        "list": "List of Verbs",
+        "search": "Search Verbs",
+        "games": "Games with Verbs"
+      }
+    },
+    "floatButton": {
+      "labels": {
+        "all": "All",
+        "search": "Search",
+        "games": "Games",
+        "refresh": "Refresh"
+      }
+    },
+    "modal": {
+      "details": {
+        "header": {
+          "type_regular": "Regular Verb",
+          "type_irregular": "Irregular Verb"
+        },
+        "cards": {
+          "third_person": "3rd Person",
+          "simple_past": "Simple Past",
+          "past_participle": "Past Participle",
+          "gerund": "Gerund"
+        },
+        "meaning": {
+          "title": "Meanings"
+        }
+      }
     }
   }
 }

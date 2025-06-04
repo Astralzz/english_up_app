@@ -12,14 +12,34 @@ const resources = {
   es: { translation: es },
 };
 
-// Verifica que el idioma detectado exista en tus recursos
-const availableLanguages = Object.keys(resources);
-const language =
-  availableLanguages.find((lang) => Localization.locale.startsWith(lang)) ||
-  "en";
+// Función para obtener el idioma preferido del dispositivo
+const getDeviceLanguage = () => {
+  try {
+    // 1. Obtener locales usando la nueva API
+    const locales = Localization.getLocales();
+    
+    // 2. Si no hay locales, usar inglés como fallback
+    if (locales.length === 0) return "en";
+    
+    // 3. Obtener el primer locale (el preferido)
+    const primaryLocale = locales[0];
+    
+    // 4. Extraer el código de idioma base (ej: 'en' de 'en-US')
+    const languageCode = primaryLocale.languageCode || "en";
+    
+    // 5. Verificar si tenemos recursos para este idioma
+    return Object.keys(resources).includes(languageCode) 
+      ? languageCode 
+      : "en";
+  } catch (error) {
+    console.error("Error detecting language:", error);
+    return "en";
+  }
+};
 
+// Inicializar i18n
 i18n.use(initReactI18next).init({
-  lng: language, // Usa el idioma detectado
+  lng: getDeviceLanguage(),
   fallbackLng: "en",
   resources,
   interpolation: {
