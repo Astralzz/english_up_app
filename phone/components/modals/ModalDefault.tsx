@@ -2,9 +2,8 @@ import { useThemeApp } from "@/hooks/useThemeApp";
 import { ColorsAppType } from "@/theme/colors";
 import React from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
-import { Dimensions } from "react-native";
 import { StyleSheet, View } from "react-native";
-import { Modal, Text } from "react-native-paper";
+import { Modal, Portal, Text } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 // Props
@@ -43,48 +42,54 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
   );
 
   return (
-    <Modal
-      visible={visible}
-      onDismiss={onClose}
-      contentContainerStyle={styles.modalContainer}
-    >
-      {/* Header */}
-      <View style={styles.header}>
-        {/* Title */}
-        <Text style={styles.title}>{title}</Text>
-        {/* Close button */}
-        <TouchableOpacity onPress={onClose}>
-          <Icon name="close" size={24} color={colors.text.primary} />
-        </TouchableOpacity>
-      </View>
-
-      {/* Content */}
-      <ScrollView
-        style={styles.content}
-        contentContainerStyle={{ paddingBottom: 16 }}
-        showsVerticalScrollIndicator={false}
+    <Portal>
+      <Modal
+        visible={visible}
+        onDismiss={onClose}
+        contentContainerStyle={styles.modalWrapper}
       >
-        {children}
-      </ScrollView>
-    </Modal>
+        <View style={styles.container}>
+          {/* Header */}
+          <View style={styles.header}>
+            <Text style={styles.title}>{title}</Text>
+            <TouchableOpacity onPress={onClose}>
+              <Icon name="close" size={24} color={colors.text.primary} />
+            </TouchableOpacity>
+          </View>
+
+          {/* Content */}
+          <ScrollView
+            style={styles.containerChildren}
+            contentContainerStyle={{ paddingBottom: 16 }}
+            showsVerticalScrollIndicator={false}
+          >
+            {children}
+          </ScrollView>
+        </View>
+      </Modal>
+    </Portal>
   );
 };
 
 // Styles
-const getStyles = (colors: ColorsAppType, isDark: boolean) => {
-  // Window height
-  const windowHeight = Dimensions.get("window").height;
-  const modalMaxHeight = windowHeight * 0.8;
-
-  // Styles
-  return StyleSheet.create({
-    modalContainer: {
+const getStyles = (colors: ColorsAppType, isDark: boolean) =>
+  StyleSheet.create({
+    modalWrapper: {
+      flex: 1,
+      backgroundColor: colors.modal.overlay,
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
+      maxHeight: "100%",
+      width: "100%",
+      maxWidth: "100%",
+    },
+    container: {
       backgroundColor: colors.modal.container,
-      marginHorizontal: 20,
       borderRadius: 16,
-      padding: 0,
-      maxHeight: modalMaxHeight,
       overflow: "hidden",
+      width: "100%",
+      maxWidth: "90%",
     },
     header: {
       backgroundColor: colors.modal.header,
@@ -102,11 +107,10 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) => {
       fontWeight: "bold",
       color: colors.text.primary,
     },
-    content: {
+    containerChildren: {
       paddingHorizontal: 16,
       paddingTop: 12,
     },
   });
-};
 
 export default ModalDefault;

@@ -36,4 +36,12 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se creo un modal global para la app
 - Se agrego boton para cambiar idioma
 
+## [0.0.5] - 05-06-2025
+
+- Se crearon nuevos componentes
+- Se mejoro el estilo y logica de la seccion de verbos
+- Se agregaron mas traducciones de idiomas
+- Se mejoraron los modales
+- Se arreglaron colores y tema
+
 ---

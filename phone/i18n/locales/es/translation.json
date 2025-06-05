@@ -7,8 +7,16 @@
       "body": "Tu viaje al bilingüismo"
     },
     "footer": {
-      "version": "version 0.0.3"
+      "label": "Acerca de"
     }
+  },
+  "about": {
+    "title": "Acerca de",
+    "edain": {
+      "name": "Edain",
+      "description": "Desarrollador"
+    },
+    "version": "version 0.0.3"
   },
   "verbs": {
     "stack": {
@@ -41,6 +49,33 @@
         "meaning": {
           "title": "Significado"
         }
+      }
+    },
+    "search": {
+      "input": {
+        "label": "Buscar verbo",
+        "placeholder": "Ej. run, eat, go..."
+      },
+      "filter": {
+        "title": "Filtros",
+        "types": {
+          "title": "Tipo de verbo",
+          "all": "Todos",
+          "regular": "Regular",
+          "irregular": "Irregular"
+        },
+        "queries": {
+          "title": "Buscar por",
+          "simple_form": "Forma simple",
+          "past_participle": "Participio",
+          "gerund": "Gerundio",
+          "meaning": "Significado",
+          "no": "Número",
+          "type": "Tipo",
+          "third_person": "3ra Persona",
+          "simple_past": "Simple Pasado"
+        },
+        "action": "Aplicar"
       }
     }
   }

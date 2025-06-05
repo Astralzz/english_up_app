@@ -68,7 +68,7 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t }) => {
         </View>
 
         {/* Language switch */}
-        <View style={styles.switchContainer}>
+        <View style={[styles.switchContainer, { marginTop: 12 }]}>
           <Avatar.Image size={22} source={flagMx as AvatarImageSource} style={styles.flagEmoji} />
           <Switch
             value={language === "en"}
@@ -81,9 +81,11 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t }) => {
       </View>
 
       {/* About */}
-      <TouchableOpacity style={styles.aboutButton}>
+      <TouchableOpacity style={styles.aboutButton} onPress={() => {
+        alert(t("about.edain.name"));
+      }}>
         <Icon name="information" size={18} color={colors.primary[600]} />
-        <Text style={styles.aboutText}>{t("menu.footer.version")}</Text>
+        <Text style={styles.aboutText}>{t("menu.footer.label")}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -118,6 +120,7 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
       backgroundColor: "transparent",
     },
     aboutButton: {
+      marginTop: 12,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "center",

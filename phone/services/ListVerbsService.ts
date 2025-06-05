@@ -128,6 +128,9 @@ class ListVerbsService {
    * @returns {Verb[]} Lista de verbos que coinciden con la búsqueda.
    */
   search(keyword: string, key: keyof Verb = "meaning"): Verb[] {
+    // ? No hay keyword
+    if (!keyword.trim()) return [];
+
     // Buscar
     const lower = keyword.toLowerCase();
 
@@ -135,14 +138,20 @@ class ListVerbsService {
     return this.verbs.filter((verb) => {
       const value = verb[key];
 
+      // ? No hay valor
+      if (!value) return false;
+
+      // ? Array
       if (key === "meaning" && Array.isArray(value)) {
         return value.some((m) => m.toLowerCase().includes(lower));
       }
 
+      // ? String
       if (typeof value === "string") {
         return value.toLowerCase().includes(lower);
       }
 
+      // ? Default
       return false;
     });
   }

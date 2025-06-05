@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
-import { TextInput, IconButton } from "react-native-paper";
 import FilterModal from "./FilterModal";
 import VerbList from "../components/VerbList";
 import VerbsLayout from "../VerbsLayout";
 import { useThemeApp } from "@/hooks/useThemeApp";
 import useVerbSearch from "../hooks/useVerbSearch";
+import InputDefault from "@/components/inputs/InputDefault";
+import { useTranslation } from "react-i18next";
 
+
+// Transitions
+const PATH_TRASNSITION = "verbs.search";
+
+/**
+ *
+ * Verb search screen
+ *
+ * @return {TSX.Component}
+ */
 const VerbSearchScreen: React.FC = () => {
+  // Hooks
   const {
     verbs,
     textSearch,
@@ -21,44 +33,27 @@ const VerbSearchScreen: React.FC = () => {
 
   // Hooks
   const [showFilters, setShowFilters] = useState(false);
+  const { t } = useTranslation();
   const {
     state: { colors, isThemeDark },
   } = useThemeApp();
 
   return (
     <VerbsLayout service={service} styleWrapper={styles.layoutWrapper}>
+      {/* Search */}
       <View style={styles.searchContainer}>
-        <View style={styles.searchBar}>
-          <TextInput
-            label="Buscar verbo"
-            value={textSearch}
-            onChangeText={setTextSearch}
-            mode="outlined"
-            style={[
-              styles.input,
-              { backgroundColor: colors.background.secondary },
-            ]}
-            placeholder="Ej. run, eat, go..."
-            left={
-              <TextInput.Icon icon="magnify" color={colors.icons.primary} />
-            }
-            theme={{
-              colors: {
-                primary: colors.primary[500],
-                background: colors.background.secondary,
-                text: colors.text.primary,
-                placeholder: colors.text.secondary,
-              },
-            }}
-          />
-          <IconButton
-            icon="tune"
-            onPress={() => setShowFilters(true)}
-            iconColor={colors.primary[500]}
-            style={styles.filterButton}
-          />
-        </View>
+        <InputDefault
+          initialValue={textSearch}
+          onChangeText={setTextSearch}
+          label={t(`${PATH_TRASNSITION}.input.label`)}
+          placeholder={t(`${PATH_TRASNSITION}.input.placeholder`)}
+          iconRight={{
+            icon: "tune",
+            onPress: () => setShowFilters(true),
+          }}
+        />
 
+        {/* Filter modal */}
         <FilterModal
           visible={showFilters}
           onClose={() => setShowFilters(false)}
@@ -67,9 +62,14 @@ const VerbSearchScreen: React.FC = () => {
           searchKey={searchKey}
           onSearchKeyChange={setSearchKey}
           colors={colors}
+          translation={{
+            t,
+            path: PATH_TRASNSITION,
+          }}
         />
       </View>
 
+      {/* List */}
       <View style={styles.listContainer}>
         <VerbList verbs={verbs} colors={colors} isThemeDark={isThemeDark} />
       </View>
@@ -77,6 +77,7 @@ const VerbSearchScreen: React.FC = () => {
   );
 };
 
+// Styles
 const styles = StyleSheet.create({
   layoutWrapper: {
     paddingVertical: 16,
@@ -95,10 +96,6 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 12,
     fontSize: 16,
-  },
-  filterButton: {
-    backgroundColor: "#FFC10720",
-    borderRadius: 8,
   },
   listContainer: {
     flex: 1,

@@ -7,8 +7,16 @@
       "body": "Your journey to bilingualism"
     },
     "footer": {
-      "version": "version 0.0.3"
+      "label": "About"
     }
+  },
+  "about": {
+    "title": "About",
+    "edain": {
+      "name": "Edain",
+      "description": "Developer"
+    },
+    "version": "version 0.0.3"
   },
   "verbs": {
     "stack": {
@@ -41,6 +49,33 @@
         "meaning": {
           "title": "Meanings"
         }
+      }
+    },
+    "search": {
+      "input": {
+        "label": "Search verb",
+        "placeholder": "Ej. run, eat, go..."
+      },
+      "filter": {
+        "title": "Filters",
+        "types": {
+          "title": "Verb type",
+          "all": "All",
+          "regular": "Regular",
+          "irregular": "Irregular"
+        },
+        "queries": {
+          "title": "Search by",
+          "simple_form": "Simple form",
+          "past_participle": "Past participle",
+          "gerund": "Gerund",
+          "meaning": "Meaning",
+          "no": "Number",
+          "type": "Type",
+          "third_person": "Third person",
+          "simple_past": "Simple past"
+        },
+        "action": "Apply"
       }
     }
   }

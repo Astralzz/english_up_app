@@ -4,6 +4,9 @@ import VerbListScreen from "./list/VerbListScreen";
 import VerbSearchScreen from "./search/VerbSearchScreen";
 import { useTranslation } from "react-i18next";
 
+// Transitions
+const PATH_TRASNSITION = "verbs.stack.titles";
+
 // Routes
 export type VerbsStackParamList = {
   VerbsList: undefined;
@@ -27,23 +30,23 @@ const VerbsStack: React.FC = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName="VerbsList"
+      initialRouteName="VerbSearch"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen
         name="VerbsList"
         component={VerbListScreen}
-        options={{ title: t("verbs.stack.titles.list") }}
+        options={{ title: t(`${PATH_TRASNSITION}.list`) }}
       />
       <Stack.Screen
         name="VerbSearch"
         component={VerbSearchScreen}
-        options={{ title: t("verbs.stack.titles.search") }}
+        options={{ title: t(`${PATH_TRASNSITION}.search`) }}
       />
       <Stack.Screen
         name="VerbGames"
         component={VerbListScreen}
-        options={{ title: t("verbs.stack.titles.games") }}
+        options={{ title: t(`${PATH_TRASNSITION}.games`) }}
       />
     </Stack.Navigator>
   );

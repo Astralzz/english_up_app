@@ -66,9 +66,33 @@ App personal enfocada en mejorar mi ingles y ayudarme en mi aprendizaje
     npx expo upgrade
     ```
 
-npx expo run:android
+- Ejecutar app en android
 
-Configuraciones antes del build:
+    ```bash
+    npx expo run:android
+    ```
+
+### EAS COMMANDS
+
+- Iniciar sesion
+
+    ```bash
+    eas login
+    ```
+
+- Configurar build y crear eas.json
+
+    ```bash
+    eas build:configure
+    ```
+
+- Crear apk para android
+
+    ```bash
+    eas build -p android --profile preview
+    ```
+
+### CONFIGURACIONES ANTES DEL BUILD
 
 - Actualizar configuración de react-native-mmkv
 
