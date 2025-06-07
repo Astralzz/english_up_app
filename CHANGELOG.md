@@ -44,4 +44,12 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se mejoraron los modales
 - Se arreglaron colores y tema
 
+## [0.0.6] - 06-06-2025
+
+- Se empezo la creacion de juegos
+- Se creo la logica y hooks para el juego de adivinar la clave de un verbo
+- Se creo la pantalla del juego
+- Se creo el modal de creditos
+- Se mejoro la logica de los verbos
+
 ---

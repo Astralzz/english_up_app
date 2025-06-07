@@ -5,8 +5,16 @@ import ROUTES_MENU_APP from "./routerlist";
 import { RootStackParamList } from "@/types/navigation";
 import NavigationHeader from "@/components/navigation/NavigationHeader";
 
+/**
+ * Drawer navigator
+ */
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
+/**
+ * Component RouterControl
+ * 
+ * @returns {TSX.Element}
+ */
 const RouterControl: React.FC = () => (
   <Drawer.Navigator
     drawerContent={(props) => <NavigationMenu {...props} />}

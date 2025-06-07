@@ -7,16 +7,43 @@
       "body": "Tu viaje al bilingüismo"
     },
     "footer": {
-      "label": "Acerca de"
+      "label": "Creditos"
+    },
+    "routes": {
+      "home": "Inicio",
+      "verbs": "Verbos",
+      "words": "Palabras",
+      "formulas": "Fórmulas"
     }
   },
   "about": {
-    "title": "Acerca de",
+    "title": "Creditos y Referencias",
     "edain": {
-      "name": "Edain",
-      "description": "Desarrollador"
+      "name": "Edain Jesus Cortez Ceron",
+      "image_id": "edain",
+      "role": "Desarrollador Full Stack y creador de esta app",
+      "description": "Ingeniero de software con experiencia en desarrollo full-stack, gestión de proyectos y creación de soluciones tecnológicas seguras y escalables. Especializado en aplicaciones robustas, optimización de procesos y arquitectura de software.",
+      "links": {
+        "portfolio": "https://astralzz.github.io",
+        "email": "edain.cortez@outlook.com",
+        "linkedin": "https://www.linkedin.com/in/edain-jcc",
+        "github": "https://github.com/Astralzz"
+      }
     },
-    "version": "version 0.0.3"
+    "links": {
+      "repo": "https://github.com/Astralzz/english_up_app.git"
+    },
+    "references": {
+      "title": "Referencias",
+      "items": [
+        {
+          "title": "Lista de Verbos",
+          "description": "Lista de verbos con sus diferentes formas y significados, basada en el Excel de Pacho8a.",
+          "url": "https://www.pacho8a.com"
+        }
+      ]
+    },
+    "version": "version 0.0.6"
   },
   "verbs": {
     "stack": {

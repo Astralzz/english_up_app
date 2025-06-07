@@ -1,11 +1,12 @@
-import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { useNavigation, DrawerActions } from "@react-navigation/native";
-import { Text } from "react-native-paper";
-import { ColorsAppType } from "@/theme/colors";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { DrawerHeaderProps } from "@react-navigation/drawer";
+import React from 'react';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useNavigation, DrawerActions } from '@react-navigation/native';
+import { Text } from 'react-native-paper';
+import { ColorsAppType } from '@/theme/colors';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { DrawerHeaderProps } from '@react-navigation/drawer';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Menu - Navigation component
@@ -19,13 +20,17 @@ const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
   } = useThemeApp();
   const styles = React.useMemo(() => getStyles(colors), [colors]);
 
+  // Hooks
+  const { t } = useTranslation();
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       {/* Título */}
       <Text style={styles.title} variant="titleLarge">
-        {props?.route?.name ?? "EnglishUp"}
+        {props?.route?.name
+          ? t(`menu.routes.${props?.route?.name.toLowerCase()}`)
+          : 'EnglishUp'}
       </Text>
 
       {/* Botones adicionales */}
@@ -57,13 +62,13 @@ const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
 const getStyles = (colors: ColorsAppType) =>
   StyleSheet.create({
     container: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       height: 60,
       backgroundColor: colors.background.secondary,
       borderBottomWidth: 1,
-      borderBottomColor: colors.neutral[300] + "33",
+      borderBottomColor: colors.neutral[300] + '33',
       paddingHorizontal: 16,
       elevation: 4,
       shadowColor: colors.neutral[900],
@@ -78,12 +83,12 @@ const getStyles = (colors: ColorsAppType) =>
     title: {
       flex: 1,
       color: colors.text.primary,
-      fontWeight: "800",
+      fontWeight: '800',
       letterSpacing: 0.5,
       marginLeft: 8,
     },
     rightContainer: {
-      flexDirection: "row",
+      flexDirection: 'row',
       gap: 16,
     },
     iconButton: {

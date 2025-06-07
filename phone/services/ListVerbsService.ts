@@ -1,5 +1,11 @@
-import Verb, { PaginateVerbsType, VerbTypeType } from "@/models/Verb";
-import verbData from "@/assets/data/jsons/verbs.json";
+import Verb, { PaginateVerbsType, VerbTypeType } from '@/models/Verb';
+import verbData from '@/assets/data/jsons/verbs.json';
+
+// Types
+export interface GenerateVerbQuestionType {
+  question: string;
+  options: { label: string; number: number; isCorrect: boolean }[];
+}
 
 /**
  * Servicio para administrar la lista de verbos en inglés.
@@ -127,7 +133,7 @@ class ListVerbsService {
    * @param {keyof Verb} [key='meaning'] - Clave del campo por el que buscar (opcional, por defecto 'meaning').
    * @returns {Verb[]} Lista de verbos que coinciden con la búsqueda.
    */
-  search(keyword: string, key: keyof Verb = "meaning"): Verb[] {
+  search(keyword: string, key: keyof Verb = 'meaning'): Verb[] {
     // ? No hay keyword
     if (!keyword.trim()) return [];
 
@@ -142,12 +148,12 @@ class ListVerbsService {
       if (!value) return false;
 
       // ? Array
-      if (key === "meaning" && Array.isArray(value)) {
+      if (key === 'meaning' && Array.isArray(value)) {
         return value.some((m) => m.toLowerCase().includes(lower));
       }
 
       // ? String
-      if (typeof value === "string") {
+      if (typeof value === 'string') {
         return value.toLowerCase().includes(lower);
       }
 
@@ -178,7 +184,7 @@ class ListVerbsService {
       const aField = a[field];
       const bField = b[field];
 
-      if (typeof aField === "number" && typeof bField === "number") {
+      if (typeof aField === 'number' && typeof bField === 'number') {
         return ascending ? aField - bField : bField - aField;
       }
 
@@ -198,7 +204,7 @@ class ListVerbsService {
    * @param {string} suffix - Sufijo a buscar (por ejemplo: "ed", "ing", "s").
    * @returns {Verb[]} Lista de verbos que tienen alguna forma que termina con el sufijo dado.
    */
-  filterByEnding(suffix: "ed" | "ing" | "s" | string): Verb[] {
+  filterByEnding(suffix: 'ed' | 'ing' | 's' | string): Verb[] {
     const lowerSuffix = suffix.toLowerCase();
     return this.verbs.filter(
       (verb) =>
@@ -209,6 +215,65 @@ class ListVerbsService {
         verb.gerund.toLowerCase().endsWith(lowerSuffix)
     );
   }
+
+  /**
+   * Genera una pregunta con opciones para un verbo.
+   *
+   * @param {Verb[]} allVerbs - Lista de verbos disponibles.
+   * @param {keyof Verb} questionKey - Clave del campo que se usará como pregunta.
+   * @param {keyof Verb} answerKey - Clave del campo que se usará como respuesta.
+   * @param {number} [countAnswers=4] - Cantidad de opciones (por defecto 4).
+   *
+   * @returns {GenerateVerbQuestionType | null} Objeto con la pregunta y las opciones, o `null` si no hay suficientes verbos.
+   */
+  generateVerbQuestion(
+    allVerbs: Verb[],
+    questionKey: keyof Verb,
+    answerKey: keyof Verb,
+    countAnswers: number = 4
+  ): GenerateVerbQuestionType | null {
+    // ? No hay verbos
+    if (allVerbs.length === 0) return null;
+
+    // ? No hay verbos
+    if (allVerbs.length < countAnswers) return null;
+
+    // Mezclamos los verbos
+    const shuffled = [...allVerbs].sort(() => Math.random() - 0.5);
+
+    // Seleccionamos el correcto
+    const correctVerb = shuffled[0];
+
+    // Filtramos los incorrectos
+    const incorrectsVerbs = shuffled
+      .filter((v) => v.no !== correctVerb.no)
+      .slice(0, countAnswers - 1);
+
+    // Construimos las opciones
+    const options = [
+      ...incorrectsVerbs.map((verb) => ({
+        label: String(verb[answerKey]),
+        number: verb.no,
+        isCorrect: false,
+      })),
+      {
+        label: String(correctVerb[answerKey]),
+        number: correctVerb.no,
+        isCorrect: true,
+      },
+    ];
+
+    // Mezclamos las opciones
+    const shuffledOptions = options.sort(() => Math.random() - 0.5);
+
+    return {
+      question: String(correctVerb[questionKey]),
+      options: shuffledOptions,
+    };
+  }
 }
+
+// Global service
+export const globaListVerbsService = new ListVerbsService();
 
 export default ListVerbsService;

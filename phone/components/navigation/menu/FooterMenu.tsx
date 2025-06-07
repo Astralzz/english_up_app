@@ -15,6 +15,7 @@ import { AvatarImageSource } from "react-native-paper/lib/typescript/components/
 // Props
 interface FooterMenuProps {
   t: TFunction<"translation", undefined>;
+  openModalAbout: () => void;
 }
 
 /**
@@ -23,7 +24,7 @@ interface FooterMenuProps {
  * @param {FooterMenuProps} props
  * @return {TSX.Component}
  */
-const FooterMenu: React.FC<FooterMenuProps> = ({ t }) => {
+const FooterMenu: React.FC<FooterMenuProps> = ({ t, openModalAbout }) => {
   // Hooks
   const {
     state: { colors, isThemeDark },
@@ -81,9 +82,7 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t }) => {
       </View>
 
       {/* About */}
-      <TouchableOpacity style={styles.aboutButton} onPress={() => {
-        alert(t("about.edain.name"));
-      }}>
+      <TouchableOpacity style={styles.aboutButton} onPress={openModalAbout}>
         <Icon name="information" size={18} color={colors.primary[600]} />
         <Text style={styles.aboutText}>{t("menu.footer.label")}</Text>
       </TouchableOpacity>

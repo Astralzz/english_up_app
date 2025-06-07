@@ -1,17 +1,17 @@
-import React from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import ScreenWrapper from "@/components/screens/ScreenWrapper";
+import React from 'react';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import ScreenWrapper from '@/components/screens/ScreenWrapper';
 import FloatingButtonMenu, {
   FabActionButtonType,
-} from "@/components/buttons/FloatingButtonMenu";
-import ListVerbsService from "@/services/ListVerbsService";
-import ScreenLoading from "@/components/screens/ScreenLoading";
-import ScreenError from "@/components/screens/ScreenError";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { VerbsStackParamList } from "./VerbsStack";
-import { Text } from "react-native-paper";
-import { ViewStyle } from "react-native";
-import { useTranslation } from "react-i18next";
+} from '@/components/buttons/FloatingButtonMenu';
+import ListVerbsService from '@/services/ListVerbsService';
+import ScreenLoading from '@/components/screens/ScreenLoading';
+import ScreenError from '@/components/screens/ScreenError';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { VerbsStackParamList } from '../VerbsStack';
+import { Text } from 'react-native-paper';
+import { ViewStyle } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 // Props
 type VerbsLayoutProps = {
@@ -60,26 +60,30 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
       label: string;
       routeName?: keyof VerbsStackParamList;
       onPress?: () => void | Promise<void>;
+      key_t?: string;
     }> = [
       {
-        icon: "microsoft-xbox-controller",
-        label: t("verbs.floatButton.labels.games"),
-        routeName: "VerbGames",
+        icon: 'microsoft-xbox-controller',
+        label: t('verbs.floatButton.labels.games'),
+        routeName: 'VerbGames',
+        key_t: 'games',
       },
       {
-        icon: "magnify",
-        label: t("verbs.floatButton.labels.search"),
-        routeName: "VerbSearch",
+        icon: 'magnify',
+        label: t('verbs.floatButton.labels.search'),
+        routeName: 'VerbSearch',
+        key_t: 'search',
       },
       {
-        icon: "format-list-bulleted-square",
-        label: t("verbs.floatButton.labels.all"),
-        routeName: "VerbsList",
+        icon: 'format-list-bulleted-square',
+        label: t('verbs.floatButton.labels.all'),
+        routeName: 'VerbsList',
+        key_t: 'list',
       },
       // Acciones
       {
-        icon: "refresh",
-        label: t("verbs.floatButton.labels.refresh"),
+        icon: 'refresh',
+        label: t('verbs.floatButton.labels.refresh'),
         onPress: floatButtonActions?.refresh,
       },
     ];
@@ -107,7 +111,10 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
             icon: action.icon,
             label: action.label,
             onPress: () =>
-              action.routeName && navigation.navigate(action.routeName),
+              action.routeName &&
+              navigation.navigate(action.routeName, {
+                title: action?.key_t && t(`verbs.stack.titles.${action.key_t}`),
+              }),
           };
         }
         // ? Tiene acción

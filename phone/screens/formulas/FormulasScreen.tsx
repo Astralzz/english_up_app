@@ -15,7 +15,7 @@ const FormulasScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text>Formulas Screen</Text>
+      <Text>Proximamente...</Text>
     </ScreenWrapper>
   );
 };

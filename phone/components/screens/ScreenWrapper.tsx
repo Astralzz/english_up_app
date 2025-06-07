@@ -26,7 +26,7 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
     justifyContent: "center",
     alignItems: "center",
   },
-  scrollable,
+  scrollable = false,
   style,
 }) => {
   // Tema

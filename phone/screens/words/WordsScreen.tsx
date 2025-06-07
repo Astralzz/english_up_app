@@ -15,7 +15,7 @@ const WordsScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text>Words Screen</Text>
+      <Text>Proximamente...</Text>
     </ScreenWrapper>
   );
 };

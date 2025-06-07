@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import FilterModal from "./FilterModal";
 import VerbList from "../components/VerbList";
-import VerbsLayout from "../VerbsLayout";
+import VerbsLayout from "../layouts/VerbsLayout";
 import { useThemeApp } from "@/hooks/useThemeApp";
 import useVerbSearch from "../hooks/useVerbSearch";
 import InputDefault from "@/components/inputs/InputDefault";

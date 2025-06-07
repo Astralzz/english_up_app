@@ -1,17 +1,23 @@
-import React, { useCallback } from "react";
+import React, { useCallback } from 'react';
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
-} from "@react-navigation/drawer";
-import { Text, Avatar, Divider, Drawer } from "react-native-paper";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { StyleSheet, Animated } from "react-native";
-import ROUTES_MENU_APP from "@/router/routerlist";
-import { ColorsAppType } from "@/theme/colors";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { LinearGradient } from "expo-linear-gradient";
-import { useTranslation } from "react-i18next";
-import FooterMenu from "./menu/FooterMenu";
+} from '@react-navigation/drawer';
+import { Text, Avatar, Divider, Drawer } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { StyleSheet, Animated, Modal } from 'react-native';
+import ROUTES_MENU_APP from '@/router/routerlist';
+import { ColorsAppType } from '@/theme/colors';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useTranslation } from 'react-i18next';
+import FooterMenu from './menu/FooterMenu';
+import ModalDefault from '../modals/ModalDefault';
+import AboutScreen from '@/screens/about/AboutScreen';
+
+
+// Path translation
+const PATH_TRASNSITION = "menu";
 
 /**
  * Menu - Navigation component
@@ -29,11 +35,23 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
   const animatedValue = React.useRef(new Animated.Value(0)).current;
   const currentRoute = props.state.routeNames[props.state.index];
 
+  // Modal
+  const [isModalVisible, setIsModalVisible] = React.useState<boolean>(false);
+
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
     [colors, isThemeDark]
   );
+
+  // Functions modal
+  const closeModal = useCallback(() => {
+    setIsModalVisible(false);
+  }, []);
+
+  const openModal = useCallback(() => {
+    setIsModalVisible(true);
+  }, []);
 
   // Animates
   const animateIcon = useCallback(() => {
@@ -56,7 +74,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
     () =>
       animatedValue.interpolate({
         inputRange: [0, 1],
-        outputRange: ["0deg", "15deg"],
+        outputRange: ['0deg', '15deg'],
       }),
     []
   );
@@ -82,9 +100,9 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
           />
         </Animated.View>
         <Text style={styles.title} variant="headlineMedium">
-          {t("menu.header.title")}
+          {t(`${PATH_TRASNSITION}.header.title`)}
         </Text>
-        <Text style={styles.subtitle}>{t("menu.header.body")}</Text>
+        <Text style={styles.subtitle}>{t(`${PATH_TRASNSITION}.header.body`)}</Text>
       </LinearGradient>
 
       {/* Divisor */}
@@ -92,46 +110,61 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
 
       {/* Menú */}
       <Drawer.Section style={styles.menuSection}>
-        {ROUTES_MENU_APP.map(({ label, name, icon }, i) => (
-          <Drawer.Item
-            key={i}
-            label={label || name}
-            icon={({ size }) => (
-              <Icon
-                name={icon || "circle-medium"}
-                size={size + 2}
-                color={
-                  currentRoute === name
-                    ? colors.text.secondary
-                    : colors.icons.primary
-                }
-                style={styles.icon}
-              />
-            )}
-            onPress={() => {
-              animateIcon();
-              props.navigation.navigate(name);
-            }}
-            style={[
-              styles.menuItem,
-              currentRoute === name && {
-                backgroundColor: colors.primary[400],
-              },
-            ]}
-            theme={{
-              colors: {
-                onSurfaceVariant: colors.text.primary, // Primario
-                onSecondaryContainer: colors.text.secondary, // Active
-              },
-            }}
-            active={currentRoute === name}
-            rippleColor={colors.primary[300] + "33"}
-          />
-        ))}
+        {ROUTES_MENU_APP.map(({ label, name, icon }, i) => {
+          // Get label
+          const labelMenu = label || t(`${PATH_TRASNSITION}.routes.${name.toLowerCase()}`);
+
+          return (
+            <Drawer.Item
+              key={i}
+              label={labelMenu}
+              icon={({ size }) => (
+                <Icon
+                  name={icon || 'circle-medium'}
+                  size={size + 2}
+                  color={
+                    currentRoute === name
+                      ? colors.text.secondary
+                      : colors.icons.primary
+                  }
+                  style={styles.icon}
+                />
+              )}
+              onPress={() => {
+                animateIcon();
+                props.navigation.navigate(name);
+              }}
+              style={[
+                styles.menuItem,
+                currentRoute === name && {
+                  backgroundColor: colors.primary[400],
+                },
+              ]}
+              theme={{
+                colors: {
+                  onSurfaceVariant: colors.text.primary, // Primario
+                  onSecondaryContainer: colors.text.secondary, // Active
+                },
+              }}
+              active={currentRoute === name}
+              rippleColor={colors.primary[300] + '33'}
+            />
+          );
+        })}
       </Drawer.Section>
 
       {/* Footer */}
-      <FooterMenu t={t} />
+      <FooterMenu t={t} openModalAbout={openModal} />
+
+      {/* Modal about */}
+      <ModalDefault
+        visible={isModalVisible}
+        onClose={closeModal}
+        title={t(`about.title`)}
+        maxHeight={80}
+      >
+        <AboutScreen t={t} colors={colors} />
+      </ModalDefault>
     </DrawerContentScrollView>
   );
 };
@@ -144,13 +177,13 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
       paddingTop: 0,
       backgroundColor: colors.background.primary,
       borderLeftWidth: isDark ? 1 : 0,
-      borderLeftColor: isDark ? colors.primary[400] + "44" : "transparent",
+      borderLeftColor: isDark ? colors.primary[400] + '44' : 'transparent',
     },
     header: {
       marginTop: 0,
       padding: 24,
       paddingBottom: 32,
-      alignItems: "center",
+      alignItems: 'center',
       borderBottomLeftRadius: 24,
       borderBottomRightRadius: 24,
       elevation: 4,
@@ -160,27 +193,27 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
       shadowRadius: 10,
     },
     avatar: {
-      backgroundColor: colors.primary[500] + "33",
+      backgroundColor: colors.primary[500] + '33',
       marginBottom: 16,
       borderWidth: 2,
       borderColor: colors.text.secondary,
     },
     title: {
       color: colors.text.secondary,
-      fontWeight: "800",
+      fontWeight: '800',
       letterSpacing: 1,
       marginBottom: 2,
-      textShadowColor: colors.neutral[900] + "33",
+      textShadowColor: colors.neutral[900] + '33',
       textShadowOffset: { width: 1, height: 1 },
       textShadowRadius: 1,
     },
     subtitle: {
-      color: colors.text.secondary + "BB",
+      color: colors.text.secondary + 'BB',
       fontSize: 13,
-      fontStyle: "italic",
+      fontStyle: 'italic',
     },
     divider: {
-      backgroundColor: colors.neutral[300] + "66",
+      backgroundColor: colors.neutral[300] + '66',
       marginVertical: 12,
       marginHorizontal: 14,
     },

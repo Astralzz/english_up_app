@@ -1,7 +1,44 @@
 {
   "name": "english_up_astralz_app",
   "main": "expo-router/entry",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "author": {
+    "name": "Edain Jesús Cortez Cerón",
+    "email": "edain.cortez@outlook.com",
+    "url": "https://github.com/Astralzz",
+    "linkedin": "https://www.linkedin.com/in/edain-jcc",
+    "github": "https://github.com/Astralzz",
+    "portfolio": "https://astralzz.github.io"
+  },
+  "description": "EnglishUp App - A bilingualism app for learning English",
+  "license": "MIT",
+  "homepage": "https://github.com/Astralzz/english_up_app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Astralzz/english_up_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Astralzz/english_up_app/issues"
+  },
+  "keywords": [
+    "english",
+    "bilingualism",
+    "education",
+    "language",
+    "learning",
+    "mobile",
+    "app",
+    "react-native",
+    "react",
+    "redux",
+    "typescript",
+    "expo",
+    "react-navigation",
+    "react-native-paper",
+    "redux-persist",
+    "i18next",
+    "Edain"
+  ],
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",

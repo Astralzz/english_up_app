@@ -1,8 +1,9 @@
-import React from "react";
-import { ScrollView, StyleSheet, View, ViewStyle } from "react-native";
-import { Button, IconButton, Modal, Portal } from "react-native-paper";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { ColorsAppType } from "@/theme/colors";
+import React from 'react';
+import { ScrollView, StyleSheet, View, ViewStyle, Modal } from 'react-native';
+import { Button, IconButton } from 'react-native-paper';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { ColorsAppType } from '@/theme/colors';
+import { Pressable } from 'react-native';
 
 // Props
 interface ModalButtonProps {
@@ -21,6 +22,7 @@ interface ModalButtonProps {
     header?: ViewStyle;
     containerChildren?: ViewStyle;
   };
+  closeOnPressOutside?: boolean;
 }
 
 /**
@@ -36,6 +38,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
   onClose,
   applyButton,
   extraStyles,
+  closeOnPressOutside = false,
 }) => {
   const {
     state: { colors, isThemeDark },
@@ -47,12 +50,20 @@ const ModalButton: React.FC<ModalButtonProps> = ({
   );
 
   return (
-    <Portal>
-      <Modal
-        visible={visible}
-        onDismiss={onClose}
-        contentContainerStyle={[styles.modalWrapper]}
-      >
+    <Modal
+      animationType="slide"
+      transparent={true}
+      visible={visible}
+      onDismiss={onClose}
+    >
+      <View style={[styles.overlay]}>
+
+        {/* Pressable */}
+        {closeOnPressOutside && (
+          <Pressable style={StyleSheet.absoluteFill} onPress={onClose} />
+        )}
+
+        {/* Container */}
         <View style={[styles.container]}>
           {/* Header */}
           <View style={[styles.header, extraStyles?.header]}>
@@ -91,8 +102,8 @@ const ModalButton: React.FC<ModalButtonProps> = ({
             </View>
           )}
         </View>
-      </Modal>
-    </Portal>
+      </View>
+    </Modal>
   );
 };
 
@@ -105,30 +116,26 @@ const ModalButton: React.FC<ModalButtonProps> = ({
  */
 const getStyles = (colors: ColorsAppType, isDark: boolean) => {
   return StyleSheet.create({
-    modalWrapper: {
+    overlay: {
       flex: 1,
       backgroundColor: colors.modal.overlay,
-      justifyContent: "flex-end",
-      alignItems: "center",
-      height: "100%",
-      maxHeight: "100%",
-      width: "100%",
-      maxWidth: "100%",
+      justifyContent: 'flex-end',
+      minHeight: '100%',
     },
     container: {
-      backgroundColor: colors.modal.container,
-      overflow: "hidden",
-      width: "100%",
-      maxWidth: "100%",
-      maxHeight: "60%",
+      backgroundColor: colors.modal.primary,
       borderTopLeftRadius: 24,
       borderTopRightRadius: 24,
       padding: 20,
+      maxHeight: '70%',
+      bottom: 0,
+      left: 0,
+      right: 0,
     },
     header: {
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
       marginBottom: 16,
     },
     applyButton: {

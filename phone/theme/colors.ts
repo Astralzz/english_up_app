@@ -30,6 +30,8 @@ export type ColorsAppType = {
     header: string;
     overlay: string;
     text: string;
+    primary: string;
+
   };
 };
 
@@ -84,7 +86,8 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       overlay: "rgba(0, 0, 0, 0.5)",
       container: "#FFF8E1",
       header: "#FFECB3",
-      text: "#FFD54F",
+      text: "#000000",
+      primary: "#FFECB3",
     },
   },
   dark: {
@@ -136,7 +139,8 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       overlay: "rgba(0, 0, 0, 0.8)",
       container: "#121212",
       header: "#1E1E1E",
-      text: "#252525",
+      text: "#FFFFFF",
+      primary: "#1E1E1E",
     },
   },
 };

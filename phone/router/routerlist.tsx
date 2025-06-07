@@ -10,33 +10,21 @@ const ROUTES_MENU_APP: Array<RoutesMenuTypeApp> = [
     name: "Home",
     Component: HomeScreen,
     icon: "home-outline", // Icono personalizado
-    options: {
-      drawerLabel: "Inicio",
-    },
   },
   {
     name: "Verbs",
     Component: VerbsStack,
     icon: "run-fast",
-    options: {
-      drawerLabel: "Verbos",
-    },
   },
   {
     name: "Words",
     Component: WordsScreen,
     icon: "alphabetical-variant",
-    options: {
-      drawerLabel: "Palabras",
-    },
   },
   {
     name: "Formulas",
     Component: FormulasScreen,
     icon: "function-variant",
-    options: {
-      drawerLabel: "Fórmulas",
-    },
   },
 ] as const;
 

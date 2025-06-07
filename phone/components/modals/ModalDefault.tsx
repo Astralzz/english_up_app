@@ -1,10 +1,16 @@
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { ColorsAppType } from "@/theme/colors";
-import React from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
-import { StyleSheet, View } from "react-native";
-import { Modal, Portal, Text } from "react-native-paper";
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { ColorsAppType } from '@/theme/colors';
+import React from 'react';
+import { Pressable } from 'react-native';
+import {
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  View,
+  Modal,
+} from 'react-native';
+import { Text } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 // Props
 interface ModalDefaultProps {
@@ -12,6 +18,9 @@ interface ModalDefaultProps {
   visible: boolean;
   onClose: () => void;
   title?: string;
+  maxHeight?: number;
+  animation?: 'slide' | 'fade' | 'none';
+  closeOnPressOutside?: boolean;
 }
 
 /**
@@ -29,6 +38,9 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
   visible,
   onClose,
   title,
+  maxHeight,
+  animation = 'fade',
+  closeOnPressOutside = true,
 }) => {
   // Hooks
   const {
@@ -37,17 +49,24 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
 
   // Styles
   const styles = React.useMemo(
-    () => getStyles(colors, isThemeDark),
-    [colors, isThemeDark]
+    () => getStyles(colors, maxHeight, isThemeDark),
+    [colors, maxHeight, isThemeDark]
   );
 
   return (
-    <Portal>
-      <Modal
-        visible={visible}
-        onDismiss={onClose}
-        contentContainerStyle={styles.modalWrapper}
-      >
+    <Modal
+      animationType={animation}
+      transparent={true}
+      visible={visible}
+      onDismiss={onClose}
+    >
+      <View style={[styles.overlay]}>
+        {/* Pressable */}
+        {closeOnPressOutside && (
+          <Pressable style={StyleSheet.absoluteFill} onPress={onClose} />
+        )}
+
+        {/* Container */}
         <View style={styles.container}>
           {/* Header */}
           <View style={styles.header}>
@@ -66,45 +85,50 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
             {children}
           </ScrollView>
         </View>
-      </Modal>
-    </Portal>
+      </View>
+    </Modal>
   );
 };
 
 // Styles
-const getStyles = (colors: ColorsAppType, isDark: boolean) =>
+const getStyles = (
+  colors: ColorsAppType,
+  maxHeight?: number,
+  isThemeDark?: boolean
+) =>
   StyleSheet.create({
-    modalWrapper: {
+    overlay: {
       flex: 1,
       backgroundColor: colors.modal.overlay,
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100%",
-      maxHeight: "100%",
-      width: "100%",
-      maxWidth: "100%",
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100%',
     },
     container: {
       backgroundColor: colors.modal.container,
       borderRadius: 16,
-      overflow: "hidden",
-      width: "100%",
-      maxWidth: "90%",
+      maxHeight: maxHeight ? `${maxHeight}%` : '90%',
+      height: 'auto',
+      maxWidth: '90%',
+      width: '100%',
+      bottom: 0,
+      left: 0,
+      right: 0,
     },
     header: {
       backgroundColor: colors.modal.header,
       padding: 16,
       borderTopLeftRadius: 16,
       borderTopRightRadius: 16,
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       borderBottomWidth: 1,
       borderColor: colors.modal.header,
     },
     title: {
       fontSize: 18,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       color: colors.text.primary,
     },
     containerChildren: {

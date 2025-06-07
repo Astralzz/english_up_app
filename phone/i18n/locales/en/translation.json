@@ -7,16 +7,43 @@
       "body": "Your journey to bilingualism"
     },
     "footer": {
-      "label": "About"
+      "label": "Credits"
+    },
+    "routes": {
+      "home": "Home",
+      "verbs": "Verbs",
+      "words": "Words",
+      "formulas": "Formulas"
     }
   },
   "about": {
-    "title": "About",
+    "title": "Credits and References",
     "edain": {
-      "name": "Edain",
-      "description": "Developer"
+      "name": "Edain Jesus Cortez Ceron",
+      "image_id": "edain",
+      "role": "Full Stack Developer and creator of this app",
+      "description": "Software engineer with experience in full-stack development, project management, and the creation of secure and scalable technological solutions. Specialized in robust applications, process optimization, and software architecture.",
+      "links": {
+        "portfolio": "https://astralzz.github.io",
+        "email": "edain.cortez@outlook.com",
+        "linkedin": "https://www.linkedin.com/in/edain-jcc",
+        "github": "https://github.com/Astralzz"
+      }
     },
-    "version": "version 0.0.3"
+    "links": {
+      "repo": "https://github.com/Astralzz/english_up_app.git"
+    },
+    "references": {
+      "title": "References",
+      "items": [
+        {
+          "title": "Verb List",
+          "description": "List of verbs with their different forms and meanings, based on Pacho8a's Excel sheet.",
+          "url": "https://www.pacho8a.com"
+        }
+      ]
+    },
+    "version": "version 0.0.6"
   },
   "verbs": {
     "stack": {
