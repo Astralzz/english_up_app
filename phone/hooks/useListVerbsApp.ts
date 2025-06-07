@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/redux/store";
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/redux/store';
 import {
   ListsVerbsSliceType,
   updateAllVerbs,
   addVerbToList,
   removeVerbFromList,
   clearVerbList,
-} from "@/redux/slices/verbsSlice";
+} from '@/redux/slices/verbsSlice';
 
 /**
  * Hook para obtener y actualizar el estado de los verbos

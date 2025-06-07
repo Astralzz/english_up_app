@@ -1,10 +1,10 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import { Card, Text } from "react-native-paper";
-import { LinearGradient } from "expo-linear-gradient";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { ColorsAppType } from "@/theme/colors";
-import Verb from "@/models/Verb";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Card, Text } from 'react-native-paper';
+import { LinearGradient } from 'expo-linear-gradient';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ColorsAppType } from '@/theme/colors';
+import Verb from '@/models/Verb';
 
 // Props
 interface VerbCardProps {
@@ -42,7 +42,7 @@ const VerbCard = ({ verb, colors, viewVerb }: VerbCardProps) => {
               {verb.simple_form}
             </Text>
             <Text style={[styles.meaning, { color: colors.text.secondary }]}>
-              {verb.meaning.join(", ")}
+              {verb.meaning.join(', ')}
             </Text>
           </View>
         </View>
@@ -58,19 +58,19 @@ const styles = StyleSheet.create({
   card: {
     marginVertical: 6,
     borderRadius: 8,
-    overflow: "hidden",
+    overflow: 'hidden',
     elevation: 4,
   },
   gradient: {
     padding: 16,
   },
   content: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   simpleForm: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   meaning: {
     fontSize: 14,

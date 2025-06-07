@@ -1,12 +1,12 @@
-import React from "react";
-import Verb from "@/models/Verb";
-import { ColorsAppType } from "@/theme/colors";
-import { View, Text, StyleSheet } from "react-native";
-import { Card, Chip, Tooltip } from "react-native-paper";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import Verb from '@/models/Verb';
+import { ColorsAppType } from '@/theme/colors';
+import { View, Text, StyleSheet } from 'react-native';
+import { Card, Chip, Tooltip } from 'react-native-paper';
+import { useTranslation } from 'react-i18next';
 
 // Path translation
-const PATH_TRANSLATION = "verbs.modal.details";
+const PATH_TRANSLATION = 'verbs.modal.details';
 
 // Props
 interface VerbDetailsProps {
@@ -38,7 +38,7 @@ const VerbDetails: React.FC<VerbDetailsProps> = ({
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
-    [colors, isThemeDark]
+    [colors, isThemeDark],
   );
 
   // ? Verb null
@@ -51,7 +51,7 @@ const VerbDetails: React.FC<VerbDetailsProps> = ({
         <View style={styles.header}>
           <Text style={styles.title}>{verb.simple_form}</Text>
           <Text style={styles.verbType}>
-            {verb.type === "I"
+            {verb.type === 'I'
               ? t(`${PATH_TRANSLATION}.header.type_irregular`)
               : t(`${PATH_TRANSLATION}.header.type_regular`)}
           </Text>
@@ -128,17 +128,17 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
       backgroundColor: colors.modal.container,
       borderRadius: 0,
       elevation: 0,
-      shadowColor: "transparent",
+      shadowColor: 'transparent',
       shadowOpacity: 0,
     },
     // Header
     header: {
-      alignItems: "center",
+      alignItems: 'center',
       marginBottom: 22,
     },
     title: {
       fontSize: 28,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       color: colors.text.primary,
       marginBottom: 4,
     },
@@ -148,58 +148,58 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
     },
     // Cards
     cards: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
       marginBottom: 12,
     },
     card: {
-      width: "48%",
+      width: '48%',
       backgroundColor: colors.primary[isDark ? 800 : 200],
       padding: 12,
       borderRadius: 10,
       marginBottom: 12,
       elevation: 2,
-      justifyContent: "center",
-      alignItems: "center",
-      textAlign: "center",
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
     },
     cardLabel: {
       fontSize: 14,
       color: colors.text.secondary,
-      justifyContent: "center",
-      alignItems: "center",
-      textAlign: "center",
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
     },
     cardValue: {
       fontSize: 16,
-      fontWeight: "600",
+      fontWeight: '600',
       color: colors.text.primary,
     },
     // Meanings
     meaningSection: {
-      justifyContent: "center",
-      alignItems: "center",
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     meaningTitle: {
       fontSize: 18,
-      fontWeight: "semibold",
+      fontWeight: 'semibold',
       marginBottom: 12,
       color: colors.text.primary,
     },
     meaningChipsContainer: {
-      flexDirection: "row",
-      flexWrap: "wrap",
+      flexDirection: 'row',
+      flexWrap: 'wrap',
       gap: 2,
     },
     chipWrapper: {
-      width: "48%",
+      width: '48%',
       marginBottom: 4,
-      alignItems: "center",
+      alignItems: 'center',
     },
     chip: {
       backgroundColor: colors.primary[isDark ? 800 : 200],
-      justifyContent: "flex-start",
+      justifyContent: 'flex-start',
       borderRadius: 12,
     },
     chipText: {

@@ -50,7 +50,7 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, maxHeight, isThemeDark),
-    [colors, maxHeight, isThemeDark]
+    [colors, maxHeight, isThemeDark],
   );
 
   return (
@@ -94,7 +94,7 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
 const getStyles = (
   colors: ColorsAppType,
   maxHeight?: number,
-  isThemeDark?: boolean
+  isThemeDark?: boolean,
 ) =>
   StyleSheet.create({
     overlay: {

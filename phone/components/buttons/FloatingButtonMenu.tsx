@@ -1,6 +1,6 @@
-import { useThemeApp } from "@/hooks/useThemeApp";
-import React from "react";
-import { FAB } from "react-native-paper";
+import { useThemeApp } from '@/hooks/useThemeApp';
+import React from 'react';
+import { FAB } from 'react-native-paper';
 
 /**
  *
@@ -27,7 +27,7 @@ interface FloatingButtonMenuProps {
  */
 const FloatingButtonMenu: React.FC<FloatingButtonMenuProps> = ({
   actions,
-  mainIcon = "plus",
+  mainIcon = 'plus',
   color,
 }) => {
   // Status open
@@ -42,7 +42,7 @@ const FloatingButtonMenu: React.FC<FloatingButtonMenuProps> = ({
     <FAB.Group
       open={open}
       visible
-      icon={open ? "close" : mainIcon}
+      icon={open ? 'close' : mainIcon}
       actions={actions.map((action) => ({
         ...action,
         color: colors.text.secondary,

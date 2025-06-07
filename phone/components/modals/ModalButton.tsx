@@ -46,7 +46,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
 
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
-    [colors, isThemeDark]
+    [colors, isThemeDark],
   );
 
   return (
@@ -57,7 +57,6 @@ const ModalButton: React.FC<ModalButtonProps> = ({
       onDismiss={onClose}
     >
       <View style={[styles.overlay]}>
-
         {/* Pressable */}
         {closeOnPressOutside && (
           <Pressable style={StyleSheet.absoluteFill} onPress={onClose} />

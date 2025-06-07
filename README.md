@@ -8,97 +8,151 @@ App personal enfocada en mejorar mi ingles y ayudarme en mi aprendizaje
 
 - Instalar dependencias
 
-    ```bash
-    npm install
-    npm install --legacy-peer-deps -> Para evitar problemas de compatibilidad
-    npm install --force -> Para forzar la instalación ignorando las dependencias
-    ```
+  ```bash
+  npm install
+  npm install --legacy-peer-deps -> Para evitar problemas de compatibilidad
+  npm install --force -> Para forzar la instalación ignorando las dependencias
+  ```
 
 - Borrar cache
 
-    ```bash
-    npm cache clean --force
-    ```
+  ```bash
+  npm cache clean --force
+  ```
 
 - Borrar node_modules and package-lock.json
 
-    ```bash
-    Remove-Item -Recurse -Force .\node_modules
-    Remove-Item -Force .\package-lock.json
-    ```
- 
+  ```bash
+  Remove-Item -Recurse -Force .\node_modules
+  Remove-Item -Force .\package-lock.json
+  ```
+
 - Verificar versiones disponibles de una librería
 
-    ```bash
-    npm show [libreria] versions
-    ```
+  ```bash
+  npm show [libreria] versions
+  ```
 
 - Instalar una version específica de una librería
 
-    ```bash
-    npm install [libreria]@[version]
-    ```
+  ```bash
+  npm install [libreria]@[version]
+  ```
+
+- Re installar dependencias
+
+  ```bash
+  npm install & npx expo install
+  ```
 
 ### COMANDOS CON NPX
 
 - Iniciar app (desarrollo)
 
-    ```bash
-    npx expo start --reset-cache
-    npx expo start --clear
-    ```
+  ```bash
+  npx expo start --reset-cache
+  npx expo start --clear
+  ```
 
 - Verificar integridad y problemas en la application
 
-    ```bash
-    npx expo-doctor 
-    ```
+  ```bash
+  npx expo-doctor
+  ```
 
 - Verificar integridad y problemas de las librerías expo
 
-    ```bash
-    npx expo install --check  
-    ```
+  ```bash
+  npx expo install --check
+  ```
 
 - Actualizar SDK y librerías
 
-    ```bash
-    npx expo upgrade
-    ```
+  ```bash
+  npx expo upgrade
+  ```
 
 - Ejecutar app en android
 
-    ```bash
-    npx expo run:android
-    ```
+  ```bash
+  npx expo run:android
+  ```
 
 ### EAS COMMANDS
 
 - Iniciar sesion
 
-    ```bash
-    eas login
-    ```
+  ```bash
+  eas login
+  ```
 
 - Configurar build y crear eas.json
 
-    ```bash
-    eas build:configure
-    ```
+  ```bash
+  eas build:configure
+  ```
 
 - Crear apk para android
 
-    ```bash
-    eas build -p android --profile preview
-    ```
+  ```bash
+  eas build -p android --profile preview
+  ```
+
+### PRETTIER COMMANDS
+
+- Formatear codigo
+
+  ```bash
+  npx prettier --write .
+  ```
+
+- Formatear codigo y verificar cambios
+
+  ```bash
+  npx prettier --check .
+  ```
+
+- Formatear codigo y verificar cambios en un archivo
+
+  ```bash
+  npx prettier --check ./src/screens/verbs/hooks/useGuestGamingVerb.ts
+  ```
+
+- Agregar config a config.json de vs code
+
+  ```json
+  {
+      .....
+      "editor.formatOnSave": true, // Formatear codigo al guardar
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true // Corregir errores al guardar
+      }
+      .....
+  }
+  ```
+
+- Agregar config a .prettierrc
+
+  ```json
+  {
+    "semi": true, // Punto y coma
+    "endOfLine": "lf", // Fin de linea
+    "singleQuote": true, // Comilla simple
+    "trailingComma": "all" // Coma al final
+    "tabWidth": 2, // Tabulador
+    "printWidth": 120, // Ancho de linea
+    "arrowParens": "avoid", // Parentesis de flecha
+    "singleAttributePerLine": true // Atributo por linea
+  }
+  ```
 
 ### CONFIGURACIONES ANTES DEL BUILD
 
 - Actualizar configuración de react-native-mmkv
 
-    ```bash
-    npx expo prebuild
-    ```
+  ```bash
+  npx expo prebuild
+  ```
 
 ## LIBRERÍAS
 

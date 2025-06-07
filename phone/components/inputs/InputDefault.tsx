@@ -1,9 +1,14 @@
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { ColorsAppType } from "@/theme/colors";
-import { IconPropsApp } from "@/types/components";
-import React from "react";
-import { StyleSheet, TextStyle, View, ViewStyle } from "react-native";
-import { IconButton, Text, TextInput, TextInputProps } from "react-native-paper";
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { ColorsAppType } from '@/theme/colors';
+import { IconPropsApp } from '@/types/components';
+import React from 'react';
+import { StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
+import {
+  IconButton,
+  Text,
+  TextInput,
+  TextInputProps,
+} from 'react-native-paper';
 
 // Props
 interface InputDefaultProps {
@@ -11,7 +16,7 @@ interface InputDefaultProps {
   onChangeText?: (text: string) => void;
   label?: string;
   placeholder?: string;
-  mode?: "flat" | "outlined";
+  mode?: 'flat' | 'outlined';
   iconLeft?: IconPropsApp;
   iconRight?: IconPropsApp;
   extraProps?: TextInputProps;
@@ -31,11 +36,11 @@ interface InputDefaultProps {
  * @returns {TSX.Element} Componente InputDefault.
  */
 const InputDefault: React.FC<InputDefaultProps> = ({
-  initialValue = "",
+  initialValue = '',
   onChangeText,
-  label = "Buscar",
-  placeholder = "Hola mundo",
-  mode = "outlined",
+  label = 'Buscar',
+  placeholder = 'Hola mundo',
+  mode = 'outlined',
   iconLeft,
   iconRight,
   extraProps,
@@ -54,18 +59,18 @@ const InputDefault: React.FC<InputDefaultProps> = ({
   const onChange = React.useCallback(
     (text: string) => {
       // Get value
-      const value = hiddenSpaces ? text.replace(/\s/g, "") : text;
+      const value = hiddenSpaces ? text.replace(/\s/g, '') : text;
 
       setTextSearch(value);
       onChangeText?.(value);
     },
-    [onChangeText, hiddenSpaces]
+    [onChangeText, hiddenSpaces],
   );
 
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
-    [colors, isThemeDark]
+    [colors, isThemeDark],
   );
 
   return (
@@ -121,8 +126,8 @@ const InputDefault: React.FC<InputDefaultProps> = ({
 const getStyles = (colors: ColorsAppType, isDark: boolean) =>
   StyleSheet.create({
     content: {
-      flexDirection: "row",
-      alignItems: "center",
+      flexDirection: 'row',
+      alignItems: 'center',
       gap: 8,
     },
     label: {
@@ -141,7 +146,7 @@ const getStyles = (colors: ColorsAppType, isDark: boolean) =>
       backgroundColor: colors.background.secondary,
     },
     iconRight: {
-      backgroundColor: "transparent",
+      backgroundColor: 'transparent',
       borderRadius: 12,
     },
   });

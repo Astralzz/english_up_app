@@ -1,13 +1,13 @@
-import React from "react";
-import { SafeAreaView, StatusBar } from "react-native";
+import React from 'react';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 // React Navigation
-import RouterControl from "../router/RouterControl";
+import RouterControl from '../router/RouterControl';
 
 // Theme
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { useLanguageApp } from "@/hooks/useLanguageApp";
-import i18n from "@/i18n";
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { useLanguageApp } from '@/hooks/useLanguageApp';
+import i18n from '@/i18n';
 
 /**
  *
@@ -28,7 +28,7 @@ const Main: React.FC = () => {
 
   // Acción
   React.useEffect(() => {
-    i18n.changeLanguage(language || "en");
+    i18n.changeLanguage(language || 'en');
   }, [language]);
 
   return (

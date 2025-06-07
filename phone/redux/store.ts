@@ -1,15 +1,15 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import themeSlice, { ThemeSliceType } from "./slices/themeSlice";
-import { persistStore, persistReducer } from "redux-persist";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { listsVerbsSlice, ListsVerbsSliceType } from "./slices/verbsSlice";
-import languageSlice, { LanguageSliceType } from "./slices/languageSlice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import themeSlice, { ThemeSliceType } from './slices/themeSlice';
+import { persistStore, persistReducer } from 'redux-persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { listsVerbsSlice, ListsVerbsSliceType } from './slices/verbsSlice';
+import languageSlice, { LanguageSliceType } from './slices/languageSlice';
 
 // Configuración persistente
 const persistConfig = {
-  key: "root-redux-persist",
+  key: 'root-redux-persist',
   storage: AsyncStorage,
-  whitelist: ["stateTheme", "stateListVerbs", "stateLanguage"], // Slices a persistir
+  whitelist: ['stateTheme', 'stateListVerbs', 'stateLanguage'], // Slices a persistir
 };
 
 // Todos los reducers

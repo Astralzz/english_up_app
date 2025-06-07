@@ -6,7 +6,9 @@ import { ImageURISource } from 'react-native';
  * @param {string} filename
  * @return {ImageURISource | null}
  */
-export const resolveImageForPathId = (filename: string): ImageURISource | null => {
+export const resolveImageForPathId = (
+  filename: string,
+): ImageURISource | null => {
   // ? Not string
   if (typeof filename !== 'string' || filename.trim() === '') {
     return null;

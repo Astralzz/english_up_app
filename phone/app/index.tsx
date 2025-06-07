@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import Main from "./Main";
-import AppProvider from "@/providers/AppProvider";
+import Main from './Main';
+import AppProvider from '@/providers/AppProvider';
 
 // Location
-import "@/i18n";
+import '@/i18n';
 
 /**
  *

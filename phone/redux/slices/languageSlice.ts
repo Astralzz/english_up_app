@@ -1,7 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Tipos
-export type LanguageAppType = "en" | "es";
+export type LanguageAppType = 'en' | 'es';
 
 // Estado
 export type LanguageSliceType = {
@@ -10,12 +10,12 @@ export type LanguageSliceType = {
 
 // Estado inicial
 const initialState: LanguageSliceType = {
-  language: "en",
+  language: 'en',
 };
 
 // Creamos un slice
 export const languageSlice = createSlice({
-  name: "language",
+  name: 'language',
   initialState,
   reducers: {
     // Actualizar idioma

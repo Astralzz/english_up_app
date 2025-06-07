@@ -1,6 +1,6 @@
-import { ScreenNavigationProp } from "@/types/navigation";
-import { useNavigation } from "@react-navigation/native";
-import type { RootStackParamList } from "@/types/navigation";
+import { ScreenNavigationProp } from '@/types/navigation';
+import { useNavigation } from '@react-navigation/native';
+import type { RootStackParamList } from '@/types/navigation';
 
 /**
  * Hook para las navegaciones

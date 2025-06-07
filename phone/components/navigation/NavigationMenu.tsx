@@ -15,9 +15,8 @@ import FooterMenu from './menu/FooterMenu';
 import ModalDefault from '../modals/ModalDefault';
 import AboutScreen from '@/screens/about/AboutScreen';
 
-
 // Path translation
-const PATH_TRASNSITION = "menu";
+const PATH_TRASNSITION = 'menu';
 
 /**
  * Menu - Navigation component
@@ -41,7 +40,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
-    [colors, isThemeDark]
+    [colors, isThemeDark],
   );
 
   // Functions modal
@@ -76,7 +75,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
         inputRange: [0, 1],
         outputRange: ['0deg', '15deg'],
       }),
-    []
+    [],
   );
 
   return (
@@ -102,7 +101,9 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
         <Text style={styles.title} variant="headlineMedium">
           {t(`${PATH_TRASNSITION}.header.title`)}
         </Text>
-        <Text style={styles.subtitle}>{t(`${PATH_TRASNSITION}.header.body`)}</Text>
+        <Text style={styles.subtitle}>
+          {t(`${PATH_TRASNSITION}.header.body`)}
+        </Text>
       </LinearGradient>
 
       {/* Divisor */}
@@ -112,7 +113,8 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
       <Drawer.Section style={styles.menuSection}>
         {ROUTES_MENU_APP.map(({ label, name, icon }, i) => {
           // Get label
-          const labelMenu = label || t(`${PATH_TRASNSITION}.routes.${name.toLowerCase()}`);
+          const labelMenu =
+            label || t(`${PATH_TRASNSITION}.routes.${name.toLowerCase()}`);
 
           return (
             <Drawer.Item

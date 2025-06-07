@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { BottomNavigation } from "react-native-paper";
+import React, { ReactNode } from 'react';
+import { BottomNavigation } from 'react-native-paper';
 
 // Props
 interface NavigationBarProps {
@@ -16,18 +16,18 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ children }) => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {
-      key: "music",
-      title: "Favorites",
-      focusedIcon: "heart",
-      unfocusedIcon: "heart-outline",
+      key: 'music',
+      title: 'Favorites',
+      focusedIcon: 'heart',
+      unfocusedIcon: 'heart-outline',
     },
-    { key: "albums", title: "Albums", focusedIcon: "album" },
-    { key: "recents", title: "Recents", focusedIcon: "history" },
+    { key: 'albums', title: 'Albums', focusedIcon: 'album' },
+    { key: 'recents', title: 'Recents', focusedIcon: 'history' },
     {
-      key: "notifications",
-      title: "Notifications",
-      focusedIcon: "bell",
-      unfocusedIcon: "bell-outline",
+      key: 'notifications',
+      title: 'Notifications',
+      focusedIcon: 'bell',
+      unfocusedIcon: 'bell-outline',
     },
   ]);
 

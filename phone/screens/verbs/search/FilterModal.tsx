@@ -1,22 +1,22 @@
-import React, { useMemo } from "react";
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { SegmentedButtons, Checkbox } from "react-native-paper";
-import Verb, { VerbTypeType } from "@/models/Verb";
-import { ColorsAppType } from "@/theme/colors";
-import { TFunction } from "i18next";
-import ModalButton from "@/components/modals/ModalButton";
+import React, { useMemo } from 'react';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { SegmentedButtons, Checkbox } from 'react-native-paper';
+import Verb, { VerbTypeType } from '@/models/Verb';
+import { ColorsAppType } from '@/theme/colors';
+import { TFunction } from 'i18next';
+import ModalButton from '@/components/modals/ModalButton';
 
 // Tipado de Props del modal
 interface Props {
   visible: boolean;
   onClose: () => void;
-  verbType: VerbTypeType | "";
-  onVerbTypeChange: (value: VerbTypeType | "") => void;
+  verbType: VerbTypeType | '';
+  onVerbTypeChange: (value: VerbTypeType | '') => void;
   searchKey: keyof Verb;
   onSearchKeyChange: (key: keyof Verb) => void;
   colors: ColorsAppType;
   translation: {
-    t: TFunction<"translation", undefined>;
+    t: TFunction<'translation', undefined>;
     path: string;
   };
 }
@@ -41,22 +41,22 @@ const FilterModal: React.FC<Props> = ({
   const verbTypeButtons = useMemo(
     () => [
       {
-        value: "",
+        value: '',
         label: t(`${path}.filter.types.all`),
-        icon: "format-list-bulleted",
+        icon: 'format-list-bulleted',
       },
       {
-        value: "R",
+        value: 'R',
         label: t(`${path}.filter.types.regular`),
-        icon: "chart-bell-curve",
+        icon: 'chart-bell-curve',
       },
       {
-        value: "I",
+        value: 'I',
         label: t(`${path}.filter.types.irregular`),
-        icon: "chart-bell-curve-cumulative",
+        icon: 'chart-bell-curve-cumulative',
       },
     ],
-    [t, path]
+    [t, path],
   );
 
   /**
@@ -104,7 +104,7 @@ const FilterModal: React.FC<Props> = ({
         </Text>
         <SegmentedButtons
           value={verbType}
-          onValueChange={(v) => onVerbTypeChange(v as VerbTypeType | "")}
+          onValueChange={(v) => onVerbTypeChange(v as VerbTypeType | '')}
           buttons={verbTypeButtons}
           density="regular"
           style={styles.segmentedButtons}
@@ -130,7 +130,7 @@ const FilterModal: React.FC<Props> = ({
             onPress={() => onSearchKeyChange(key as keyof Verb)}
           >
             <Checkbox.Android
-              status={searchKey === key ? "checked" : "unchecked"}
+              status={searchKey === key ? 'checked' : 'unchecked'}
               color={colors.primary[500]}
               uncheckedColor={colors.primary[500]}
               rippleColor={colors.primary[500]}
@@ -153,13 +153,13 @@ const getStyles = (colors: ColorsAppType) =>
     },
     filterTitle: {
       fontSize: 16,
-      fontWeight: "600",
+      fontWeight: '600',
       marginBottom: 12,
     },
     segmentedButtons: {},
     filterOption: {
-      flexDirection: "row",
-      alignItems: "center",
+      flexDirection: 'row',
+      alignItems: 'center',
       marginVertical: 8,
     },
   });

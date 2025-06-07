@@ -1,10 +1,10 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Button, Text } from "react-native-paper";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import ScreenWrapper from "./ScreenWrapper";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { ColorsAppType } from "@/theme/colors";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Button, Text } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import ScreenWrapper from './ScreenWrapper';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { ColorsAppType } from '@/theme/colors';
 
 // Props
 interface ScreenErrorProps {
@@ -15,10 +15,10 @@ interface ScreenErrorProps {
 }
 
 const ScreenError: React.FC<ScreenErrorProps> = ({
-  title = "Error",
+  title = 'Error',
   message,
   reloadAction,
-  iconName = "alert-circle-outline",
+  iconName = 'alert-circle-outline',
 }) => {
   const {
     state: { colors },
@@ -70,8 +70,8 @@ const getStyles = (colors: ColorsAppType) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
+      justifyContent: 'center',
+      alignItems: 'center',
       paddingHorizontal: 24,
     },
     icon: {
@@ -79,15 +79,15 @@ const getStyles = (colors: ColorsAppType) =>
     },
     title: {
       fontSize: 18,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       color: colors.alert.error,
-      textAlign: "center",
+      textAlign: 'center',
     },
     message: {
       marginTop: 8,
       fontSize: 14,
       color: colors.text.secondary,
-      textAlign: "center",
+      textAlign: 'center',
     },
     button: {
       marginTop: 18,

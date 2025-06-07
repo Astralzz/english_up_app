@@ -8,7 +8,6 @@ import {
   VerbsStackParamGamesList,
 } from '@/screens/verbs/VerbsStack';
 
-
 /**
  *
  * Guest the verb game screen

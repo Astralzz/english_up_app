@@ -1,5 +1,5 @@
-import COLORS_APP, { ColorsAppType, ThemeAppType } from "@/theme/colors";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import COLORS_APP, { ColorsAppType, ThemeAppType } from '@/theme/colors';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Estado
 export type ThemeSliceType = {
@@ -10,25 +10,25 @@ export type ThemeSliceType = {
 
 // Estado inicial
 const initialState: ThemeSliceType = {
-  theme: "light",
+  theme: 'light',
   isThemeDark: false,
   colors: COLORS_APP.light,
 };
 
 // Creamos un slice
 export const themeSlice = createSlice({
-  name: "theme",
+  name: 'theme',
   initialState,
   reducers: {
     // Actualizar tema
     updateTheme: (state, action: PayloadAction<ThemeAppType>) => {
       // Cambiamos temas
-      const newTheme = action.payload === "light" ? "dark" : "light";
+      const newTheme = action.payload === 'light' ? 'dark' : 'light';
 
       // Actualizamos tema
       state.theme = newTheme;
-      state.isThemeDark = newTheme === "dark";
-      state.colors = COLORS_APP[newTheme]; 
+      state.isThemeDark = newTheme === 'dark';
+      state.colors = COLORS_APP[newTheme];
     },
   },
 });

@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/redux/store";
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/redux/store';
 import {
-    LanguageAppType,
+  LanguageAppType,
   LanguageSliceType,
   updateLanguage,
-} from "@/redux/slices/languageSlice";
+} from '@/redux/slices/languageSlice';
 
 /**
  * Hook para obtener y actualizar el estado del idioma

@@ -1,9 +1,9 @@
-import React from "react";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import NavigationMenu from "@/components/navigation/NavigationMenu";
-import ROUTES_MENU_APP from "./routerlist";
-import { RootStackParamList } from "@/types/navigation";
-import NavigationHeader from "@/components/navigation/NavigationHeader";
+import React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import NavigationMenu from '@/components/navigation/NavigationMenu';
+import ROUTES_MENU_APP from './routerlist';
+import { RootStackParamList } from '@/types/navigation';
+import NavigationHeader from '@/components/navigation/NavigationHeader';
 
 /**
  * Drawer navigator
@@ -12,7 +12,7 @@ const Drawer = createDrawerNavigator<RootStackParamList>();
 
 /**
  * Component RouterControl
- * 
+ *
  * @returns {TSX.Element}
  */
 const RouterControl: React.FC = () => (
@@ -21,8 +21,8 @@ const RouterControl: React.FC = () => (
     initialRouteName="Home"
     screenOptions={{
       header: (props) => <NavigationHeader {...props} />,
-      drawerPosition: "right",
-      drawerType: "front", // Tipo de comportamiento
+      drawerPosition: 'right',
+      drawerType: 'front', // Tipo de comportamiento
       // headerShown: false // Ocultar headers
     }}
   >

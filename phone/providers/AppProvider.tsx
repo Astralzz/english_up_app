@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 // Redux
-import { Provider as ReduxProvider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { store, persistor } from "@/redux/store";
+import { Provider as ReduxProvider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from '@/redux/store';
 
 // UI
-import { ActivityIndicator, PaperProvider } from "react-native-paper";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { ActivityIndicator, PaperProvider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Props
 interface AppProviderProps {
@@ -26,7 +26,7 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       <PersistGate
         loading={
           <SafeAreaView
-            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
           >
             <ActivityIndicator size="large" />
           </SafeAreaView>

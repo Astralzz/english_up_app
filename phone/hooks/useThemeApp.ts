@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/redux/store";
-import { ThemeSliceType, updateTheme } from "@/redux/slices/themeSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/redux/store';
+import { ThemeSliceType, updateTheme } from '@/redux/slices/themeSlice';
 
 /**
  * Hook para obtener y actualizar el estado del tema

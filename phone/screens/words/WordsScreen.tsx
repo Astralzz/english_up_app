@@ -1,7 +1,7 @@
-import React from "react";
-import { Text } from "react-native";
-import ScreenWrapper from "@/components/screens/ScreenWrapper";
-import { useTypedNavigation } from "@/hooks/useTypedNavigation";
+import React from 'react';
+import { Text } from 'react-native';
+import ScreenWrapper from '@/components/screens/ScreenWrapper';
+import { useTypedNavigation } from '@/hooks/useTypedNavigation';
 
 /**
  *
@@ -11,7 +11,7 @@ import { useTypedNavigation } from "@/hooks/useTypedNavigation";
  */
 const WordsScreen = () => {
   // Obtener acceso a la navegación
-  const navigation = useTypedNavigation<"Words">();
+  const navigation = useTypedNavigation<'Words'>();
 
   return (
     <ScreenWrapper>

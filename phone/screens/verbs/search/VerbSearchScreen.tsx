@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
-import FilterModal from "./FilterModal";
-import VerbList from "../components/VerbList";
-import VerbsLayout from "../layouts/VerbsLayout";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import useVerbSearch from "../hooks/useVerbSearch";
-import InputDefault from "@/components/inputs/InputDefault";
-import { useTranslation } from "react-i18next";
-
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import FilterModal from './FilterModal';
+import VerbList from '../components/VerbList';
+import VerbsLayout from '../layouts/VerbsLayout';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import useVerbSearch from '../hooks/useVerbSearch';
+import InputDefault from '@/components/inputs/InputDefault';
+import { useTranslation } from 'react-i18next';
 
 // Transitions
-const PATH_TRASNSITION = "verbs.search";
+const PATH_TRASNSITION = 'verbs.search';
 
 /**
  *
@@ -48,7 +47,7 @@ const VerbSearchScreen: React.FC = () => {
           label={t(`${PATH_TRASNSITION}.input.label`)}
           placeholder={t(`${PATH_TRASNSITION}.input.placeholder`)}
           iconRight={{
-            icon: "tune",
+            icon: 'tune',
             onPress: () => setShowFilters(true),
           }}
         />
@@ -84,12 +83,12 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   searchContainer: {
-    width: "100%",
+    width: '100%',
     paddingHorizontal: 16,
   },
   searchBar: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 8,
   },
   input: {
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 1,
-    width: "100%",
+    width: '100%',
     paddingHorizontal: 16,
   },
 });

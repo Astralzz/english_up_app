@@ -52,4 +52,11 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se creo el modal de creditos
 - Se mejoro la logica de los verbos
 
+## [0.0.7] - 07-06-2025
+
+- Se agregaron todas las configuraciones de ESLint
+- Se agregaron todas las configuraciones de Prettier
+- Se creo el archivo de eslint.config.js y .prettierrc
+- Se agregaron las dependencias de ESLint y Prettier
+
 ---

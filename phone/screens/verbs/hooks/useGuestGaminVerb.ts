@@ -45,10 +45,7 @@ interface UseGuestGamingVerbProps {
   isThemeDark: boolean;
   levels: GuestTheVerbGameLevelType[];
   levelSelected: GuestTheVerbGameLevelType | null;
-  selectLevel: (
-    level: GuestTheVerbGameLevelType,
-    keyVerbs: GuestTheVerbGameKeyVerbsType
-  ) => void;
+  selectLevel: (level: GuestTheVerbGameLevelType, keyVerbs: GuestTheVerbGameKeyVerbsType) => void;
   registerAttempt: (isCorrect: boolean) => void;
   results: UseGuestGamingVerbResult | null;
   currentQuestion: GenerateVerbQuestionType | null;
@@ -61,21 +58,18 @@ interface UseGuestGamingVerbProps {
  *
  * @returns {UseGuestGamingVerbProps} Objeto con las propiedades y métodos para manejar la búsqueda de verbos.
  */
-const useGuestGamingVerb = (
-  p: UseGuestGamingVerbParams
-): UseGuestGamingVerbProps => {
+const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProps => {
   // States
   const [results, setResults] = useState<UseGuestGamingVerbResult | null>(null);
-  const [selectedKeyVerbs, setSelectedKeyVerbs] =
-    useState<GuestTheVerbGameKeyVerbsType | null>(null);
-  const [currentQuestion, setCurrentQuestion] =
-    useState<GenerateVerbQuestionType | null>(null);
+  const [selectedKeyVerbs, setSelectedKeyVerbs] = useState<GuestTheVerbGameKeyVerbsType | null>(
+    null
+  );
+  const [currentQuestion, setCurrentQuestion] = useState<GenerateVerbQuestionType | null>(null);
   const [verbs, setVerbs] = useState<Verb[]>([]);
   const [successCount, setSuccessCount] = useState(0);
   const [failsCount, setFailsCount] = useState(0);
   const [count, setCount] = useState(0);
-  const [levelSelected, setLevelSelected] =
-    useState<GuestTheVerbGameLevelType | null>(null);
+  const [levelSelected, setLevelSelected] = useState<GuestTheVerbGameLevelType | null>(null);
 
   // Params
   const { routeName } = p;
@@ -143,7 +137,7 @@ const useGuestGamingVerb = (
 
       // ? Actualizamos la pregunta
       setCurrentQuestion(question);
-    }, [verbs, levelSelected, selectedKeyVerbs]),
+    }, [levelSelected, selectedKeyVerbs, verbs]),
   });
 
   // Register attempt
@@ -178,10 +172,7 @@ const useGuestGamingVerb = (
 
   // Selected level
   const selectLevel = React.useCallback(
-    (
-      level: GuestTheVerbGameLevelType,
-      keyVerbs: GuestTheVerbGameKeyVerbsType
-    ) => {
+    (level: GuestTheVerbGameLevelType, keyVerbs: GuestTheVerbGameKeyVerbsType) => {
       setSelectedKeyVerbs(keyVerbs);
       setLevelSelected(level);
       generateNextQuestion();
@@ -205,12 +196,12 @@ const useGuestGamingVerb = (
     setSelectedKeyVerbs(null);
     setLevelSelected(null);
     setCurrentQuestion(null);
-  }, []);
+  }, [loadVerbs]);
 
   // Effects
   useEffect(() => {
     loadVerbs();
-  }, []);
+  }, [loadVerbs]);
 
   // Return
   return {

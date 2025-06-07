@@ -1,9 +1,9 @@
-import React from "react";
-import { useThemeApp } from "@/hooks/useThemeApp";
-import { StyleSheet } from "react-native";
-import { ActivityIndicator, Text } from "react-native-paper";
-import ScreenWrapper from "./ScreenWrapper";
-import { ColorsAppType } from "@/theme/colors";
+import React from 'react';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { StyleSheet } from 'react-native';
+import { ActivityIndicator, Text } from 'react-native-paper';
+import ScreenWrapper from './ScreenWrapper';
+import { ColorsAppType } from '@/theme/colors';
 
 // Props
 interface ScreenLoadingProps {
@@ -18,7 +18,7 @@ interface ScreenLoadingProps {
  * @return {TSX.Component}
  */
 const ScreenLoading: React.FC<ScreenLoadingProps> = ({
-  message = "Cargando",
+  message = 'Cargando',
   colorIndicator,
 }) => {
   // Hooks

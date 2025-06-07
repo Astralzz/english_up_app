@@ -1,15 +1,15 @@
 // screens/ProfileScreen.tsx
-import React from "react";
-import { View, Text, Button } from "react-native";
-import { RouteProp } from "@react-navigation/native";
-import { RootStackParamList } from "@/types/navigation";
-import { StackNavigationProp } from "@react-navigation/stack";
-import ScreenWrapper from "@/components/screens/ScreenWrapper";
+import React from 'react';
+import { Text, Button } from 'react-native';
+import { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '@/types/navigation';
+import { StackNavigationProp } from '@react-navigation/stack';
+import ScreenWrapper from '@/components/screens/ScreenWrapper';
 
 // Props correctamente
 interface ProfileScreenProps {
-  route: RouteProp<RootStackParamList, "Profile">;
-  navigation: StackNavigationProp<RootStackParamList, "Profile">;
+  route: RouteProp<RootStackParamList, 'Profile'>;
+  navigation: StackNavigationProp<RootStackParamList, 'Profile'>;
 }
 
 /**

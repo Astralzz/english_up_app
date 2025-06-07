@@ -1,10 +1,10 @@
-import React from "react";
-import { FlatList } from "react-native";
-import { ColorsAppType } from "@/theme/colors";
-import Verb from "@/models/Verb";
-import VerbCard from "./VerbCard";
-import VerbDetails from "./VerbDetails";
-import ModalDefault from "@/components/modals/ModalDefault";
+import React from 'react';
+import { FlatList } from 'react-native';
+import { ColorsAppType } from '@/theme/colors';
+import Verb from '@/models/Verb';
+import VerbCard from './VerbCard';
+import VerbDetails from './VerbDetails';
+import ModalDefault from '@/components/modals/ModalDefault';
 
 // Props
 interface VerbListProps {
@@ -53,7 +53,7 @@ const VerbList = ({ verbs, colors, isThemeDark }: VerbListProps) => {
       <ModalDefault
         visible={showModal}
         onClose={closeModal}
-        title={`${selectedVerb?.simple_form || "N/A"}`}
+        title={`${selectedVerb?.simple_form || 'N/A'}`}
       >
         <VerbDetails
           verb={selectedVerb}

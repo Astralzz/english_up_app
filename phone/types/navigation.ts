@@ -1,6 +1,6 @@
-import { DrawerNavigationOptions } from "@react-navigation/drawer";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { StackNavigationOptions } from "@react-navigation/stack";
+import { DrawerNavigationOptions } from '@react-navigation/drawer';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { StackNavigationOptions } from '@react-navigation/stack';
 
 // Types router interface screens
 export type RootStackParamList = {

@@ -1,6 +1,5 @@
-import { ViewStyle } from "react-native";
-import { IconSource } from "react-native-paper/lib/typescript/components/Icon";
-
+import { ViewStyle } from 'react-native';
+import { IconSource } from 'react-native-paper/lib/typescript/components/Icon';
 
 /**
  * Props for icon component
@@ -11,4 +10,4 @@ export type IconPropsApp = {
   style?: ViewStyle;
   color?: string;
   size?: number;
-}
+};

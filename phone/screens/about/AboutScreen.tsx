@@ -62,7 +62,7 @@ const AboutScreen: React.FC<AboutScreenProps> = ({ t, colors }) => {
         onPress={() => Linking.openURL(url)}
       />
     ),
-    [colors]
+    [colors],
   );
 
   // Styles

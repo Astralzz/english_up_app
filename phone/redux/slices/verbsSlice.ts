@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Estado extendido con props opcionales
 export interface ListsVerbsSliceType {
@@ -16,7 +16,7 @@ const initialState: ListsVerbsSliceType = {
 
 // Creamos el slice
 export const listsVerbsSlice = createSlice({
-  name: "verbs",
+  name: 'verbs',
   initialState,
   reducers: {
     // Reemplaza todo el estado de listas
@@ -27,7 +27,10 @@ export const listsVerbsSlice = createSlice({
     // Agrega un verbo a la lista indicada
     addVerbToList: (
       state,
-      action: PayloadAction<{ list: keyof ListsVerbsSliceType; verbId: number }>
+      action: PayloadAction<{
+        list: keyof ListsVerbsSliceType;
+        verbId: number;
+      }>,
     ) => {
       const { list, verbId } = action.payload;
       if (!state[list].includes(verbId)) {
@@ -38,7 +41,10 @@ export const listsVerbsSlice = createSlice({
     // Elimina un verbo de la lista indicada
     removeVerbFromList: (
       state,
-      action: PayloadAction<{ list: keyof ListsVerbsSliceType; verbId: number }>
+      action: PayloadAction<{
+        list: keyof ListsVerbsSliceType;
+        verbId: number;
+      }>,
     ) => {
       const { list, verbId } = action.payload;
       state[list] = state[list].filter((id) => id !== verbId);
@@ -47,7 +53,7 @@ export const listsVerbsSlice = createSlice({
     // Limpia todos los verbos de una lista
     clearVerbList: (
       state,
-      action: PayloadAction<keyof ListsVerbsSliceType>
+      action: PayloadAction<keyof ListsVerbsSliceType>,
     ) => {
       state[action.payload] = [];
     },

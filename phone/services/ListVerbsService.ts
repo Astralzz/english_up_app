@@ -76,7 +76,7 @@ class ListVerbsService {
   paginate(
     page: number,
     limit: number,
-    list: Verb[] = this.verbs
+    list: Verb[] = this.verbs,
   ): PaginateVerbsType {
     const totalItems = list.length;
     const totalPages = Math.ceil(totalItems / limit);
@@ -122,7 +122,7 @@ class ListVerbsService {
         verb.third_person.toLowerCase() === q ||
         verb.simple_past.toLowerCase() === q ||
         verb.past_participle.toLowerCase() === q ||
-        verb.gerund.toLowerCase() === q
+        verb.gerund.toLowerCase() === q,
     );
   }
 
@@ -212,7 +212,7 @@ class ListVerbsService {
         verb.third_person.toLowerCase().endsWith(lowerSuffix) ||
         verb.simple_past.toLowerCase().endsWith(lowerSuffix) ||
         verb.past_participle.toLowerCase().endsWith(lowerSuffix) ||
-        verb.gerund.toLowerCase().endsWith(lowerSuffix)
+        verb.gerund.toLowerCase().endsWith(lowerSuffix),
     );
   }
 
@@ -230,7 +230,7 @@ class ListVerbsService {
     allVerbs: Verb[],
     questionKey: keyof Verb,
     answerKey: keyof Verb,
-    countAnswers: number = 4
+    countAnswers: number = 4,
   ): GenerateVerbQuestionType | null {
     // ? No hay verbos
     if (allVerbs.length === 0) return null;

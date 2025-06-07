@@ -1,4 +1,4 @@
-import { useTransition, useCallback } from "react";
+import { useTransition, useCallback } from 'react';
 
 /**
  * Options
@@ -16,7 +16,7 @@ interface UseTransitionSubmitOptions<TArgs extends unknown[]> {
  * @returns A tuple with isPending and a submit function
  */
 export function useTransitionApp<TArgs extends unknown[]>(
-  options: UseTransitionSubmitOptions<TArgs>
+  options: UseTransitionSubmitOptions<TArgs>,
 ): [boolean, (...args: TArgs) => void] {
   // Var
   const [isPending, startTransition] = useTransition();
@@ -30,7 +30,7 @@ export function useTransitionApp<TArgs extends unknown[]>(
         void options.fn(...args);
       });
     },
-    [options]
+    [options],
   );
 
   return [isPending, action];

@@ -19,7 +19,7 @@ interface Verb {
  * @module VerbTypeType
  * @description This module defines the VerbTypeType type.
  */
-export type VerbTypeType = "I" | "R";
+export type VerbTypeType = 'I' | 'R';
 
 /**
  * Paginate verbs type

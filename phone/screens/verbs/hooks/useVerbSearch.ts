@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import Verb, { VerbTypeType } from "@/models/Verb";
-import ListVerbsService from "@/services/ListVerbsService";
+import { useEffect, useState } from 'react';
+import Verb, { VerbTypeType } from '@/models/Verb';
+import ListVerbsService from '@/services/ListVerbsService';
 
 // Props returns
 interface UseVerbSearchProps {
   verbs: Verb[];
   textSearch: string;
   setTextSearch: React.Dispatch<React.SetStateAction<string>>;
-  verbTypeFilter: VerbTypeType | "";
-  setVerbTypeFilter: React.Dispatch<React.SetStateAction<VerbTypeType | "">>;
+  verbTypeFilter: VerbTypeType | '';
+  setVerbTypeFilter: React.Dispatch<React.SetStateAction<VerbTypeType | ''>>;
   searchKey: keyof Verb;
   setSearchKey: React.Dispatch<React.SetStateAction<keyof Verb>>;
   service: ListVerbsService | null;
@@ -22,9 +22,9 @@ interface UseVerbSearchProps {
 const useVerbSearch = (): UseVerbSearchProps => {
   // States
   const [verbs, setVerbs] = useState<Verb[]>([]);
-  const [textSearch, setTextSearch] = useState("");
-  const [verbTypeFilter, setVerbTypeFilter] = useState<VerbTypeType | "">("");
-  const [searchKey, setSearchKey] = useState<keyof Verb>("simple_form");
+  const [textSearch, setTextSearch] = useState('');
+  const [verbTypeFilter, setVerbTypeFilter] = useState<VerbTypeType | ''>('');
+  const [searchKey, setSearchKey] = useState<keyof Verb>('simple_form');
   const [service, setService] = useState<ListVerbsService | null>(null);
 
   // Effects
@@ -38,7 +38,7 @@ const useVerbSearch = (): UseVerbSearchProps => {
     if (!service) return;
 
     // ? No hay texto de búsqueda
-    if (!textSearch.trim() || textSearch === "") {
+    if (!textSearch.trim() || textSearch === '') {
       // Get complete list with filters
       const list = service
         .getAll()
