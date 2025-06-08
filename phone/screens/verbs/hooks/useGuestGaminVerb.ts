@@ -1,56 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import Verb from '@/models/Verb';
-import ListVerbsService, {
+import {
+  GenerateVerbOptionType,
   GenerateVerbQuestionType,
   globaListVerbsService,
+  UseGuestGamingVerbResult,
 } from '@/services/ListVerbsService';
-import { VerbsStackParamGamesList } from '../VerbsStack';
-import { RouteProp, useRoute } from '@react-navigation/native';
 import { ColorsAppType } from '@/theme/colors';
 import { useTransitionApp } from '@/hooks/useTransitionApp';
-
-// Levels type
-type GuestTheVerbGameLevelType = {
-  name: string;
-  count: number;
-  key: string;
-};
-
-// Key verbs type
-type GuestTheVerbGameKeyVerbsType = {
-  question: keyof Verb;
-  answers: keyof Verb;
-};
-
-// Type resoults
-interface UseGuestGamingVerbResult {
-  failsCount: number;
-  successCount: number;
-  totalPoints: number;
-  isWin: boolean;
-  title?: string;
-  description?: string;
-}
-
-// Params
-interface UseGuestGamingVerbParams {
-  routeName: keyof VerbsStackParamGamesList;
-}
+import { TFunction } from 'i18next';
+import {
+  GuestTheVerbGameKeyVerbsType,
+  GuestTheVerbGameLevelType,
+} from '@/components/games/ScreenGameSelectedLevel';
+import { useThemeApp } from '@/hooks/useThemeApp';
+import { useTranslation } from 'react-i18next';
 
 // Props returns
 interface UseGuestGamingVerbProps {
-  verbs: Verb[];
-  service: ListVerbsService;
   colors: ColorsAppType;
   isThemeDark: boolean;
   levels: GuestTheVerbGameLevelType[];
   levelSelected: GuestTheVerbGameLevelType | null;
-  selectLevel: (level: GuestTheVerbGameLevelType, keyVerbs: GuestTheVerbGameKeyVerbsType) => void;
-  registerAttempt: (isCorrect: boolean) => void;
+  selectLevel: (
+    level: GuestTheVerbGameLevelType,
+    keyVerbs: GuestTheVerbGameKeyVerbsType,
+  ) => void;
+  registerAttempt: (option: GenerateVerbOptionType) => Promise<void>;
   results: UseGuestGamingVerbResult | null;
   currentQuestion: GenerateVerbQuestionType | null;
   isGeneratingQuestion: boolean;
-  restartGame: () => void;
+  startGame: () => void;
+  actualyRound: number;
+  selectedOption: GenerateVerbOptionType | null;
+  t: TFunction<'translation', undefined>;
 }
 
 /**
@@ -58,26 +41,48 @@ interface UseGuestGamingVerbProps {
  *
  * @returns {UseGuestGamingVerbProps} Objeto con las propiedades y métodos para manejar la búsqueda de verbos.
  */
-const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProps => {
+const useGuestGamingVerb = (): UseGuestGamingVerbProps => {
   // States
+  const [selectedOption, setSelectedOption] =
+    React.useState<GenerateVerbOptionType | null>(null);
   const [results, setResults] = useState<UseGuestGamingVerbResult | null>(null);
-  const [selectedKeyVerbs, setSelectedKeyVerbs] = useState<GuestTheVerbGameKeyVerbsType | null>(
-    null
-  );
-  const [currentQuestion, setCurrentQuestion] = useState<GenerateVerbQuestionType | null>(null);
+  const [selectedKeyVerbs, setSelectedKeyVerbs] =
+    useState<GuestTheVerbGameKeyVerbsType | null>(null);
+  const [currentQuestion, setCurrentQuestion] =
+    useState<GenerateVerbQuestionType | null>(null);
   const [verbs, setVerbs] = useState<Verb[]>([]);
   const [successCount, setSuccessCount] = useState(0);
   const [failsCount, setFailsCount] = useState(0);
-  const [count, setCount] = useState(0);
-  const [levelSelected, setLevelSelected] = useState<GuestTheVerbGameLevelType | null>(null);
+  const [actualyRound, setActualyRound] = useState(0);
+  const [levelSelected, setLevelSelected] =
+    useState<GuestTheVerbGameLevelType | null>(null);
 
-  // Params
-  const { routeName } = p;
+  // Translations
+  const { t } = useTranslation();
 
-  // Props
+  // Theme
   const {
-    params: { colors, isThemeDark },
-  } = useRoute<RouteProp<VerbsStackParamGamesList, typeof routeName>>();
+    state: { colors, isThemeDark },
+  } = useThemeApp();
+
+  // Load verbs
+  const loadVerbs = React.useCallback(() => {
+    const list = globaListVerbsService.getAll();
+    setVerbs(list);
+  }, []);
+
+  // Clear values
+  const clearValues = React.useCallback(() => {
+    setSelectedOption(null);
+    setResults(null);
+    loadVerbs();
+    setSuccessCount(0);
+    setFailsCount(0);
+    setActualyRound(0);
+    setSelectedKeyVerbs(null);
+    setLevelSelected(null);
+    setCurrentQuestion(null);
+  }, [loadVerbs]);
 
   // Finalize game
   const finalizeGame = React.useCallback(() => {
@@ -90,8 +95,8 @@ const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProp
     // ? Generamos los puntos
     const totalAttempts = successCount + failsCount;
     const accuracy = totalAttempts === 0 ? 0 : successCount / totalAttempts;
-    const totalPoints = successCount * 10; // ajusta según tus reglas
-    const isWin = accuracy >= 0.7; // por ejemplo, 70% de aciertos para ganar
+    const totalPoints = successCount * 10; // 10 puntos por acierto
+    const isWin = accuracy >= 0.7; // 70% de aciertos para ganar
 
     // ? Generamos el titulo y la descripcion
     const title = isWin ? '¡Ganaste!' : '¡Intenta de nuevo!';
@@ -122,7 +127,7 @@ const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProp
         verbs,
         selectedKeyVerbs.question, // o el campo que desees como pregunta
         selectedKeyVerbs.answers, // o el campo que desees como opciones
-        4
+        4,
       );
 
       // ? No hay pregunta
@@ -142,61 +147,59 @@ const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProp
 
   // Register attempt
   const registerAttempt = React.useCallback(
-    (isCorrect: boolean) => {
+    async (option: GenerateVerbOptionType) => {
       // ? No hay nivel seleccionado
       if (!levelSelected) return;
 
+      // Agregamos la opcion seleccionada
+      setSelectedOption(option);
+
       // ? Incrementamos el contador
-      if (isCorrect) {
+      if (option.isCorrect) {
         setSuccessCount((prev) => prev + 1);
       } else {
         setFailsCount((prev) => prev + 1);
       }
 
-      setCount((prevCount) => {
-        // ? Incrementamos el contador
-        const newCount = prevCount + 1;
+      // ? Incrementamos el contador
+      const newCount = actualyRound + 1;
 
-        // ? Si se supera el contador
-        if (newCount >= levelSelected.count) {
-          finalizeGame();
-        } else {
-          generateNextQuestion();
-        }
+      // ? Si se supera el contador
+      if (newCount >= levelSelected.count) {
+        setTimeout(() => finalizeGame(), 1000);
+        return;
+      }
 
-        return newCount;
-      });
+      // ? Generamos la siguiente pregunta
+      const nextQuestion = () => {
+        generateNextQuestion();
+        setSelectedOption(null);
+        setActualyRound(newCount);
+      };
+
+      // ? Generamos la siguiente pregunta despues de un delay
+      setTimeout(() => nextQuestion(), 1000);
     },
-    [generateNextQuestion, levelSelected, finalizeGame]
+    [levelSelected, actualyRound, generateNextQuestion, finalizeGame],
   );
 
   // Selected level
   const selectLevel = React.useCallback(
-    (level: GuestTheVerbGameLevelType, keyVerbs: GuestTheVerbGameKeyVerbsType) => {
+    (
+      level: GuestTheVerbGameLevelType,
+      keyVerbs: GuestTheVerbGameKeyVerbsType,
+    ) => {
       setSelectedKeyVerbs(keyVerbs);
       setLevelSelected(level);
-      generateNextQuestion();
     },
-    [generateNextQuestion]
+    [],
   );
 
-  // Load verbs
-  const loadVerbs = React.useCallback(() => {
-    const list = globaListVerbsService.getAll();
-    setVerbs(list);
-  }, []);
-
-  // Restart game
-  const restartGame = React.useCallback(() => {
-    setResults(null);
-    loadVerbs();
-    setSuccessCount(0);
-    setFailsCount(0);
-    setCount(0);
-    setSelectedKeyVerbs(null);
-    setLevelSelected(null);
-    setCurrentQuestion(null);
-  }, [loadVerbs]);
+  // Start game
+  const startGame = React.useCallback(() => {
+    if (results) clearValues();
+    generateNextQuestion();
+  }, [generateNextQuestion, clearValues, results]);
 
   // Effects
   useEffect(() => {
@@ -205,8 +208,6 @@ const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProp
 
   // Return
   return {
-    verbs,
-    service: globaListVerbsService,
     colors,
     isThemeDark,
     levels: [
@@ -220,7 +221,10 @@ const useGuestGamingVerb = (p: UseGuestGamingVerbParams): UseGuestGamingVerbProp
     results,
     currentQuestion,
     isGeneratingQuestion,
-    restartGame,
+    startGame,
+    actualyRound,
+    selectedOption,
+    t,
   };
 };
 

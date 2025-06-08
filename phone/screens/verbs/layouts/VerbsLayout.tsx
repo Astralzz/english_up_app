@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import ScreenWrapper from '@/components/screens/ScreenWrapper';
 import FloatingButtonMenu, {
   FabActionButtonType,
@@ -11,7 +11,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { VerbsStackParamList } from '../VerbsStack';
 import { Text } from 'react-native-paper';
 import { ViewStyle } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import { useThemeApp } from '@/hooks/useThemeApp';
 
 // Props
 type VerbsLayoutProps = {
@@ -25,10 +25,8 @@ type VerbsLayoutProps = {
   floatButtonActions?: {
     refresh: () => void | Promise<void>;
   };
-  options?: {
-    title?: string;
-  };
   styleWrapper?: ViewStyle;
+  routeName: keyof VerbsStackParamList;
 };
 
 /**
@@ -43,42 +41,51 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   isPending,
   error,
   floatButtonActions,
-  options,
   styleWrapper,
+  routeName,
 }) => {
   // Hooks
   const navigation =
     useNavigation<NativeStackNavigationProp<VerbsStackParamList>>();
   const route = useRoute();
-  const { t } = useTranslation();
+
+  // Navigation
+  const {
+    params: { title, t },
+  } = useRoute<RouteProp<VerbsStackParamList, typeof routeName>>();
+
+  // Theme
+  const {
+    state: { colors },
+  } = useThemeApp();
 
   // Obtener acciones
-  const getFloatingButtons = React.useMemo((): Array<FabActionButtonType> => {
+  const getFloatingButtons = React.useMemo((): FabActionButtonType[] => {
     // Lista de acciones completas
-    const allActionsButtons: Array<{
+    const allActionsButtons: {
       icon: string;
       label: string;
       routeName?: keyof VerbsStackParamList;
       onPress?: () => void | Promise<void>;
-      key_t?: string;
-    }> = [
+      key_title?: string;
+    }[] = [
       {
         icon: 'microsoft-xbox-controller',
         label: t('verbs.floatButton.labels.games'),
         routeName: 'VerbGames',
-        key_t: 'games',
+        key_title: 'games',
       },
       {
         icon: 'magnify',
         label: t('verbs.floatButton.labels.search'),
         routeName: 'VerbSearch',
-        key_t: 'search',
+        // key_title: 'search',
       },
       {
         icon: 'format-list-bulleted-square',
         label: t('verbs.floatButton.labels.all'),
         routeName: 'VerbsList',
-        key_t: 'list',
+        // key_title: 'list',
       },
       // Acciones
       {
@@ -113,7 +120,10 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
             onPress: () =>
               action.routeName &&
               navigation.navigate(action.routeName, {
-                title: action?.key_t && t(`verbs.stack.titles.${action.key_t}`),
+                title:
+                  action?.key_title &&
+                  t(`verbs.stack.titles.${action.key_title}`),
+                t,
               }),
           };
         }
@@ -129,20 +139,22 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
         return null;
       })
       .filter((a): a is FabActionButtonType => a !== null);
-  }, [floatButtonActions, route, navigation, t]);
+  }, [floatButtonActions, route.name, navigation, t]);
 
   return (
     <ScreenWrapper style={styleWrapper}>
       {/* Titulo */}
-      {options?.title && (
+      {title && (
         <Text
           style={{
-            fontSize: 18,
-            paddingTop: 14,
-            paddingBottom: 5,
+            fontSize: 26,
+            fontWeight: 'bold',
+            marginVertical: 20,
+            alignSelf: 'center',
+            color: colors.text.primary,
           }}
         >
-          {options.title}
+          {title}
         </Text>
       )}
 
@@ -160,8 +172,8 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
       {service && (
         <FloatingButtonMenu
           actions={getFloatingButtons}
-          mainIcon="plus"
-          color="white"
+          mainIcon='plus'
+          color='white'
         />
       )}
     </ScreenWrapper>

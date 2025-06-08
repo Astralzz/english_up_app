@@ -101,7 +101,7 @@ const VerbDetails: React.FC<VerbDetailsProps> = ({
               <View key={index} style={styles.chipWrapper}>
                 <Tooltip title={item}>
                   <Chip
-                    mode="flat"
+                    mode='flat'
                     style={styles.chip}
                     textStyle={styles.chipText}
                   >

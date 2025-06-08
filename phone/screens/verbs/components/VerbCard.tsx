@@ -33,7 +33,7 @@ const VerbCard = ({ verb, colors, viewVerb }: VerbCardProps) => {
       >
         <View style={styles.content}>
           <Icon
-            name="book-open-page-variant"
+            name='book-open-page-variant'
             size={24}
             color={colors.text.primary}
           />

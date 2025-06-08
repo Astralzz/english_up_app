@@ -106,7 +106,7 @@ const FilterModal: React.FC<Props> = ({
           value={verbType}
           onValueChange={(v) => onVerbTypeChange(v as VerbTypeType | '')}
           buttons={verbTypeButtons}
-          density="regular"
+          density='regular'
           style={styles.segmentedButtons}
           theme={{
             colors: {

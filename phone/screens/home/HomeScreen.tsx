@@ -17,7 +17,7 @@ const HomeScreen = () => {
     <ScreenWrapper>
       <Text>Proximamente...</Text>
       <Button
-        title="Ir a Verbos"
+        title='Ir a Verbos'
         onPress={() =>
           // navigation.navigate("Profile", { idUser: Math.random() * 100 })
           navigation.navigate('Verbs')

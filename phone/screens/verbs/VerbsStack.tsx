@@ -5,24 +5,21 @@ import VerbSearchScreen from './search/VerbSearchScreen';
 import { useTranslation } from 'react-i18next';
 import VerbGamesScreen from './games/VerbGamesScreen';
 import GuestTheVerbGameScreen from './games/gaming/GuestTheVerbGameScreen';
-import { ColorsAppType } from '@/theme/colors';
+import { TFunction } from 'i18next';
 
 // Transitions
 const PATH_TRASNSITION = 'verbs.stack.titles';
 
 // Routes
 export type VerbsStackParamList = {
-  VerbsList: { title?: string };
-  VerbGames: { title?: string };
-  VerbSearch: { title?: string };
+  VerbsList: { title?: string; t: TFunction<'translation', undefined> };
+  VerbGames: { title?: string; t: TFunction<'translation', undefined> };
+  VerbSearch: { title?: string; t: TFunction<'translation', undefined> };
 };
 
 // Games
 export type VerbsStackParamGamesList = {
-  GuessTheMeaningOfTheVerbGame: {
-    colors: ColorsAppType;
-    isThemeDark: boolean;
-  }; // Guess the meaning of the verb
+  GuessTheMeaningOfTheVerbGame: undefined;
 };
 
 // All routes verbs
@@ -44,20 +41,28 @@ const VerbsStack: React.FC = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName="VerbSearch"
+      initialRouteName='VerbSearch'
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="VerbsList" component={VerbListScreen} />
-      <Stack.Screen name="VerbSearch" component={VerbSearchScreen} />
       <Stack.Screen
-        name="VerbGames"
+        name='VerbsList'
+        component={VerbListScreen}
+        initialParams={{ t }}
+      />
+      <Stack.Screen
+        name='VerbSearch'
+        component={VerbSearchScreen}
+        initialParams={{ t }}
+      />
+      <Stack.Screen
+        name='VerbGames'
         component={VerbGamesScreen}
-        initialParams={{ title: t(`${PATH_TRASNSITION}.games`) }}
+        initialParams={{ title: t(`${PATH_TRASNSITION}.games`), t }}
       />
 
       {/* Games */}
       <Stack.Screen
-        name="GuessTheMeaningOfTheVerbGame"
+        name='GuessTheMeaningOfTheVerbGame'
         component={GuestTheVerbGameScreen}
       />
     </Stack.Navigator>

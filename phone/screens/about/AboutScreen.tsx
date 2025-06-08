@@ -77,13 +77,13 @@ const AboutScreen: React.FC<AboutScreenProps> = ({ t, colors }) => {
           <Image
             source={getEdain.avatar}
             style={styles.avatar}
-            resizeMode="cover"
+            resizeMode='cover'
           />
         )}
 
         <View>
           {/* Nombre */}
-          <Text variant="titleLarge" style={styles.name}>
+          <Text variant='titleLarge' style={styles.name}>
             {getEdain.name}
           </Text>
 
@@ -96,10 +96,10 @@ const AboutScreen: React.FC<AboutScreenProps> = ({ t, colors }) => {
 
         {/* Redes sociales */}
         <View style={styles.socials}>
-          <SocialIcon icon="github" url={getEdain?.links.github} />
-          <SocialIcon icon="linkedin" url={getEdain?.links.linkedin} />
-          <SocialIcon icon="web" url={getEdain?.links.portfolio} />
-          <SocialIcon icon="email" url={`mailto:${getEdain?.links.email}`} />
+          <SocialIcon icon='github' url={getEdain?.links.github} />
+          <SocialIcon icon='linkedin' url={getEdain?.links.linkedin} />
+          <SocialIcon icon='web' url={getEdain?.links.portfolio} />
+          <SocialIcon icon='email' url={`mailto:${getEdain?.links.email}`} />
         </View>
       </View>
 
@@ -134,7 +134,7 @@ const AboutScreen: React.FC<AboutScreenProps> = ({ t, colors }) => {
           >
             <View style={styles.referenceItem}>
               {/* icon */}
-              <Icon name="link" size={22} color={colors.primary[600]} />
+              <Icon name='link' size={22} color={colors.primary[600]} />
 
               {/* description */}
               <View style={styles.referenceText}>

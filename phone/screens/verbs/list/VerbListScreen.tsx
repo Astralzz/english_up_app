@@ -48,10 +48,13 @@ const VerbListScreen: React.FC = () => {
   });
 
   // Initial effect
-  useEffect(() => getListVerbs(), []);
+  useEffect(() => {
+    verbs.length === 0 && getListVerbs();
+  }, [getListVerbs, verbs.length]);
 
   return (
     <VerbsLayout
+      routeName='VerbsList'
       service={globaListVerbsService}
       isPending={{
         loading: isPending,

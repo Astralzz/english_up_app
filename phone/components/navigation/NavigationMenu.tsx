@@ -93,12 +93,12 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
         <Animated.View style={{ transform: [{ rotate: rotateInterpolation }] }}>
           <Avatar.Icon
             size={72}
-            icon="book-open-page-variant-outline"
+            icon='book-open-page-variant-outline'
             style={styles.avatar}
             color={colors.text.secondary}
           />
         </Animated.View>
-        <Text style={styles.title} variant="headlineMedium">
+        <Text style={styles.title} variant='headlineMedium'>
           {t(`${PATH_TRASNSITION}.header.title`)}
         </Text>
         <Text style={styles.subtitle}>

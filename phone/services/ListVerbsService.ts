@@ -1,10 +1,27 @@
 import Verb, { PaginateVerbsType, VerbTypeType } from '@/models/Verb';
 import verbData from '@/assets/data/jsons/verbs.json';
 
-// Types
+// Type options
+export interface GenerateVerbOptionType {
+  label: string;
+  number: number;
+  isCorrect: boolean;
+}
+
+// Types questions
 export interface GenerateVerbQuestionType {
   question: string;
-  options: { label: string; number: number; isCorrect: boolean }[];
+  options: GenerateVerbOptionType[];
+}
+
+// Type resoults
+export interface UseGuestGamingVerbResult {
+  failsCount: number;
+  successCount: number;
+  totalPoints: number;
+  isWin: boolean;
+  title?: string;
+  description?: string;
 }
 
 /**
@@ -252,12 +269,16 @@ class ListVerbsService {
     // Construimos las opciones
     const options = [
       ...incorrectsVerbs.map((verb) => ({
-        label: String(verb[answerKey]),
+        label: Array.isArray(verb[answerKey])
+          ? verb[answerKey].join(', ')
+          : String(verb[answerKey]),
         number: verb.no,
         isCorrect: false,
       })),
       {
-        label: String(correctVerb[answerKey]),
+        label: Array.isArray(correctVerb[answerKey])
+          ? correctVerb[answerKey].join(', ')
+          : String(correctVerb[answerKey]),
         number: correctVerb.no,
         isCorrect: true,
       },

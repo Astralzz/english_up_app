@@ -32,7 +32,7 @@ const ScreenLoading: React.FC<ScreenLoadingProps> = ({
   return (
     <ScreenWrapper>
       <ActivityIndicator
-        size="large"
+        size='large'
         color={colorIndicator ?? colors.primary[600]}
       />
       <Text style={styles.text}>{message}</Text>

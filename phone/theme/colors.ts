@@ -18,6 +18,8 @@ export type ColorsAppType = {
     errorSecondary: string;
     success: string;
     successSecondary: string;
+    warning: string;
+    warningSecondary: string;
   };
   neutral: Record<number, string>;
   background: {
@@ -60,10 +62,12 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       secondary: '#616161',
     },
     alert: {
-      error: '#D32F2F',
+      error: '#EF5350',
       errorSecondary: '#FFEBEE',
-      success: '#2E7D32',
+      success: '#66BB6A',
       successSecondary: '#E8F5E9',
+      warning: '#FFC107',
+      warningSecondary: '#FFF8E1',
     },
     neutral: {
       100: '#FFFFFF',
@@ -113,10 +117,12 @@ const COLORS_APP: Record<ThemeAppType, ColorsAppType> = {
       secondary: '#9E9E9E',
     },
     alert: {
-      error: '#EF5350',
+      error: '#D32F2F',
       errorSecondary: '#2A1A1A',
-      success: '#66BB6A',
+      success: '#2E7D32',
       successSecondary: '#1B2A1B',
+      warning: '#FFC107',
+      warningSecondary: '#FFF8E1',
     },
     neutral: {
       100: '#121212',

@@ -38,7 +38,11 @@ const VerbSearchScreen: React.FC = () => {
   } = useThemeApp();
 
   return (
-    <VerbsLayout service={service} styleWrapper={styles.layoutWrapper}>
+    <VerbsLayout
+      routeName='VerbSearch'
+      service={service}
+      styleWrapper={styles.layoutWrapper}
+    >
       {/* Search */}
       <View style={styles.searchContainer}>
         <InputDefault

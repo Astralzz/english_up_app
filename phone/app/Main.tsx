@@ -37,7 +37,7 @@ const Main: React.FC = () => {
       <StatusBar
         backgroundColor={colors.background.secondary} // Android
         animated
-        barStyle="dark-content" // iOS: 'light-content' para texto blanco
+        barStyle='dark-content' // iOS: 'light-content' para texto blanco
         translucent={true}
       />
 

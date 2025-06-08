@@ -5,7 +5,7 @@ import FormulasScreen from '@/screens/formulas/FormulasScreen';
 import VerbsStack from '@/screens/verbs/VerbsStack';
 
 // Rutas de la app en general (Menu)
-const ROUTES_MENU_APP: Array<RoutesMenuTypeApp> = [
+const ROUTES_MENU_APP: RoutesMenuTypeApp[] = [
   {
     name: 'Home',
     Component: HomeScreen,

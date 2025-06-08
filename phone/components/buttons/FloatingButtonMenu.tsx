@@ -56,7 +56,7 @@ const FloatingButtonMenu: React.FC<FloatingButtonMenuProps> = ({
         backgroundColor: colors.primary[600],
       }}
       // backdropColor={colors.background.overlay}
-      accessibilityLabel="Floating button menu"
+      accessibilityLabel='Floating button menu'
     />
   );
 };

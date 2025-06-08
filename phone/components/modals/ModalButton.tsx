@@ -51,7 +51,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
 
   return (
     <Modal
-      animationType="slide"
+      animationType='slide'
       transparent={true}
       visible={visible}
       onDismiss={onClose}
@@ -67,14 +67,14 @@ const ModalButton: React.FC<ModalButtonProps> = ({
           {/* Header */}
           <View style={[styles.header, extraStyles?.header]}>
             <IconButton
-              icon="close"
+              icon='close'
               onPress={onClose}
               iconColor={colors.text.primary}
               size={28}
             />
             {applyButton && (
               <Button
-                mode="contained"
+                mode='contained'
                 onPress={applyButton.onPress}
                 textColor={colors.text.primary}
                 style={[styles.applyButton, applyButton.style]}

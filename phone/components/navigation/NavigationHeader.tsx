@@ -27,7 +27,7 @@ const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
   return (
     <View style={styles.container}>
       {/* Título */}
-      <Text style={styles.title} variant="titleLarge">
+      <Text style={styles.title} variant='titleLarge'>
         {props?.route?.name
           ? t(`menu.routes.${props?.route?.name.toLowerCase()}`)
           : 'EnglishUp'}
@@ -36,10 +36,10 @@ const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
       {/* Botones adicionales */}
       <View style={styles.rightContainer}>
         <TouchableOpacity style={styles.iconButton}>
-          <Icon name="bell-outline" size={24} color={colors.text.primary} />
+          <Icon name='bell-outline' size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.iconButton}>
-          <Icon name="account-circle" size={24} color={colors.text.primary} />
+          <Icon name='account-circle' size={24} color={colors.text.primary} />
         </TouchableOpacity>
       </View>
 
@@ -49,7 +49,7 @@ const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
         style={styles.menuButton}
       >
         <Icon
-          name="menu"
+          name='menu'
           size={28}
           color={colors.text.primary}
           style={styles.icon}

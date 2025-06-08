@@ -25,7 +25,7 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ route, navigation }) => {
   return (
     <ScreenWrapper>
       <Text>Profile Screen and id is {2}</Text>
-      <Button title="Volver a Home" onPress={() => navigation.goBack()} />
+      <Button title='Volver a Home' onPress={() => navigation.goBack()} />
     </ScreenWrapper>
   );
 };

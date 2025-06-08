@@ -18,7 +18,7 @@ const Drawer = createDrawerNavigator<RootStackParamList>();
 const RouterControl: React.FC = () => (
   <Drawer.Navigator
     drawerContent={(props) => <NavigationMenu {...props} />}
-    initialRouteName="Home"
+    initialRouteName='Home'
     screenOptions={{
       header: (props) => <NavigationHeader {...props} />,
       drawerPosition: 'right',

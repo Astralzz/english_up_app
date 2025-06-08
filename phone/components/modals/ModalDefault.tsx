@@ -72,7 +72,7 @@ const ModalDefault: React.FC<ModalDefaultProps> = ({
           <View style={styles.header}>
             <Text style={styles.title}>{title}</Text>
             <TouchableOpacity onPress={onClose}>
-              <Icon name="close" size={24} color={colors.text.primary} />
+              <Icon name='close' size={24} color={colors.text.primary} />
             </TouchableOpacity>
           </View>
 

@@ -59,4 +59,13 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se creo el archivo de eslint.config.js y .prettierrc
 - Se agregaron las dependencias de ESLint y Prettier
 
+## [0.0.8] - 07-06-2025
+
+- Se creo el icono de la app
+- Se añadieron imagenes del icono
+- Se creo el primer juego
+- Se mejoro la logica del juego
+- Se mejoro la logica de los verbos
+- Se mejoraron las routes
+
 ---

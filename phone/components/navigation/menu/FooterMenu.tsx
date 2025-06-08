@@ -51,7 +51,7 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t, openModalAbout }) => {
         {/* Theme switch */}
         <View style={styles.switchContainer}>
           <Icon
-            name="white-balance-sunny"
+            name='white-balance-sunny'
             size={22}
             color={colors.text.primary}
           />
@@ -62,7 +62,7 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t, openModalAbout }) => {
             style={styles.switch}
           />
           <Icon
-            name="moon-waning-crescent"
+            name='moon-waning-crescent'
             size={22}
             color={colors.icons.primary}
           />
@@ -91,7 +91,7 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ t, openModalAbout }) => {
 
       {/* About */}
       <TouchableOpacity style={styles.aboutButton} onPress={openModalAbout}>
-        <Icon name="information" size={18} color={colors.primary[600]} />
+        <Icon name='information' size={18} color={colors.primary[600]} />
         <Text style={styles.aboutText}>{t('menu.footer.label')}</Text>
       </TouchableOpacity>
     </View>

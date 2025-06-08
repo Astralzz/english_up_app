@@ -47,7 +47,7 @@ const ScreenError: React.FC<ScreenErrorProps> = ({
         {/* Reload Button */}
         {reloadAction && (
           <Button
-            mode="contained"
+            mode='contained'
             onPress={reloadAction}
             labelStyle={styles.buttonText}
             style={styles.button}
