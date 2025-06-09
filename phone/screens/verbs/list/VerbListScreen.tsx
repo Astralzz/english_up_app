@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { globaListVerbsService } from '@/services/ListVerbsService';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { useTransitionApp } from '@/hooks/useTransitionApp';
 import VerbList from '../components/VerbList';
 import Verb from '@/models/Verb';
 import VerbsLayout from '../layouts/VerbsLayout';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 /**
  *
@@ -18,9 +18,7 @@ const VerbListScreen: React.FC = () => {
   const [error, setError] = useState<string | undefined>(undefined);
 
   // Hooks
-  const {
-    state: { colors, isThemeDark },
-  } = useThemeApp();
+  const { colors, isThemeDark, t } = useVarsScreenDefault();
 
   // Transition hook
   const [isPending, getListVerbs] = useTransitionApp({
@@ -54,13 +52,13 @@ const VerbListScreen: React.FC = () => {
 
   return (
     <VerbsLayout
-      routeName='VerbsList'
       service={globaListVerbsService}
       isPending={{
         loading: isPending,
         message: 'Cargando verbos',
       }}
       error={error}
+      t={t}
     >
       <VerbList verbs={verbs} colors={colors} isThemeDark={isThemeDark} />
     </VerbsLayout>

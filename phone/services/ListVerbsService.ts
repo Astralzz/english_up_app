@@ -1,28 +1,7 @@
 import Verb, { PaginateVerbsType, VerbTypeType } from '@/models/Verb';
 import verbData from '@/assets/data/jsons/verbs.json';
-
-// Type options
-export interface GenerateVerbOptionType {
-  label: string;
-  number: number;
-  isCorrect: boolean;
-}
-
-// Types questions
-export interface GenerateVerbQuestionType {
-  question: string;
-  options: GenerateVerbOptionType[];
-}
-
-// Type resoults
-export interface UseGuestGamingVerbResult {
-  failsCount: number;
-  successCount: number;
-  totalPoints: number;
-  isWin: boolean;
-  title?: string;
-  description?: string;
-}
+import { GameGenerateQuestionType } from '@/types/games';
+import { TFunction } from 'i18next';
 
 /**
  * Servicio para administrar la lista de verbos en inglés.
@@ -241,14 +220,19 @@ class ListVerbsService {
    * @param {keyof Verb} answerKey - Clave del campo que se usará como respuesta.
    * @param {number} [countAnswers=4] - Cantidad de opciones (por defecto 4).
    *
-   * @returns {GenerateVerbQuestionType | null} Objeto con la pregunta y las opciones, o `null` si no hay suficientes verbos.
+   * @returns {GameGenerateQuestionType | null}
+   * Objeto con la pregunta (`question`) y sus opciones (`options`), o `null` si no se puede generar.
    */
   generateVerbQuestion(
     allVerbs: Verb[],
     questionKey: keyof Verb,
     answerKey: keyof Verb,
     countAnswers: number = 4,
-  ): GenerateVerbQuestionType | null {
+    translation: {
+      t: TFunction<'translation', undefined>;
+      path: string;
+    },
+  ): GameGenerateQuestionType | null {
     // ? No hay verbos
     if (allVerbs.length === 0) return null;
 
@@ -266,19 +250,19 @@ class ListVerbsService {
       .filter((v) => v.no !== correctVerb.no)
       .slice(0, countAnswers - 1);
 
+    // Funcion para obtener el valor como string
+    const getValueAsString = (value: string | number | string[]): string =>
+      Array.isArray(value) ? value.join(', ') : String(value);
+
     // Construimos las opciones
     const options = [
       ...incorrectsVerbs.map((verb) => ({
-        label: Array.isArray(verb[answerKey])
-          ? verb[answerKey].join(', ')
-          : String(verb[answerKey]),
+        label: getValueAsString(verb[answerKey]),
         number: verb.no,
         isCorrect: false,
       })),
       {
-        label: Array.isArray(correctVerb[answerKey])
-          ? correctVerb[answerKey].join(', ')
-          : String(correctVerb[answerKey]),
+        label: getValueAsString(correctVerb[answerKey]),
         number: correctVerb.no,
         isCorrect: true,
       },
@@ -287,8 +271,14 @@ class ListVerbsService {
     // Mezclamos las opciones
     const shuffledOptions = options.sort(() => Math.random() - 0.5);
 
+    // Generamos la pregunta
+    const x = translation.t(`${translation.path}.keys_question.${questionKey}`);
+    const y = getValueAsString(correctVerb[questionKey]);
+    const preQuestion = translation.t(`${translation.path}.question_pre`);
+    const question = `${preQuestion.replace('[x]', x).replace('[y]', y)}`;
+
     return {
-      question: String(correctVerb[questionKey]),
+      question,
       options: shuffledOptions,
     };
   }

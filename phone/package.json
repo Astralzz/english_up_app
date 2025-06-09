@@ -1,7 +1,7 @@
 {
   "name": "english_up_astralz_app",
   "main": "expo-router/entry",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "author": {
     "name": "Edain Jesús Cortez Cerón",
     "email": "edain.cortez@outlook.com",
@@ -62,7 +62,7 @@
     "@reduxjs/toolkit": "^2.6.1",
     "@types/react-dom": "19.1.6",
     "axios": "^1.8.3",
-    "expo": "^53.0.9",
+    "expo": "53.0.11",
     "expo-blur": "~14.1.4",
     "expo-constants": "~17.1.6",
     "expo-crypto": "~14.1.4",
@@ -94,7 +94,8 @@
     "react-native-web": "^0.20.0",
     "react-native-webview": "13.13.5",
     "react-redux": "^9.2.0",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "@react-native-picker/picker": "2.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

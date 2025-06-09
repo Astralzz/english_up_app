@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, StyleSheet, Animated } from 'react-native';
+import { View, StyleSheet, Animated, BackHandler } from 'react-native';
 import { Text } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useThemeApp } from '@/hooks/useThemeApp';
@@ -11,7 +11,8 @@ interface ScreenGameCountdownProps {
   count: number;
   title?: string;
   hiddenIcon?: boolean;
-  onFinish: () => void;
+  onStart?: () => void | Promise<void>;
+  onFinish: () => void | Promise<void>;
 }
 
 /**
@@ -24,6 +25,7 @@ const ScreenGameCountdown: React.FC<ScreenGameCountdownProps> = ({
   count = 3,
   title,
   hiddenIcon = false,
+  onStart,
   onFinish,
 }) => {
   // State
@@ -37,6 +39,11 @@ const ScreenGameCountdown: React.FC<ScreenGameCountdownProps> = ({
 
   // Styles
   const styles = React.useMemo(() => getStyles(colors), [colors]);
+
+  // Start
+  useEffect(() => {
+    onStart?.();
+  }, [onStart]);
 
   // Start countdown
   useEffect(() => {
@@ -68,6 +75,21 @@ const ScreenGameCountdown: React.FC<ScreenGameCountdownProps> = ({
     // Clear timer
     return () => clearTimeout(timer);
   }, [currentCount, fadeAnim, onFinish]);
+
+  // Reset count
+  useEffect(() => {
+    setCurrentCount(count);
+  }, [count]);
+
+  // 🔒 Bloquear botón de atrás
+  React.useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => true,
+    );
+
+    return () => backHandler.remove();
+  }, []);
 
   return (
     <ScreenWrapper>

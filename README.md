@@ -175,6 +175,7 @@ UI
 - [React Native Paper](https://reactnativepaper.com)
 - [Vector icons](https://github.com/oblador/react-native-vector-icons)
 - [Expo LinearGradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient)
+- [Picker](https://github.com/react-native-picker/picker)
 
 STORAGE
 

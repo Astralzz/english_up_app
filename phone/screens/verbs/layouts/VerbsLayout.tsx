@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import ScreenWrapper from '@/components/screens/ScreenWrapper';
 import FloatingButtonMenu, {
   FabActionButtonType,
@@ -12,6 +12,7 @@ import { VerbsStackParamList } from '../VerbsStack';
 import { Text } from 'react-native-paper';
 import { ViewStyle } from 'react-native';
 import { useThemeApp } from '@/hooks/useThemeApp';
+import { TFunction } from 'i18next';
 
 // Props
 type VerbsLayoutProps = {
@@ -26,7 +27,8 @@ type VerbsLayoutProps = {
     refresh: () => void | Promise<void>;
   };
   styleWrapper?: ViewStyle;
-  routeName: keyof VerbsStackParamList;
+  t: TFunction<'translation', undefined>;
+  title?: string;
 };
 
 /**
@@ -42,17 +44,13 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   error,
   floatButtonActions,
   styleWrapper,
-  routeName,
+  t,
+  title,
 }) => {
   // Hooks
   const navigation =
     useNavigation<NativeStackNavigationProp<VerbsStackParamList>>();
   const route = useRoute();
-
-  // Navigation
-  const {
-    params: { title, t },
-  } = useRoute<RouteProp<VerbsStackParamList, typeof routeName>>();
 
   // Theme
   const {
@@ -118,13 +116,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
             icon: action.icon,
             label: action.label,
             onPress: () =>
-              action.routeName &&
-              navigation.navigate(action.routeName, {
-                title:
-                  action?.key_title &&
-                  t(`verbs.stack.titles.${action.key_title}`),
-                t,
-              }),
+              action.routeName && navigation.navigate(action.routeName),
           };
         }
         // ? Tiene acción
@@ -139,17 +131,18 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
         return null;
       })
       .filter((a): a is FabActionButtonType => a !== null);
-  }, [floatButtonActions, route.name, navigation, t]);
+  }, [floatButtonActions, navigation, route.name, t]);
 
   return (
     <ScreenWrapper style={styleWrapper}>
       {/* Titulo */}
       {title && (
         <Text
+          variant='titleLarge'
           style={{
-            fontSize: 26,
             fontWeight: 'bold',
-            marginVertical: 20,
+            marginTop: 4,
+            marginBottom: 8,
             alignSelf: 'center',
             color: colors.text.primary,
           }}

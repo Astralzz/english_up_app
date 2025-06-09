@@ -4,6 +4,11 @@ import ScreenGameSelectedLevel from '@/components/games/ScreenGameSelectedLevel'
 import ScreenGameCountdown from '@/components/games/ScreenGameCountdown';
 import ScreenGameQuestion from '@/components/games/ScreenGameQuestion';
 import ScreenGameResult from '@/components/games/ScreenGameResult';
+import { VerbsStackParamGamesList } from '../../VerbsStack';
+import { RouteProp, useRoute } from '@react-navigation/native';
+
+// Translation
+const PATH_TRANSLATION = 'verbs.games.keys';
 
 /**
  *
@@ -11,7 +16,18 @@ import ScreenGameResult from '@/components/games/ScreenGameResult';
  *
  * @return {TSX.Component}
  */
-const GuestTheVerbGameScreen: React.FC = () => {
+const QuestionGameScreen: React.FC = () => {
+  // Obtener ruta con tipo
+  const route = useRoute<RouteProp<VerbsStackParamGamesList, 'QuestionGame'>>();
+
+  // Extraer optionsQuestion
+  const {
+    optionsQuestion = {
+      questionKey: 'simple_form',
+      answerKey: 'meaning',
+    },
+  } = route.params;
+
   // Hooks the game
   const {
     colors,
@@ -27,29 +43,21 @@ const GuestTheVerbGameScreen: React.FC = () => {
     selectedOption,
     isGeneratingQuestion,
     t,
-  } = useGuestGamingVerb();
+  } = useGuestGamingVerb(optionsQuestion, PATH_TRANSLATION);
 
   // ? Not level selected
   if (!levelSelected) {
     return (
       <ScreenGameSelectedLevel
-        title={t('Choose your level')}
+        title={t(`${PATH_TRANSLATION}.choose_level`)}
         colors={colors}
         isThemeDark={isThemeDark}
         levels={levels}
         selectLevel={selectLevel}
-        t={t}
-      />
-    );
-  }
-
-  // Countdown
-  if (!currentQuestion) {
-    return (
-      <ScreenGameCountdown
-        count={3}
-        title={t('Get ready')}
-        onFinish={() => startGame()}
+        translation={{
+          path: PATH_TRANSLATION,
+          t,
+        }}
       />
     );
   }
@@ -62,7 +70,21 @@ const GuestTheVerbGameScreen: React.FC = () => {
         onRestart={() => startGame()}
         colors={colors}
         isThemeDark={isThemeDark}
-        t={t}
+        translation={{
+          path: PATH_TRANSLATION,
+          t,
+        }}
+      />
+    );
+  }
+
+  // Countdown
+  if (!currentQuestion) {
+    return (
+      <ScreenGameCountdown
+        count={3}
+        title={t(`${PATH_TRANSLATION}.get_ready`)}
+        onFinish={startGame}
       />
     );
   }
@@ -78,9 +100,12 @@ const GuestTheVerbGameScreen: React.FC = () => {
       registerAttempt={registerAttempt}
       selectedOption={selectedOption}
       isGeneratingQuestion={isGeneratingQuestion}
-      t={t}
+      translation={{
+        path: PATH_TRANSLATION,
+        t,
+      }}
     />
   );
 };
 
-export default GuestTheVerbGameScreen;
+export default QuestionGameScreen;

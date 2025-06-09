@@ -2,18 +2,21 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 import { ColorsAppType } from '@/theme/colors';
-import { UseGuestGamingVerbResult } from '@/services/ListVerbsService';
+import { GameResulDefaultType } from '@/types/games';
 import { TFunction } from 'i18next';
 import ScreenWrapper from '../screens/ScreenWrapper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Props
 interface ScreenGameResultProps {
-  results: UseGuestGamingVerbResult;
+  results: GameResulDefaultType;
   onRestart: () => void;
   colors: ColorsAppType;
   isThemeDark: boolean;
-  t: TFunction<'translation', undefined>;
+  translation: {
+    t: TFunction<'translation', undefined>;
+    path: string;
+  };
   hiddenIcon?: boolean;
 }
 
@@ -28,7 +31,7 @@ const ScreenGameResult: React.FC<ScreenGameResultProps> = ({
   onRestart,
   colors,
   isThemeDark,
-  t,
+  translation: { t, path },
   hiddenIcon = false,
 }) => {
   // Styles
@@ -37,30 +40,59 @@ const ScreenGameResult: React.FC<ScreenGameResultProps> = ({
     [colors, isThemeDark],
   );
 
+  // ? Excelent
+  const dataResult = React.useMemo(() => {
+    // Excelent
+    if (results.totalPoints === results.successCount * 10) {
+      return {
+        icon: 'trophy-outline',
+        color: colors.alert.warning,
+        title: t(`${path}.win_excelent`),
+        description: t(`${path}.win_excelent_description`),
+      };
+    }
+
+    // Win
+    if (results.isWin) {
+      return {
+        icon: 'trophy-outline',
+        color: colors.alert.success,
+        title: t(`${path}.win`),
+        description: t(`${path}.win_description`),
+      };
+    }
+
+    // Lose
+    return {
+      icon: 'emoticon-sad-outline',
+      color: colors.alert.error,
+      title: t(`${path}.lose`),
+      description: t(`${path}.lose_description`),
+    };
+  }, [results, t, path, colors]);
+
   return (
     <ScreenWrapper>
       {/* Header */}
       <View style={styles.header}>
         {/* Icon */}
         {!hiddenIcon && (
-          <Icon
-            name={results.isWin ? 'trophy' : 'emoticon-sad'}
-            size={94}
-            color={results.isWin ? colors.alert.success : colors.alert.error}
-          />
+          <Icon name={dataResult.icon} size={94} color={dataResult.color} />
         )}
-        <Text style={styles.title}>{results.title || t('Game Over')}</Text>
-        <Text style={styles.description}>{results.description}</Text>
+        {/* Title */}
+        <Text style={styles.title}>{dataResult.title}</Text>
+        {/* Description */}
+        <Text style={styles.description}>{dataResult.description}</Text>
       </View>
       {/* Result */}
       <View>
         <Text style={styles.result}>
-          {t('Correct')}: {results.successCount} | {t('Fails')}:{' '}
-          {results.failsCount}
+          {t(`${path}.corrects`)}: {results.successCount} | {t(`${path}.fails`)}
+          : {results.failsCount}
         </Text>
         {/* Points */}
         <Text style={styles.points}>
-          {t('Total Points')}: {results.totalPoints}
+          {t(`${path}.total_points`)}: {results.totalPoints}
         </Text>
       </View>
       {/* Footer */}
@@ -72,14 +104,12 @@ const ScreenGameResult: React.FC<ScreenGameResultProps> = ({
           style={[
             styles.button,
             {
-              backgroundColor: results.isWin
-                ? colors.alert.success
-                : colors.alert.error,
+              backgroundColor: dataResult.color,
             },
           ]}
           textColor={'#fff'}
         >
-          {t('Play Again')}
+          {t(`${path}.play_again`)}
         </Button>
       </View>
     </ScreenWrapper>

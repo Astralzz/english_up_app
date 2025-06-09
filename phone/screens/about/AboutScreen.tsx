@@ -1,8 +1,13 @@
 import React from 'react';
 import { TFunction } from 'i18next';
-import { Image, StyleSheet, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  View,
+  Linking,
+  TouchableOpacity,
+} from 'react-native';
 import { Text, Divider, IconButton } from 'react-native-paper';
-import { Linking, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ColorsAppType } from '@/theme/colors';
 import { resolveImageForPathId } from '@/utils/iamgeUtils';

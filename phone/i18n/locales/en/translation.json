@@ -43,9 +43,23 @@
         }
       ]
     },
-    "version": "version 0.0.6"
+    "version": "version 0.0.9"
   },
   "verbs": {
+    "keys_verb": {
+      "simple_form": "Simple form",
+      "description_simple_form": "The simple form is the way in which the verb is written in the present simple.",
+      "past_participle": "Past participle",
+      "description_past_participle": "The past participle is the way in which the verb is written in the past simple.",
+      "gerund": "Gerund",
+      "description_gerund": "The gerund is the way in which the verb is written in the gerund.",
+      "meaning": "Meaning",
+      "description_meaning": "The meaning is the definition of the verb.",
+      "third_person": "Third person",
+      "description_third_person": "The third person is the way in which the verb is written in the third person.",
+      "simple_past": "Simple past",
+      "description_simple_past": "The simple past is the way in which the verb is written in the simple past."
+    },
     "stack": {
       "titles": {
         "list": "List of Verbs",
@@ -79,6 +93,7 @@
       }
     },
     "search": {
+      "title": "Search Verbs",
       "input": {
         "label": "Search verb",
         "placeholder": "Ej. run, eat, go..."
@@ -103,6 +118,59 @@
           "simple_past": "Simple past"
         },
         "action": "Apply"
+      }
+    },
+    "games": {
+      "title": "Games with Verbs",
+      "keys": {
+        "level": "Level",
+        "round": "Round",
+        "correct": "Correct",
+        "fail": "Incorrect",
+        "corrects": "Corrects",
+        "fails": "Incorrects",
+        "play_again": "Play again",
+        "game_over": "Game over",
+        "total_points": "Total points",
+        "get_ready": "Get ready",
+        "choose_level": "Choose level",
+        "no_questions": "Questions",
+        "win": "You win!",
+        "win_excelent": "You excel!",
+        "lose": "You lose!",
+        "win_description": "Your IQ is higher than the average!",
+        "win_excelent_description": "Perfection is your second name!",
+        "lose_description": "More luck next time!",
+        "try_again": "Try again!",
+        "total_corrects": "Corrects",
+        "total_fails": "Incorrects",
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+      },
+      "game_1": {
+        "title": "Questions and answers",
+        "description": "Choose which type of question you want to answer (for example, the meaning or the past of a verb) and select the correct option from the available answers.",
+        "question_pre": "Which is the [x] of [y]?",
+        "modal": {
+          "title": "Select an option",
+          "key_question": "Select the type of question",
+          "key_answer": "Select the answer form",
+          "error_same": "The question and answer cannot be the same.",
+          "accept_button": "Accept"
+        },
+        "keys_question": {
+          "simple_form": "Simple form",
+          "past_participle": "Past participle",
+          "gerund": "Gerund",
+          "meaning": "Meaning",
+          "third_person": "Third person",
+          "simple_past": "Simple past"
+        }
+      },
+      "game_2": {
+        "title": "Verb memory",
+        "description": "Find the pairs of verbs relating their form and meaning."
       }
     }
   }

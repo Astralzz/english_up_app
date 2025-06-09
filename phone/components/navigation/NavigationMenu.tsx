@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/drawer';
 import { Text, Avatar, Divider, Drawer } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { StyleSheet, Animated, Modal } from 'react-native';
+import { StyleSheet, Animated } from 'react-native';
 import ROUTES_MENU_APP from '@/router/routerlist';
 import { ColorsAppType } from '@/theme/colors';
 import { useThemeApp } from '@/hooks/useThemeApp';
@@ -66,7 +66,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
         useNativeDriver: true,
       }),
     ]).start();
-  }, []);
+  }, [animatedValue]);
 
   // Interpolación
   const rotateInterpolation = React.useMemo(
@@ -75,7 +75,7 @@ const NavigationMenu: React.FC<DrawerContentComponentProps> = (props) => {
         inputRange: [0, 1],
         outputRange: ['0deg', '15deg'],
       }),
-    [],
+    [animatedValue],
   );
 
   return (

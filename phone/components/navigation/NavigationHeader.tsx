@@ -4,9 +4,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { Text } from 'react-native-paper';
 import { ColorsAppType } from '@/theme/colors';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { DrawerHeaderProps } from '@react-navigation/drawer';
-import { useTranslation } from 'react-i18next';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 /**
  * Menu - Navigation component
@@ -15,13 +14,9 @@ import { useTranslation } from 'react-i18next';
  */
 const NavigationHeader: React.FC<DrawerHeaderProps> = (props) => {
   // Hooks
-  const {
-    state: { colors },
-  } = useThemeApp();
+  const { colors, t } = useVarsScreenDefault();
   const styles = React.useMemo(() => getStyles(colors), [colors]);
 
-  // Hooks
-  const { t } = useTranslation();
   const navigation = useNavigation();
 
   return (

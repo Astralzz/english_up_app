@@ -1,9 +1,15 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, ViewStyle, Modal } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  ViewStyle,
+  Modal,
+  Pressable,
+} from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { useThemeApp } from '@/hooks/useThemeApp';
 import { ColorsAppType } from '@/theme/colors';
-import { Pressable } from 'react-native';
 
 // Props
 interface ModalButtonProps {

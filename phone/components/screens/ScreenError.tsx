@@ -3,8 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ScreenWrapper from './ScreenWrapper';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { ColorsAppType } from '@/theme/colors';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 // Props
 interface ScreenErrorProps {
@@ -20,9 +20,8 @@ const ScreenError: React.FC<ScreenErrorProps> = ({
   reloadAction,
   iconName = 'alert-circle-outline',
 }) => {
-  const {
-    state: { colors },
-  } = useThemeApp();
+  // Hooks
+  const { colors } = useVarsScreenDefault();
 
   // Estilos
   const styles = React.useMemo(() => getStyles(colors), [colors]);

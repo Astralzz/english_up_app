@@ -1,9 +1,9 @@
 import React from 'react';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { StyleSheet } from 'react-native';
 import { ActivityIndicator, Text } from 'react-native-paper';
 import ScreenWrapper from './ScreenWrapper';
 import { ColorsAppType } from '@/theme/colors';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 // Props
 interface ScreenLoadingProps {
@@ -22,9 +22,7 @@ const ScreenLoading: React.FC<ScreenLoadingProps> = ({
   colorIndicator,
 }) => {
   // Hooks
-  const {
-    state: { colors },
-  } = useThemeApp();
+  const { colors } = useVarsScreenDefault();
 
   // Styles
   const styles = React.useMemo(() => getStyles(colors), [colors]);

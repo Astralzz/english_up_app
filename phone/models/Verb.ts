@@ -4,14 +4,14 @@
  * @description This module defines the Verb model and its properties.
  */
 interface Verb {
-  readonly no: number;
-  type: VerbTypeType;
-  simple_form: string;
-  third_person: string;
-  simple_past: string;
-  past_participle: string;
-  gerund: string;
-  meaning: Array<string>;
+  readonly no: number; // Number of the verb
+  type: VerbTypeType; // Type of the verb
+  simple_form: string; // Simple form of the verb
+  third_person: string; // Third person of the verb
+  simple_past: string; // Simple past of the verb
+  past_participle: string; // Past participle of the verb
+  gerund: string; // Gerund of the verb
+  meaning: string[]; // Meaning of the verb
 }
 
 /**

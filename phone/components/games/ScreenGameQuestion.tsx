@@ -3,12 +3,12 @@ import ScreenWrapper from '@/components/screens/ScreenWrapper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ColorsAppType } from '@/theme/colors';
 import { Text } from 'react-native-paper';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, BackHandler } from 'react-native';
 import { GuestTheVerbGameLevelType } from './ScreenGameSelectedLevel';
 import {
-  GenerateVerbOptionType,
-  GenerateVerbQuestionType,
-} from '@/services/ListVerbsService';
+  GameGenerateOptionType,
+  GameGenerateQuestionType,
+} from '@/types/games';
 import { TFunction } from 'i18next';
 
 // Props
@@ -17,11 +17,14 @@ interface ScreenGameQuestionProps {
   isThemeDark: boolean;
   levelSelected: GuestTheVerbGameLevelType;
   actualyRound: number;
-  currentQuestion: GenerateVerbQuestionType;
-  registerAttempt: (option: GenerateVerbOptionType) => void;
-  selectedOption: GenerateVerbOptionType | null;
+  currentQuestion: GameGenerateQuestionType;
+  registerAttempt: (option: GameGenerateOptionType) => void;
+  selectedOption: GameGenerateOptionType | null;
   isGeneratingQuestion: boolean;
-  t: TFunction<'translation', undefined>;
+  translation: {
+    t: TFunction<'translation', undefined>;
+    path: string;
+  };
 }
 
 /**
@@ -40,13 +43,23 @@ const ScreenGameQuestion: React.FC<ScreenGameQuestionProps> = ({
   registerAttempt,
   selectedOption,
   isGeneratingQuestion,
-  t,
+  translation: { t, path },
 }) => {
   // Styles
   const styles = React.useMemo(
     () => getStyles(colors, isThemeDark),
     [colors, isThemeDark],
   );
+
+  // 🔒 Bloquear botón de atrás
+  React.useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => true,
+    );
+
+    return () => backHandler.remove();
+  }, []);
 
   return (
     <ScreenWrapper>
@@ -56,20 +69,25 @@ const ScreenGameQuestion: React.FC<ScreenGameQuestionProps> = ({
         <Icon name='school' size={20} color={colors.text.primary} />
         {/* Text */}
         <Text style={styles.levelText}>
-          {t('Level')}: {levelSelected.name} | {t('Round')}: {actualyRound + 1}
+          {t(`${path}.level`)}: {t(`${path}.${levelSelected.key}`)} |{' '}
+          {t(`${path}.round`)}: {actualyRound + 1}
         </Text>
       </View>
 
       {/* Question */}
       <View style={styles.questionContainer}>
         {/* Icon */}
-        <Icon
-          name='help-circle-outline'
-          size={24}
-          color={colors.text.primary}
-        />
+        {false && (
+          <Icon
+            name='help-circle-outline'
+            size={24}
+            color={colors.text.primary}
+          />
+        )}
         {/* Text */}
-        <Text style={styles.question}>{currentQuestion.question}</Text>
+        <Text style={styles.question} numberOfLines={4} ellipsizeMode='tail'>
+          {currentQuestion.question}
+        </Text>
       </View>
 
       {/* Options */}
@@ -95,7 +113,7 @@ const ScreenGameQuestion: React.FC<ScreenGameQuestionProps> = ({
                     optionColor || colors.primary[isThemeDark ? 600 : 400],
                 },
               ]}
-              disabled={isGeneratingQuestion}
+              disabled={isGeneratingQuestion || selectedOption !== null}
             >
               {/* Icon */}
               <Icon
@@ -121,23 +139,26 @@ const getStyles = (colors: ColorsAppType, isThemeDark: boolean) =>
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 8,
+      paddingHorizontal: 16,
     },
     levelText: {
       fontSize: 16,
       marginLeft: 8,
       color: colors.text.secondary,
+      flexShrink: 1,
     },
     questionContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
       marginVertical: 16,
+      paddingHorizontal: 16,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     question: {
       fontSize: 20,
       fontWeight: 'bold',
-      marginLeft: 8,
       color: colors.text.primary,
-      flexShrink: 1,
+      textAlign: 'center',
+      flexWrap: 'wrap',
     },
     optionsContainer: {
       marginTop: 10,
@@ -154,6 +175,9 @@ const getStyles = (colors: ColorsAppType, isThemeDark: boolean) =>
     optionText: {
       color: colors.text.primary,
       fontSize: 16,
+      flexShrink: 1,
+      flexWrap: 'wrap',
+      textAlign: 'left',
     },
   });
 

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle } from 'react-native';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { ScrollView } from 'react-native-gesture-handler';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 // Props
 interface ScreenWrapperProps {
@@ -30,9 +30,7 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
   style,
 }) => {
   // Tema
-  const {
-    state: { colors },
-  } = useThemeApp();
+  const { colors } = useVarsScreenDefault();
 
   // Contenido
   const Wrapper = scrollable ? ScrollView : View;

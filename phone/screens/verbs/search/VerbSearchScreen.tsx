@@ -3,10 +3,9 @@ import { View, StyleSheet } from 'react-native';
 import FilterModal from './FilterModal';
 import VerbList from '../components/VerbList';
 import VerbsLayout from '../layouts/VerbsLayout';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import useVerbSearch from '../hooks/useVerbSearch';
 import InputDefault from '@/components/inputs/InputDefault';
-import { useTranslation } from 'react-i18next';
+import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 // Transitions
 const PATH_TRASNSITION = 'verbs.search';
@@ -32,16 +31,14 @@ const VerbSearchScreen: React.FC = () => {
 
   // Hooks
   const [showFilters, setShowFilters] = useState(false);
-  const { t } = useTranslation();
-  const {
-    state: { colors, isThemeDark },
-  } = useThemeApp();
+  const { colors, isThemeDark, t } = useVarsScreenDefault();
 
   return (
     <VerbsLayout
-      routeName='VerbSearch'
       service={service}
+      title={t(`${PATH_TRASNSITION}.title`)}
       styleWrapper={styles.layoutWrapper}
+      t={t}
     >
       {/* Search */}
       <View style={styles.searchContainer}>

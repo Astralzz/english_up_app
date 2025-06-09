@@ -68,4 +68,11 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se mejoro la logica de los verbos
 - Se mejoraron las routes
 
+## [0.0.9] - 09-06-2025
+
+- Se termino la primera version del juego de preguntas y respuestas
+- Se mejoro la logica del juego
+- Se mejoro la logica de las acciones
+- Se redujo el codigo y se optimizo
+
 ---

@@ -30,7 +30,10 @@ interface ScreenGameSelectedLevelProps {
     level: GuestTheVerbGameLevelType,
     keyVerbs: GuestTheVerbGameKeyVerbsType,
   ) => void;
-  t: TFunction<'translation', undefined>;
+  translation: {
+    t: TFunction<'translation', undefined>;
+    path: string;
+  };
 }
 
 /**
@@ -44,7 +47,7 @@ const ScreenGameSelectedLevel: React.FC<ScreenGameSelectedLevelProps> = ({
   isThemeDark,
   levels,
   selectLevel,
-  t,
+  translation: { t, path },
 }) => {
   // Get theme
   const styles = React.useMemo(
@@ -122,7 +125,7 @@ const ScreenGameSelectedLevel: React.FC<ScreenGameSelectedLevelProps> = ({
                     </Text>
                     {/* Text */}
                     <Text variant='bodyMedium' style={styles.textContent}>
-                      {t('Questions')}: {level.count}
+                      {t(`${path}.no_questions`)}: {level.count}
                     </Text>
                   </Card.Content>
                 </Card>
@@ -156,7 +159,7 @@ const getStyles = (colors: ColorsAppType, isThemeDark: boolean) =>
     card: {
       borderRadius: 12,
       elevation: 4,
-      backgroundColor: colors.primary[isThemeDark ? 800 : 200],
+      backgroundColor: colors.primary[isThemeDark ? 800 : 100],
     },
     cardContent: {
       alignItems: 'center',

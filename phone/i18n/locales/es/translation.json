@@ -43,9 +43,23 @@
         }
       ]
     },
-    "version": "version 0.0.6"
+    "version": "version 0.0.9"
   },
   "verbs": {
+    "keys_verb": {
+      "simple_form": "Forma simple",
+      "description_simple_form": "La forma simple es la forma en que se escribe el verbo en el presente simple.",
+      "past_participle": "Participio",
+      "description_past_participle": "El participio es la forma en que se escribe el verbo en el pasado simple.",
+      "gerund": "Gerundio",
+      "description_gerund": "El gerundio es la forma en que se escribe el verbo en el gerundio.",
+      "meaning": "Significado",
+      "description_meaning": "El significado es la definición del verbo.",
+      "third_person": "Tercera persona",
+      "description_third_person": "La tercera persona es la forma en que se escribe el verbo en el tercera persona.",
+      "simple_past": "Pasado simple",
+      "description_simple_past": "El pasado simple es la forma en que se escribe el verbo en el pasado simple."
+    },
     "stack": {
       "titles": {
         "list": "Lista de Verbos",
@@ -79,6 +93,7 @@
       }
     },
     "search": {
+      "title": "Buscar verbos",
       "input": {
         "label": "Buscar verbo",
         "placeholder": "Ej. run, eat, go..."
@@ -103,6 +118,59 @@
           "simple_past": "Simple Pasado"
         },
         "action": "Aplicar"
+      }
+    },
+    "games": {
+      "title": "Juegos con Verbos",
+      "keys": {
+        "level": "nivel",
+        "round": "ronda",
+        "correct": "Correcto",
+        "fail": "Incorrecto",
+        "corrects": "Correctos",
+        "fails": "Incorrectos",
+        "play_again": "Jugar de nuevo",
+        "game_over": "Juego terminado",
+        "total_points": "Puntos totales",
+        "get_ready": "Listo",
+        "choose_level": "Elige tu nivel",
+        "no_questions": "Preguntas",
+        "win": "¡Eres genial!",
+        "win_excelent": "¡Eres un genio sin duda!",
+        "lose": "¡Recorcholis!",
+        "win_description": "¡Tienes un IQ mayor al promedio!",
+        "win_excelent_description": "¡Perfección es tu segundo nombre!",
+        "lose_description": "¡Más suerte la próxima vez!",
+        "try_again": "¡Intenta de nuevo!",
+        "total_corrects": "Correctos",
+        "total_fails": "Incorrectos",
+        "easy": "Facil",
+        "medium": "Medio",
+        "hard": "Dificil"
+      },
+      "game_1": {
+        "title": "Preguntas y respuestas",
+        "description": "Elige qué tipo de pregunta quieres responder (por ejemplo, el significado o el pasado de un verbo) y selecciona la opción correcta entre las respuestas disponibles.",
+        "question_pre": "¿Cual es [x] de [y]?",
+        "modal": {
+          "title": "Selecciona una opción",
+          "key_question": "Seleccciona el tipo de pregunta",
+          "key_answer": "Seleccciona las forma de respuesta",
+          "error_same": "La pregunta y la respuesta no pueden ser iguales.",
+          "accept_button": "Aceptar"
+        },
+        "keys_question": {
+          "simple_form": "la forma simple",
+          "past_participle": "el participio",
+          "gerund": "el gerundio",
+          "meaning": "el significado",
+          "third_person": "la tercera persona",
+          "simple_past": "el pasado simple"
+        }
+      },
+      "game_2": {
+        "title": "Memorama de verbos",
+        "description": "Encuentra los pares de verbos relacionando su forma y significado."
       }
     }
   }

@@ -1,14 +1,17 @@
 import React from 'react';
 import VerbsLayout from '../layouts/VerbsLayout';
-import { Card, Text } from 'react-native-paper';
+import { Card, Text, TouchableRipple } from 'react-native-paper';
 import { VerbsStackParamAllList } from '../VerbsStack';
 import { globaListVerbsService } from '@/services/ListVerbsService';
 import { ScrollView, StyleSheet } from 'react-native';
 import { useNavigation } from 'expo-router';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { useThemeApp } from '@/hooks/useThemeApp';
 import { ColorsAppType } from '@/theme/colors';
-import { useTranslation } from 'react-i18next';
+import useVerbScreen from '../../../hooks/useVarsScreenDefault';
+import SelectGameQuestion from '../components/SelectGameQuestion';
+
+// Transitions
+const PATH_TRASNSITION = 'verbs.games';
 
 /**
  *
@@ -21,10 +24,16 @@ const VerbGamesScreen: React.FC = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<VerbsStackParamAllList>>();
 
-  // Theme
-  const {
-    state: { colors, isThemeDark },
-  } = useThemeApp();
+  // Hooks
+  const { colors, isThemeDark, t } = useVerbScreen();
+
+  // State
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  // Close modal
+  const handleClose = React.useCallback(() => {
+    setModalVisible(false);
+  }, []);
 
   // Style
   const styles = React.useMemo(
@@ -32,43 +41,56 @@ const VerbGamesScreen: React.FC = () => {
     [colors, isThemeDark],
   );
 
-  // Translation
-  const { t } = useTranslation();
+  // List of games
+  const games: {
+    action: () => void;
+    title: string;
+    description: string;
+  }[] = React.useMemo(
+    () => [
+      {
+        action: () => setModalVisible(true),
+        title: t(`${PATH_TRASNSITION}.game_1.title`),
+        description: t(`${PATH_TRASNSITION}.game_1.description`),
+      },
+      {
+        action: () => alert('Proximamente'),
+        title: t(`${PATH_TRASNSITION}.game_2.title`),
+        description: t(`${PATH_TRASNSITION}.game_2.description`),
+      },
+    ],
+    [t],
+  );
 
   return (
-    <VerbsLayout routeName='VerbGames' service={globaListVerbsService}>
+    <VerbsLayout service={globaListVerbsService} t={t}>
+      {/* List of games */}
       <ScrollView contentContainerStyle={styles.container}>
-        <Card
-          style={styles.card}
-          onPress={() => navigation.navigate('GuessTheMeaningOfTheVerbGame')}
-        >
-          <Card.Title
-            title='Adivina el significado'
-            titleStyle={styles.cardTitle}
-          />
-          <Card.Content>
-            <Text style={styles.description}>
-              Te mostraremos un verbo en inglés. Elige su significado correcto
-              en español.
-            </Text>
-          </Card.Content>
-        </Card>
-
-        <Card
-          style={styles.card}
-          onPress={() => navigation.navigate('GuessTheMeaningOfTheVerbGame')}
-        >
-          <Card.Title
-            title='Memorama de verbos'
-            titleStyle={styles.cardTitle}
-          />
-          <Card.Content>
-            <Text style={styles.description}>
-              Encuentra los pares de verbos relacionando su forma y significado.
-            </Text>
-          </Card.Content>
-        </Card>
+        {games.map(({ action, title, description }, index) => (
+          <TouchableRipple key={index} onPress={action}>
+            <Card style={styles.card} onPress={action}>
+              <Card.Title title={title} titleStyle={styles.cardTitle} />
+              <Card.Content>
+                <Text style={styles.description}>{description}</Text>
+              </Card.Content>
+            </Card>
+          </TouchableRipple>
+        ))}
       </ScrollView>
+
+      {/* Modal */}
+      <SelectGameQuestion
+        colors={colors}
+        isThemeDark={isThemeDark}
+        translation={{ t, path: PATH_TRASNSITION }}
+        visible={modalVisible}
+        onClose={handleClose}
+        onAccept={(data) =>
+          navigation.navigate('QuestionGame', {
+            optionsQuestion: data,
+          })
+        }
+      />
     </VerbsLayout>
   );
 };
