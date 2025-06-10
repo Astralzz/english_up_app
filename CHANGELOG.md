@@ -75,4 +75,13 @@ Todos los cambios importantes de este proyecto se documentarán en este archivo.
 - Se mejoro la logica de las acciones
 - Se redujo el codigo y se optimizo
 
+## [0.0.10] - 10-06-2025
+
+- Se creo el ***README*** oficial de la app
+- Se creo el archivo de ***LICENSE*** para la app
+- Se agregaron nuevos textos
+- Se crearon nuevos componentes
+- Se creo el menu principal para desarrollo
+- Se agrego el link al repositorio de github de la app en la parte de creditos
+
 ---

@@ -18,6 +18,7 @@ export interface GameResulDefaultType {
   failsCount: number;
   successCount: number;
   totalPoints: number;
+  allPointsOfGame: number;
   isWin: boolean;
   title?: string;
   description?: string;

@@ -220,7 +220,8 @@ const getStyles = (colors: ColorsAppType) =>
     // Footer
     footer: {
       alignItems: 'center',
-      marginTop: 20,
+      marginTop: 7,
+      marginBottom: 3,
     },
     version: {
       color: colors.text.secondary,

@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { View, StyleSheet, ViewStyle, ScrollView } from 'react-native';
 import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
 
 // Props
@@ -35,16 +34,23 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
   // Contenido
   const Wrapper = scrollable ? ScrollView : View;
 
+  // Styles
+  const fullStyles = React.useMemo(
+    () => [
+      styles.container,
+      {
+        backgroundColor: colors.background.primary,
+        ...stylesProps,
+        ...style,
+      },
+    ],
+    [colors.background.primary, stylesProps, style],
+  );
+
   return (
     <Wrapper
-      style={[
-        styles.container,
-        {
-          backgroundColor: colors.background.primary,
-          ...stylesProps,
-          ...style,
-        },
-      ]}
+      style={!scrollable && fullStyles}
+      contentContainerStyle={scrollable && fullStyles}
     >
       {children}
     </Wrapper>

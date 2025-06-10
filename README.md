@@ -1,193 +1,273 @@
-# ENGLISH APP
+# 📘 **English Up** – Aprende inglés a tu ritmo
 
-App personal enfocada en mejorar mi ingles y ayudarme en mi aprendizaje
+![License](https://img.shields.io/github/license/Astralzz/english_up_app)
+![Expo](https://img.shields.io/badge/Expo-47.0.0-blue)
+![React Native](https://img.shields.io/badge/React%20Native-0.73.x-61DAFB)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-## COMANDOS
+> Una app de uso libre, sin anuncios, para ayudarte a mejorar tu nivel de inglés.
 
-### COMANDOS CON NPM
+---
 
-- Instalar dependencias
+## 📌 Contacto
 
-  ```bash
-  npm install
-  npm install --legacy-peer-deps -> Para evitar problemas de compatibilidad
-  npm install --force -> Para forzar la instalación ignorando las dependencias
-  ```
+- 🌐 **Portafolio:** [astralzz.io](https://astralzz.github.io/)
+- 📩 **Email:** [edain.cortez@outlook.com](mailto:edain.cortez@outlook.com)
+- 💬 **Telegram:** [@lAstralz](https://t.me/lAstralz)
+- 💼 **LinkedIn:** [Edain Jesús Cortez Cerón](https://linkedin.com/in/edain-jesus-cortez-ceron-23b26b155)
+- 😺 **GitHub:** [@Astralzz](https://github.com/Astralzz)
 
-- Borrar cache
+### 📜 Licencia
 
-  ```bash
-  npm cache clean --force
-  ```
+Este proyecto se distribuye bajo la [Licencia de Uso Personal y No Comercial](./LICENSE).  
+Puedes usarlo y modificarlo libremente, pero no está permitido venderlo. Para otros usos, por favor contáctame.
 
-- Borrar node_modules and package-lock.json
+---
 
-  ```bash
-  Remove-Item -Recurse -Force .\node_modules
-  Remove-Item -Force .\package-lock.json
-  ```
+## 👋 Introducción
 
-- Verificar versiones disponibles de una librería
+¡Hola! Soy **Edain Jesús**, desarrollador de software e ingeniero con 26 años. Actualmente estoy comprometido con mejorar mi nivel de inglés hasta alcanzar un nivel **C1** (¡si todo sale bien! 🎯).
 
-  ```bash
-  npm show [libreria] versions
-  ```
+Después de probar muchas apps, noté que la mayoría tienen publicidad, funciones bloqueadas o interfaces poco intuitivas. Así que pensé:
 
-- Instalar una version específica de una librería
+> “Soy ingeniero 🤔… ¿por qué no crear **mi propia app**?”
 
-  ```bash
-  npm install [libreria]@[version]
-  ```
+Así nació **English Up**: una aplicación muy simple, gratuita, sin anuncios y completamente **open source**, pensada para quienes, como yo, buscan mejorar su inglés con enfoque práctico y sin complicaciones.
 
-- Re installar dependencias
+---
 
-  ```bash
-  npm install & npx expo install
-  ```
+## 🎯 ¿Qué es _English Up_?
 
-### COMANDOS CON NPX
+Una app enfocada en practicar inglés, especialmente la estructura y la gramática como lo son los verbos, fórmulas y frases con herramientas clave, sin cosas innecesarias. Simple, directa y funcional.
 
-- Iniciar app (desarrollo)
+---
 
-  ```bash
-  npx expo start --reset-cache
-  npx expo start --clear
-  ```
+## 🧪 Estado del Proyecto
 
-- Verificar integridad y problemas en la application
+| Módulo             | Estado           |
+| ------------------ | ---------------- |
+| Cambio de tema     | ✅ Completado    |
+| Cambio de idioma   | ✅ Completado    |
+| Stack de rutas     | ✅ Completado    |
+| Buscador de verbos | ✅ Completado    |
+| Juego de práctica  | ✅ Completado    |
+| Nuevas funciones   | 🚧 En desarrollo |
+| Mejoras UI         | 🟡 Planeadas     |
 
-  ```bash
-  npx expo-doctor
-  ```
+---
 
-- Verificar integridad y problemas de las librerías expo
+## 🔍 Características
 
-  ```bash
-  npx expo install --check
-  ```
+### 🖥️ Generales
 
-- Actualizar SDK y librerías
+- 🌙 Modo claro/oscuro
+- 🌐 Soporte multilenguaje (Español/Inglés)
+- 🚀 Navegación optimizada
 
-  ```bash
-  npx expo upgrade
-  ```
+### 📚 Verbos
 
-- Ejecutar app en android
+- 🔎 Buscador de verbos irregulares
+- 🧠 Detalles completos: pasado simple, participio, gerundio, tercera persona y traducción
+- 🎮 Juego de práctica interactivo
+- 🎯 Interfaz simple y enfocada
 
-  ```bash
-  npx expo run:android
-  ```
+---
 
-### EAS COMMANDS
+## 📲 Descargar APK (Android)
 
-- Iniciar sesion
+### 📊 Lista de versiones
 
-  ```bash
-  eas login
-  ```
+Aquí puedes descargar versiones compiladas de **English Up** para Android.
 
-- Configurar build y crear eas.json
+| Versión | Fecha de lanzamiento | Enlace                                                                                                                         |
+| ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 0.0.9   | 2025-06-10           | [Descargar APK](https://expo.dev/accounts/astralz/projects/english_up_astralz_app/builds/bef40c9b-80bf-4c82-a089-d1973a937cf5) |
 
-  ```bash
-  eas build:configure
-  ```
+> ⚠️ Las APKs están firmadas para pruebas. Usala bajo tu propia responsabilidad, puede que no funcione correctamente o no se actualice correctamente.
 
-- Crear apk para android
+---
 
-  ```bash
-  eas build -p android --profile preview
-  ```
+### 🧪 ¿Cómo instalar un APK?
 
-### PRETTIER COMMANDS
+1. Descarga el archivo APK desde el enlace correspondiente.
+2. Abre el archivo en tu dispositivo Android.
+3. Habilita la opción "Instalar desde fuentes desconocidas" si es necesario.
+4. ¡Listo! Ya puedes usar **English Up**.
 
-- Formatear codigo
+### 🍎 ¿Y si la quiero en iOS?
 
-  ```bash
-  npx prettier --write .
-  ```
+Desafortunadamente, no es posible descargar probar **English Up** en iOS ya que no se permite la instalación de APKs desde fuentes externas.
 
-- Formatear codigo y verificar cambios
+---
 
-  ```bash
-  npx prettier --check .
-  ```
+## 🤝 Cómo contribuir
 
-- Formatear codigo y verificar cambios en un archivo
+### ¿Quién puede ayudar?
 
-  ```bash
-  npx prettier --check ./src/screens/verbs/hooks/useGuestGamingVerb.ts
-  ```
+¡**Cualquiera!** No necesitas ser programador. Puedes colaborar con:
 
-- Agregar config a config.json de vs code
+- 📝 Traducción y corrección de textos
+- 📁 Creación de archivos JSON con nuevos verbos/frases
+- 🎨 Diseño de logo/interfaz
+- 💻 Programación de nuevas funcionalidades
+- 💡 Ideas y sugerencias
 
-  ```json
-  {
-      .....
-      "editor.formatOnSave": true, // Formatear codigo al guardar
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true // Corregir errores al guardar
-      }
-      .....
+**¡Todo aporte será reconocido en los créditos! ❤️**
+
+---
+
+### 🛠 Instrucciones para colaborar
+
+```bash
+# 1. Haz un fork del repositorio
+
+# 2. Clona el repositorio
+git clone https://github.com/Astralzz/english_up_app.git
+
+# 3. Crea tu rama desde develop
+git checkout -b feature/nombre-funcion develop
+
+# 4. Haz tus cambios y commitea
+git add .
+git commit -m "Agregué la función XYZ"
+
+# 5. Sube tu rama
+git push origin feature/nombre-funcion
+
+# 6. Crea un Pull Request hacia develop
+git checkout develop
+git pull origin develop
+git merge feature/nombre-funcion
+git push origin develop
+```
+
+⚠️ **Por favor, no hagas cambios directamente en `main`**. Esta rama se reserva para versiones estables.
+
+---
+
+## 🧰 Stack Tecnológico
+
+### 🔌 Providers
+
+- React Redux
+- Redux Toolkit
+- Redux Persist (→ futuro: `react-native-mmkv`)
+
+### 🚦 Navegación
+
+- React Navigation
+
+### 🌐 Requests
+
+- Axios
+
+### 🎨 Interfaz
+
+- React Native Paper
+- React Native Vector Icons
+- Expo Linear Gradient
+- Picker
+
+### 💾 Almacenamiento
+
+- Async Storage
+
+### 🔐 Seguridad
+
+- Expo Secure Store
+- Expo Crypto
+
+### 🌍 Localización
+
+- i18next
+- React i18next
+- Expo Localization
+
+---
+
+## ⚙️ Configuración Técnica
+
+- ✅ **TypeScript** con soporte completo
+- ✅ **Redux Toolkit** en `src/redux/`
+- ✅ **Gestión de temas**: `themeSlice.ts`
+- ✅ **Formik + Yup**: validaciones en formularios
+- ✅ **Modal genérico**: `ModalDefault.tsx`
+- ✅ **404 Page** implementada
+- ✅ **i18n** preconfigurado
+- ✅ **Persistencia** y seguridad
+- ✅ **Prettier + ESLint** integrados
+
+---
+
+## 🚀 Instalación y Uso
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/Astralzz/english_up_app.git
+cd english_up_app
+
+# Instalar dependencias
+npm install
+npx expo install
+
+# Iniciar el entorno de desarrollo
+npx expo start --reset-cache
+```
+
+---
+
+## 📜 Scripts útiles
+
+### 🔁 NPM
+
+- `npm install` – Instala dependencias
+- `npm cache clean --force` – Limpia caché
+- `npm install --legacy-peer-deps` – Instala sin conflictos
+- `npm install [lib]@[version]` – Instala versión específica
+
+### ⚡ NPX
+
+- `npx expo start` – Inicia app
+- `npx expo-doctor` – Diagnóstico de errores
+- `npx expo run:android` – Ejecuta en Android
+
+### 🛠️ EAS
+
+- `eas login` – Iniciar sesión
+- `eas build -p android` – Compilar apk
+
+### ✨ Prettier
+
+- `npx prettier --write .` – Formatear código
+- Config VSCode:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
-  ```
+}
+```
 
-- Agregar config a .prettierrc
+- Config `.prettierrc`:
 
-  ```json
-  {
-    "semi": true, // Punto y coma
-    "endOfLine": "lf", // Fin de linea
-    "singleQuote": true, // Comilla simple
-    "trailingComma": "all" // Coma al final
-    "tabWidth": 2, // Tabulador
-    "printWidth": 120, // Ancho de linea
-    "arrowParens": "avoid", // Parentesis de flecha
-    "singleAttributePerLine": true // Atributo por linea
-  }
-  ```
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "printWidth": 120,
+  "arrowParens": "avoid",
+  "singleAttributePerLine": true
+}
+```
 
-### CONFIGURACIONES ANTES DEL BUILD
+---
 
-- Actualizar configuración de react-native-mmkv
+## 📌 Conclusión
 
-  ```bash
-  npx expo prebuild
-  ```
+**English Up** es una app hecha solo por diversión y en mis tiempos libres, simple pero poderosa, para ayudarte a avanzar en tu aprendizaje de inglés. Sin anuncios, sin complicaciones y 100% libre.
 
-## LIBRERÍAS
-
-PROVIDERS
-
-- [React Redux](https://react-redux.js.org)
-- [Redux Toolkit](https://redux-toolkit.js.org)
-- [Redux Persist](https://github.com/rt2zz/redux-persist#readme) > NOTE: Temporal, despues se usara react-native-mmkv
-
-NAVIGATION
-
-- [React navigator](https://reactnavigation.org)
-
-REQUESTS
-
-- [Axios](https://axios-http.com)
-
-UI
-
-- [React Native Paper](https://reactnativepaper.com)
-- [Vector icons](https://github.com/oblador/react-native-vector-icons)
-- [Expo LinearGradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient)
-- [Picker](https://github.com/react-native-picker/picker)
-
-STORAGE
-
-- [Async Storage](https://react-native-async-storage.github.io/async-storage)
-
-SECURITY
-
-- [Expo Secure Store](https://docs.expo.dev/versions/latest/sdk/securestore)
-- [Expo Crypto](https://docs.expo.dev/versions/latest/sdk/crypto)
-
-LENGUAJE
-
-- [i18next](https://react.i18next.com)
-- [React i18next](https://react.i18next.com)
-- [Expo Localization](https://docs.expo.dev/versions/latest/sdk/localization)
+> Si te gusta la idea, ⭐ dale una estrella al repo y ¡únete al proyecto!

@@ -54,7 +54,7 @@ const VerbGamesScreen: React.FC = () => {
         description: t(`${PATH_TRASNSITION}.game_1.description`),
       },
       {
-        action: () => alert('Proximamente'),
+        action: () => alert(t('not_available')),
         title: t(`${PATH_TRASNSITION}.game_2.title`),
         description: t(`${PATH_TRASNSITION}.game_2.description`),
       },

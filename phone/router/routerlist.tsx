@@ -1,5 +1,5 @@
 import { RoutesMenuTypeApp } from '@/types/navigation';
-import HomeScreen from '@/screens/home/HomeScreen';
+import HomeScreenDevelop from '@/components/screens/HomeScreenDevelop';
 import WordsScreen from '@/screens/words/WordsScreen';
 import FormulasScreen from '@/screens/formulas/FormulasScreen';
 import VerbsStack from '@/screens/verbs/VerbsStack';
@@ -8,7 +8,7 @@ import VerbsStack from '@/screens/verbs/VerbsStack';
 const ROUTES_MENU_APP: RoutesMenuTypeApp[] = [
   {
     name: 'Home',
-    Component: HomeScreen,
+    Component: HomeScreenDevelop,
     icon: 'home-outline', // Icono personalizado
   },
   {

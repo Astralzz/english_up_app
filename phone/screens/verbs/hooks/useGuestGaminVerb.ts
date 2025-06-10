@@ -101,6 +101,7 @@ const useGuestGamingVerb = (
       const totalAttempts = successCount + failsCount;
       const accuracy = totalAttempts === 0 ? 0 : successCount / totalAttempts;
       const totalPoints = successCount * 10; // 10 puntos por acierto
+      const allPointsOfGame = levelSelected.count * 10;
       const isWin = accuracy >= 0.7; // 70% de aciertos para ganar
 
       // ? Generamos el resultado
@@ -108,6 +109,7 @@ const useGuestGamingVerb = (
         failsCount,
         successCount,
         totalPoints,
+        allPointsOfGame,
         isWin,
       });
     },

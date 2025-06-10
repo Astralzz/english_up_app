@@ -272,7 +272,7 @@ class ListVerbsService {
     const shuffledOptions = options.sort(() => Math.random() - 0.5);
 
     // Generamos la pregunta
-    const x = translation.t(`${translation.path}.keys_question.${questionKey}`);
+    const x = translation.t(`${translation.path}.keys_question.${answerKey}`);
     const y = getValueAsString(correctVerb[questionKey]);
     const preQuestion = translation.t(`${translation.path}.question_pre`);
     const question = `${preQuestion.replace('[x]', x).replace('[y]', y)}`;

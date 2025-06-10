@@ -43,7 +43,7 @@ const ScreenGameResult: React.FC<ScreenGameResultProps> = ({
   // ? Excelent
   const dataResult = React.useMemo(() => {
     // Excelent
-    if (results.totalPoints === results.successCount * 10) {
+    if (results?.allPointsOfGame === results?.totalPoints) {
       return {
         icon: 'trophy-outline',
         color: colors.alert.warning,
@@ -53,7 +53,7 @@ const ScreenGameResult: React.FC<ScreenGameResultProps> = ({
     }
 
     // Win
-    if (results.isWin) {
+    if (results?.isWin) {
       return {
         icon: 'trophy-outline',
         color: colors.alert.success,

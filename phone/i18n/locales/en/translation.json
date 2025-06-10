@@ -1,6 +1,35 @@
 {
   "app_name": "EnglishUp",
   "welcome": "Welcome",
+  "not_available": "This section will be available soon",
+  "home_develop": {
+    "title": "Welcome to EnglishUp",
+    "subtitle": "Learn English in a simple and direct way.",
+    "description": "An app focused on practicing English, especially the structure and grammar as are the verbs, formulas and phrases with key tools, without unnecessary things. Simple, direct and functional.",
+    "features_title": "📦 Available Modules",
+    "features": {
+      "theme": {
+        "title": "🎨 Dynamic theme",
+        "description": "Change the app theme between light and dark.",
+        "key": "theme"
+      },
+      "language": {
+        "title": "🌐 Language change",
+        "description": "Change the app language between Spanish and English.",
+        "key": "language"
+      },
+      "verbs_section": {
+        "title": "📚 Verbs sections",
+        "description": "Explore and study the most common English verbs with clear explanations and practical examples.",
+        "key": "verbs_section"
+      },
+      "verbs_game": {
+        "title": "🎮 Verb practice game",
+        "description": "Practice your English verbs with an interactive game that tests your knowledge of verbs in different contexts.",
+        "key": "verbs_game"
+      }
+    }
+  },
   "menu": {
     "header": {
       "title": "EnglishUp",
@@ -34,16 +63,21 @@
       "repo": "https://github.com/Astralzz/english_up_app.git"
     },
     "references": {
-      "title": "References",
+      "title": "Links and references",
       "items": [
         {
+          "title": "App repository",
+          "description": "App repository in GitHub, where you can find the source code of the app.",
+          "url": "https://github.com/Astralzz/english_up_app.git"
+        },
+        {
           "title": "Verb List",
-          "description": "List of verbs with their different forms and meanings, based on Pacho8a's Excel sheet.",
+          "description": "Repository of the app in GitHub, where you can find the source code and learn more about the app.",
           "url": "https://www.pacho8a.com"
         }
       ]
     },
-    "version": "version 0.0.9"
+    "version": "version 0.0.10"
   },
   "verbs": {
     "keys_verb": {
@@ -157,6 +191,7 @@
           "key_question": "Select the type of question",
           "key_answer": "Select the answer form",
           "error_same": "The question and answer cannot be the same.",
+          "picker_placeholder": "Select an option...",
           "accept_button": "Accept"
         },
         "keys_question": {

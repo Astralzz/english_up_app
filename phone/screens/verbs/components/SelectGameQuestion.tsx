@@ -82,12 +82,16 @@ const SelectGameQuestion: React.FC<SelectGameQuestionProps> = ({
       selectedAnswer &&
       selectedQuestion !== selectedAnswer
     ) {
+      // Accept
       onAccept({
         answerKey: selectedAnswer,
         questionKey: selectedQuestion,
       });
+
+      // Reset
+      onClose();
     }
-  }, [selectedAnswer, selectedQuestion, onAccept]);
+  }, [selectedAnswer, selectedQuestion, onAccept, onClose]);
 
   // Al cambiar visible
   React.useEffect(() => {
@@ -130,14 +134,20 @@ const SelectGameQuestion: React.FC<SelectGameQuestionProps> = ({
                   ? setSelectedQuestion(value as ValidKeysTypeVerb)
                   : setSelectedAnswer(value as ValidKeysTypeVerb)
               }
+              style={styles.picker}
+              itemStyle={styles.pickerItem}
             >
-              <Picker.Item label='Selecciona una opción...' value='' />
+              <Picker.Item
+                label={t(`${path}.game_1.modal.picker_placeholder`)}
+                value=''
+              />
               {/* Items */}
               {items.map((item) => (
                 <Picker.Item
                   key={item.key}
                   label={item.label}
                   value={item.key}
+                  i18nIsDynamicList={true}
                 />
               ))}
             </Picker>
@@ -184,6 +194,14 @@ const getStyles = (colors: ColorsAppType, isThemeDark: boolean) =>
       fontSize: 12,
       color: colors.text.secondary,
       marginBottom: 6,
+    },
+    picker: {
+      color: colors.text.secondary,
+      marginVertical: 6,
+    },
+    pickerItem: {
+      color: colors.modal.text,
+      backgroundColor: colors.modal.container,
     },
     error: {
       marginTop: 10,

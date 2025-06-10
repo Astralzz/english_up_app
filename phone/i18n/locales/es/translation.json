@@ -1,6 +1,35 @@
 {
   "app_name": "EnglishUp",
   "welcome": "Bienvenido",
+  "not_available": "Esta seccion estara disponible pronto",
+  "home_develop": {
+    "title": "Bienvenido a EnglishUp",
+    "subtitle": "Aprende inglés de forma simple y directa.",
+    "description": "Una app enfocada en practicar inglés, especialmente la estructura y la gramática como lo son los verbos, fórmulas y frases con herramientas clave, sin cosas innecesarias. Simple, directa y funcional.",
+    "features_title": "📦 Módulos Disponibles",
+    "features": {
+      "theme": {
+        "title": "🎨 Tema Dinámico",
+        "description": "Personaliza la apariencia de la app eligiendo entre los modos claro y oscuro para mayor comodidad visual.",
+        "key": "theme"
+      },
+      "language": {
+        "title": "🌐 Cambio de Idioma",
+        "description": "Alterna fácilmente entre español e inglés para usar la app en el idioma que prefieras.",
+        "key": "language"
+      },
+      "verbs_section": {
+        "title": "📚 Secciones de Verbos",
+        "description": "Explora y estudia los verbos más comunes del inglés con explicaciones claras y ejemplos prácticos.",
+        "key": "verbs_section"
+      },
+      "verbs_game": {
+        "title": "🎮 Juego de Práctica de Verbos",
+        "description": "Refuerza tu aprendizaje con un juego interactivo que pone a prueba tu dominio de los verbos en distintos contextos.",
+        "key": "verbs_game"
+      }
+    }
+  },
   "menu": {
     "header": {
       "title": "EnglishUp",
@@ -34,8 +63,13 @@
       "repo": "https://github.com/Astralzz/english_up_app.git"
     },
     "references": {
-      "title": "Referencias",
+      "title": "Enlaces y referencias",
       "items": [
+        {
+          "title": "Repositorio de la app",
+          "description": "Repositorio de la app en GitHub, donde puedes encontrar el codigo fuente y saber mas acerca de la app.",
+          "url": "https://github.com/Astralzz/english_up_app.git"
+        },
         {
           "title": "Lista de Verbos",
           "description": "Lista de verbos con sus diferentes formas y significados, basada en el Excel de Pacho8a.",
@@ -43,7 +77,7 @@
         }
       ]
     },
-    "version": "version 0.0.9"
+    "version": "version 0.0.10"
   },
   "verbs": {
     "keys_verb": {
@@ -157,6 +191,7 @@
           "key_question": "Seleccciona el tipo de pregunta",
           "key_answer": "Seleccciona las forma de respuesta",
           "error_same": "La pregunta y la respuesta no pueden ser iguales.",
+          "picker_placeholder": "Selecciona una opción...",
           "accept_button": "Aceptar"
         },
         "keys_question": {

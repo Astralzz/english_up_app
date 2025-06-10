@@ -26,7 +26,7 @@ const VerbCard = ({ verb, colors, viewVerb }: VerbCardProps) => {
   return (
     <Card style={styles.card} onPress={() => viewVerb(verb)}>
       <LinearGradient
-        colors={[colors.primary[200], colors.primary[400]]}
+        colors={[colors.primary[500], colors.primary[400]]}
         style={styles.gradient}
         start={[0, 0]}
         end={[1, 1]}
