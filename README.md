@@ -81,7 +81,9 @@ Aquí puedes descargar versiones compiladas de **English Up** para Android.
 
 | Versión | Fecha de lanzamiento | Enlace                                                                                                                         |
 | ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 0.0.9   | 2025-06-10           | [Descargar APK](https://expo.dev/accounts/astralz/projects/english_up_astralz_app/builds/bef40c9b-80bf-4c82-a089-d1973a937cf5) |
+| 0.0.10  | 2025-06-10           | [Descargar APK](https://expo.dev/accounts/astralz/projects/english_up_astralz_app/builds/503e1699-6bdc-4590-beb6-ccb19f6463cb) |
+| 0.0.9   | 2025-06-08           | [Descargar APK](https://expo.dev/accounts/astralz/projects/english_up_astralz_app/builds/bef40c9b-80bf-4c82-a089-d1973a937cf5) |
+| 0.0.8   | 2025-06-07           | [Descargar APK](https://expo.dev/accounts/astralz/projects/english_up_astralz_app/builds/545fa3c2-c208-4abb-be20-d1a6044d800e) |
 
 > ⚠️ Las APKs están firmadas para pruebas. Usala bajo tu propia responsabilidad, puede que no funcione correctamente o no se actualice correctamente.
 
