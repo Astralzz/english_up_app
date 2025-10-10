@@ -216,6 +216,22 @@ npx expo install
 npx expo start --reset-cache
 ```
 
+### Otros conmandos útiles
+
+```bash
+# Revisa y actualiza dependencias
+npx expo install --check
+
+# Instala dependencias ignorando conflictos (Mas seguro que --force)
+npx expo install -- --legacy-peer-deps
+
+# Fuerza la reinstalación de dependencias
+npx expo install -- --force
+
+# Diagnóstico de errores comunes
+npx expo-doctor
+```
+
 ---
 
 ## 📜 Scripts útiles
