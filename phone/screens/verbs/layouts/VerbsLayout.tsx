@@ -4,7 +4,6 @@ import ScreenWrapper from '@/components/screens/ScreenWrapper';
 import FloatingButtonMenu, {
   FabActionButtonType,
 } from '@/components/buttons/FloatingButtonMenu';
-import ListVerbsService from '@/services/ListVerbsService';
 import ScreenLoading from '@/components/screens/ScreenLoading';
 import ScreenError from '@/components/screens/ScreenError';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -13,11 +12,11 @@ import { Text } from 'react-native-paper';
 import { ViewStyle } from 'react-native';
 import { useThemeApp } from '@/hooks/useThemeApp';
 import { TFunction } from 'i18next';
+import useVerbs from '../hooks/useVerbs';
 
 // Props
 type VerbsLayoutProps = {
   children: React.ReactNode;
-  service?: ListVerbsService | null;
   isPending?: {
     loading: boolean;
     message?: string;
@@ -39,7 +38,6 @@ type VerbsLayoutProps = {
  */
 const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   children,
-  service,
   isPending,
   error,
   floatButtonActions,
@@ -47,6 +45,9 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   t,
   title,
 }) => {
+  // Hook
+  const { listVerbsService: service, refreshVerbs, loading } = useVerbs();
+
   // Hooks
   const navigation =
     useNavigation<NativeStackNavigationProp<VerbsStackParamList>>();
@@ -56,6 +57,20 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
   const {
     state: { colors },
   } = useThemeApp();
+
+  // Función de refresh combinada
+  const handleRefresh = React.useCallback(async () => {
+    try {
+      // Ejecutar la función de refresh personalizada si existe
+      if (floatButtonActions?.refresh) {
+        await floatButtonActions.refresh();
+      }
+      // Siempre refrescar los verbos
+      await refreshVerbs();
+    } catch (error) {
+      console.error('Error al refrescar:', error);
+    }
+  }, [floatButtonActions, refreshVerbs]);
 
   // Obtener acciones
   const getFloatingButtons = React.useMemo((): FabActionButtonType[] => {
@@ -89,7 +104,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
       {
         icon: 'refresh',
         label: t('verbs.floatButton.labels.refresh'),
-        onPress: floatButtonActions?.refresh,
+        onPress: handleRefresh,
       },
     ];
 
@@ -131,7 +146,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
         return null;
       })
       .filter((a): a is FabActionButtonType => a !== null);
-  }, [floatButtonActions, navigation, route.name, t]);
+  }, [navigation, route.name, t, handleRefresh]);
 
   return (
     <ScreenWrapper style={styleWrapper}>
@@ -152,7 +167,7 @@ const VerbsLayout: React.FC<VerbsLayoutProps> = ({
       )}
 
       {/* Cargando */}
-      {isPending?.loading ? (
+      {isPending?.loading || loading ? (
         <ScreenLoading message={isPending?.message} />
       ) : // Error
       error || !service ? (

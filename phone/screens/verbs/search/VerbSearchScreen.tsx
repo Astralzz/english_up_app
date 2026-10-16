@@ -26,7 +26,6 @@ const VerbSearchScreen: React.FC = () => {
     setVerbTypeFilter,
     searchKey,
     setSearchKey,
-    service,
   } = useVerbSearch();
 
   // Hooks
@@ -35,7 +34,6 @@ const VerbSearchScreen: React.FC = () => {
 
   return (
     <VerbsLayout
-      service={service}
       title={t(`${PATH_TRASNSITION}.title`)}
       styleWrapper={styles.layoutWrapper}
       t={t}

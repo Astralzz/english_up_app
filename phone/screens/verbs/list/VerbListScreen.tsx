@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { globaListVerbsService } from '@/services/ListVerbsService';
 import { useTransitionApp } from '@/hooks/useTransitionApp';
 import VerbList from '../components/VerbList';
-import Verb from '@/models/Verb';
 import VerbsLayout from '../layouts/VerbsLayout';
 import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
+import useVerbs from '../hooks/useVerbs';
 
 /**
  *
@@ -13,8 +12,10 @@ import useVarsScreenDefault from '@/hooks/useVarsScreenDefault';
  * @return {TSX.Component}
  */
 const VerbListScreen: React.FC = () => {
+  // Hook padre
+  const { verbs, refreshVerbs } = useVerbs();
+
   // Data
-  const [verbs, setVerbs] = useState<Verb[]>([]);
   const [error, setError] = useState<string | undefined>(undefined);
 
   // Hooks
@@ -24,25 +25,14 @@ const VerbListScreen: React.FC = () => {
   const [isPending, getListVerbs] = useTransitionApp({
     fn: React.useCallback(async () => {
       try {
-        // Obtenemos
-        const allVerbs = globaListVerbsService.getAll();
-
-        // Validamos que sea un array válido
-        if (!Array.isArray(allVerbs) || allVerbs.length === 0) {
-          setError('No se encontraron verbos.');
-          return;
-        }
-
-        // Asignamos
-        setVerbs(allVerbs);
-
+        await refreshVerbs();
         // ! Error
       } catch (err: unknown) {
         const errorMessage =
           err instanceof Error ? err.message : 'Error desconocido';
         setError(`Hubo un error al cargar los verbos, ${errorMessage}`);
       }
-    }, []),
+    }, [refreshVerbs]),
   });
 
   // Initial effect
@@ -52,7 +42,6 @@ const VerbListScreen: React.FC = () => {
 
   return (
     <VerbsLayout
-      service={globaListVerbsService}
       isPending={{
         loading: isPending,
         message: 'Cargando verbos',

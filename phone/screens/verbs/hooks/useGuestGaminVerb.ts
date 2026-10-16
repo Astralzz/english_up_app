@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Verb from '@/models/Verb';
-import { globaListVerbsService } from '@/services/ListVerbsService';
+import React, { useState } from 'react';
 import { ColorsAppType } from '@/theme/colors';
 import { useTransitionApp } from '@/hooks/useTransitionApp';
 import { TFunction } from 'i18next';
@@ -10,6 +8,8 @@ import {
 } from '@/components/games/ScreenGameSelectedLevel';
 import { useThemeApp } from '@/hooks/useThemeApp';
 import { useTranslation } from 'react-i18next';
+import useVerbs from './useVerbs';
+import type Verb from '@/models/Verb';
 import {
   GameGenerateOptionType,
   GameGenerateQuestionType,
@@ -46,6 +46,9 @@ const useGuestGamingVerb = (
   typeGame: GameQuestionVerbType,
   PATH_TRANSLATION: string,
 ): UseGuestGamingVerbProps => {
+  // Hook padre
+  const { verbs, setVerbs, listVerbsService: service } = useVerbs();
+
   // States
   const [selectedOption, setSelectedOption] =
     React.useState<GameGenerateOptionType | null>(null);
@@ -54,7 +57,6 @@ const useGuestGamingVerb = (
     useState<GuestTheVerbGameKeyVerbsType | null>(null);
   const [currentQuestion, setCurrentQuestion] =
     useState<GameGenerateQuestionType | null>(null);
-  const [verbs, setVerbs] = useState<Verb[]>([]);
   const [successCount, setSuccessCount] = useState(0);
   const [failsCount, setFailsCount] = useState(0);
   const [actualyRound, setActualyRound] = useState(0);
@@ -69,15 +71,9 @@ const useGuestGamingVerb = (
     state: { colors, isThemeDark },
   } = useThemeApp();
 
-  // Load verbs
-  const loadVerbs = React.useCallback(() => {
-    const list = globaListVerbsService.getAll();
-    setVerbs(list);
-  }, []);
-
   // Clear values
   const clearValues = React.useCallback(() => {
-    loadVerbs();
+    // Los verbos ya vienen del hook padre, no necesitamos cargarlos
     setResults(null);
     setSuccessCount(0);
     setFailsCount(0);
@@ -86,7 +82,7 @@ const useGuestGamingVerb = (
     setLevelSelected(null);
     setCurrentQuestion(null);
     setSelectedOption(null);
-  }, [loadVerbs]);
+  }, []);
 
   // Finalize game
   const finalizeGame = React.useCallback(
@@ -125,8 +121,11 @@ const useGuestGamingVerb = (
       // ? No hay key de verbos seleccionado
       if (!selectedKeyVerbs) return;
 
+      // ? No hay servicio
+      if (!service) return;
+
       // ? Generamos la pregunta
-      const question = globaListVerbsService.generateVerbQuestion(
+      const question = service.generateVerbQuestion(
         verbs,
         typeGame.questionKey, // o el campo que desees como pregunta
         typeGame.answerKey, // o el campo que desees como opciones
@@ -147,11 +146,23 @@ const useGuestGamingVerb = (
       const correctOption = question.options.find(
         (o: GameGenerateOptionType) => o.isCorrect,
       );
-      setVerbs((prev) => prev.filter((v) => v.no !== correctOption?.number));
+      const filteredVerbs = verbs.filter(
+        (v: Verb) => v.no !== correctOption?.number,
+      );
+      setVerbs(filteredVerbs);
 
       // ? Actualizamos la pregunta
       setCurrentQuestion(question);
-    }, [levelSelected, selectedKeyVerbs, verbs, typeGame, t]),
+    }, [
+      verbs,
+      levelSelected,
+      selectedKeyVerbs,
+      service,
+      typeGame.questionKey,
+      typeGame.answerKey,
+      t,
+      setVerbs,
+    ]),
   });
 
   // Register attempt
@@ -223,10 +234,7 @@ const useGuestGamingVerb = (
     generateNextQuestion();
   }, [generateNextQuestion, clearValues, results]);
 
-  // Effects
-  useEffect(() => {
-    loadVerbs();
-  }, [loadVerbs]);
+  // Effects - Ya no necesitamos cargar verbos porque vienen del hook padre
 
   // Return
   return {

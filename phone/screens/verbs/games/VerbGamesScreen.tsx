@@ -2,7 +2,6 @@ import React from 'react';
 import VerbsLayout from '../layouts/VerbsLayout';
 import { Card, Text, TouchableRipple } from 'react-native-paper';
 import { VerbsStackParamAllList } from '../VerbsStack';
-import { globaListVerbsService } from '@/services/ListVerbsService';
 import { ScrollView, StyleSheet } from 'react-native';
 import { useNavigation } from 'expo-router';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -63,7 +62,7 @@ const VerbGamesScreen: React.FC = () => {
   );
 
   return (
-    <VerbsLayout service={globaListVerbsService} t={t}>
+    <VerbsLayout t={t}>
       {/* List of games */}
       <ScrollView contentContainerStyle={styles.container}>
         {games.map(({ action, title, description }, index) => (

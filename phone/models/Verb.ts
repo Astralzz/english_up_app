@@ -4,6 +4,7 @@
  * @description This module defines the Verb model and its properties.
  */
 interface Verb {
+  _id: string; // Unique identifier
   readonly no: number; // Number of the verb
   type: VerbTypeType; // Type of the verb
   simple_form: string; // Simple form of the verb

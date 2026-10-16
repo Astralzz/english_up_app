@@ -173,6 +173,7 @@ git push origin develop
 ### 💾 Almacenamiento
 
 - Async Storage
+- React realm (Base de datos local)
 
 ### 🔐 Seguridad
 
@@ -198,6 +199,7 @@ git push origin develop
 - ✅ **i18n** preconfigurado
 - ✅ **Persistencia** y seguridad
 - ✅ **Prettier + ESLint** integrados
+- ✅ **Base de datos local** con Realm
 
 ---
 
